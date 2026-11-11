@@ -1,5 +1,5 @@
 custom-properties.custom=true
-default-js-path=platform\:/resource/portal-ui/clx-src/runtime/defaults.js
+default-js-path=platform\:/resource/PSE-Portal-ui/clx-src/runtime/defaults.js
 eclipse.preferences.version=1
 id-policy.custom=true
 preferred-size.custom=true
