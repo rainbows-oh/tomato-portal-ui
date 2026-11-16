@@ -129,83 +129,125 @@
     <cl:listener std:sid="listener-8c41d7e2" name="screen-change" handler="onBodyScreenChange"/>
     <cl:group std:sid="group-654cc646" id="grpHeaderSlider" class="header-slider">
       <cl:verticaldata std:sid="v-data-113c2e06" width="400px" height="323px" autosize="none"/>
-      <cl:group std:sid="group-09867650" class="slide01">
-        <cl:flowlayoutdata std:sid="f-data-2fd0397a" width="100%" height="323px"/>
-        <cl:output std:sid="output-c6c757e3" class="font-caption fw-bold" value="Disclosure Announcement">
-          <cl:verticaldata std:sid="v-data-6257e573" width="1320px" height="20px" autosize="height"/>
-        </cl:output>
-        <cl:output std:sid="output-887bf9aa" class="tit" value="Quarterly report filing window opens today.">
-          <cl:verticaldata std:sid="v-data-3a50e141" width="1320px" height="45px" autosize="height"/>
-        </cl:output>
-        <cl:output std:sid="output-1132f8b2" value="Listed companies may submit Q2 disclosures through&#xD;&#xA;PIE EDGE portal seamlessly. Please review instructions prior to upload.">
-          <cl:verticaldata std:sid="v-data-6e151faf" width="1320px" height="41px" autosize="height"/>
-        </cl:output>
-        <cl:verticallayout std:sid="v-layout-d280b95c" distribution="center" spacing="12"/>
+      <cl:group std:sid="group-71e40a45" class="slide">
+        <cl:flowlayoutdata std:sid="f-data-d9a0531b" width="1920px" height="323px"/>
+        <cl:img std:sid="image-b41add0c">
+          <cl:xylayoutdata std:sid="xyl-data-008c8baa" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+        </cl:img>
+        <cl:group std:sid="group-09867650" class="slide-txt">
+          <cl:xylayoutdata std:sid="xyl-data-4048a5fe" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+          <cl:output std:sid="output-c6c757e3" class="font-caption fw-bold" value="Disclosure Announcement">
+            <cl:verticaldata std:sid="v-data-6257e573" width="1320px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-887bf9aa" class="tit" value="Quarterly report filing window opens today.">
+            <cl:verticaldata std:sid="v-data-3a50e141" width="1320px" height="45px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-1132f8b2" value="Listed companies may submit Q2 disclosures through&#xD;&#xA;PIE EDGE portal seamlessly. Please review instructions prior to upload.">
+            <cl:verticaldata std:sid="v-data-6e151faf" width="1320px" height="41px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-d280b95c" distribution="center" spacing="12"/>
+        </cl:group>
+        <cl:xylayout std:sid="xylayout-6f84eaa2"/>
       </cl:group>
-      <cl:group std:sid="group-1cba2c0c" class="slide02">
+      <cl:group std:sid="group-1cba2c0c" class="slide">
         <cl:flowlayoutdata std:sid="f-data-10218ccd" width="100%" height="323px" autosize="none"/>
-        <cl:output std:sid="output-ba5c8470" class="font-caption fw-bold" value="Disclosure Announcement">
-          <cl:verticaldata std:sid="v-data-56df9b43" width="1320px" height="20px" autosize="height"/>
-        </cl:output>
-        <cl:output std:sid="output-619091a4" class="tit" value="Quarterly report filing window opens today.">
-          <cl:verticaldata std:sid="v-data-e4418a11" width="1320px" height="45px" autosize="height"/>
-        </cl:output>
-        <cl:output std:sid="output-3bb0e570" value="Listed companies may submit Q2 disclosures through&#xD;&#xA;PIE EDGE portal seamlessly. Please review instructions prior to upload.">
-          <cl:verticaldata std:sid="v-data-e54090de" width="1320px" height="41px" autosize="height"/>
-        </cl:output>
-        <cl:verticallayout std:sid="v-layout-da730387" distribution="center" spacing="12"/>
+        <cl:img std:sid="image-bc917f4f">
+          <cl:xylayoutdata std:sid="xyl-data-6e699071" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+        </cl:img>
+        <cl:group std:sid="group-249440b3" class="slide-txt">
+          <cl:xylayoutdata std:sid="xyl-data-bf93bf5d" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+          <cl:output std:sid="output-ba5c8470" class="font-caption fw-bold" value="Disclosure Announcement">
+            <cl:verticaldata std:sid="v-data-56df9b43" width="1320px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-619091a4" class="tit" value="Quarterly report filing window opens today.">
+            <cl:verticaldata std:sid="v-data-e4418a11" width="1320px" height="45px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-3bb0e570" value="Listed companies may submit Q2 disclosures through&#xD;&#xA;PIE EDGE portal seamlessly. Please review instructions prior to upload.">
+            <cl:verticaldata std:sid="v-data-e54090de" width="1320px" height="41px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-da730387" distribution="center" spacing="12"/>
+        </cl:group>
+        <cl:xylayout std:sid="xylayout-e982dba0"/>
       </cl:group>
-      <cl:group std:sid="group-15804d5a" class="slide03">
+      <cl:group std:sid="group-15804d5a" class="slide">
         <cl:flowlayoutdata std:sid="f-data-1343d108" width="100%" height="323px" autosize="none"/>
-        <cl:output std:sid="output-5bcc9bbc" class="font-caption fw-bold" value="Disclosure Announcement">
-          <cl:verticaldata std:sid="v-data-b0e4a0df" width="1320px" height="20px" autosize="height"/>
-        </cl:output>
-        <cl:output std:sid="output-ef791d5a" class="tit" value="Quarterly report filing window opens today.">
-          <cl:verticaldata std:sid="v-data-c3d0edc4" width="1320px" height="45px" autosize="height"/>
-        </cl:output>
-        <cl:output std:sid="output-629c157a" value="Listed companies may submit Q2 disclosures through&#xD;&#xA;PIE EDGE portal seamlessly. Please review instructions prior to upload.">
-          <cl:verticaldata std:sid="v-data-9f6b37fe" width="1320px" height="41px" autosize="height"/>
-        </cl:output>
-        <cl:verticallayout std:sid="v-layout-d19e27a9" distribution="center" spacing="12"/>
+        <cl:img std:sid="image-b9b98d3b">
+          <cl:xylayoutdata std:sid="xyl-data-485cad36" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+        </cl:img>
+        <cl:group std:sid="group-8b8f8761" class="slide-txt">
+          <cl:xylayoutdata std:sid="xyl-data-831610f1" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+          <cl:output std:sid="output-5bcc9bbc" class="font-caption fw-bold" value="Disclosure Announcement">
+            <cl:verticaldata std:sid="v-data-b0e4a0df" width="1320px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-ef791d5a" class="tit" value="Quarterly report filing window opens today.">
+            <cl:verticaldata std:sid="v-data-c3d0edc4" width="1320px" height="45px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-629c157a" value="Listed companies may submit Q2 disclosures through&#xD;&#xA;PIE EDGE portal seamlessly. Please review instructions prior to upload.">
+            <cl:verticaldata std:sid="v-data-9f6b37fe" width="1320px" height="41px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-d19e27a9" distribution="center" spacing="12"/>
+        </cl:group>
+        <cl:xylayout std:sid="xylayout-ee36b7e0"/>
       </cl:group>
-      <cl:group std:sid="group-48a01a21" class="slide04">
+      <cl:group std:sid="group-48a01a21" class="slide">
         <cl:flowlayoutdata std:sid="f-data-03dad580" width="100%" height="323px" autosize="none"/>
-        <cl:output std:sid="output-773378ad" class="font-caption fw-bold" value="Disclosure Announcement">
-          <cl:verticaldata std:sid="v-data-b70c0b2c" width="1320px" height="20px" autosize="height"/>
-        </cl:output>
-        <cl:output std:sid="output-8a62bdb3" class="tit" value="Quarterly report filing window opens today.">
-          <cl:verticaldata std:sid="v-data-0a4491b4" width="1320px" height="45px" autosize="height"/>
-        </cl:output>
-        <cl:output std:sid="output-7b33086c" value="Listed companies may submit Q2 disclosures through&#xD;&#xA;PIE EDGE portal seamlessly. Please review instructions prior to upload.">
-          <cl:verticaldata std:sid="v-data-29b259d0" width="1320px" height="41px" autosize="height"/>
-        </cl:output>
-        <cl:verticallayout std:sid="v-layout-6d117dda" distribution="center" spacing="12"/>
+        <cl:img std:sid="image-2da2717d">
+          <cl:xylayoutdata std:sid="xyl-data-368284a5" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+        </cl:img>
+        <cl:group std:sid="group-8847efa4" class="slide-txt">
+          <cl:xylayoutdata std:sid="xyl-data-a2e6c7c9" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+          <cl:output std:sid="output-773378ad" class="font-caption fw-bold" value="Disclosure Announcement">
+            <cl:verticaldata std:sid="v-data-b70c0b2c" width="1320px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-8a62bdb3" class="tit" value="Quarterly report filing window opens today.">
+            <cl:verticaldata std:sid="v-data-0a4491b4" width="1320px" height="45px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-7b33086c" value="Listed companies may submit Q2 disclosures through&#xD;&#xA;PIE EDGE portal seamlessly. Please review instructions prior to upload.">
+            <cl:verticaldata std:sid="v-data-29b259d0" width="1320px" height="41px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-6d117dda" distribution="center" spacing="12"/>
+        </cl:group>
+        <cl:xylayout std:sid="xylayout-e7913bf0"/>
       </cl:group>
-      <cl:group std:sid="group-02f7dc2a" class="slide05">
+      <cl:group std:sid="group-02f7dc2a" class="slide">
         <cl:flowlayoutdata std:sid="f-data-e0e5091e" width="100%" height="323px" autosize="none"/>
-        <cl:output std:sid="output-848e419d" class="font-caption fw-bold" value="Disclosure Announcement">
-          <cl:verticaldata std:sid="v-data-4b59b59d" width="1320px" height="20px" autosize="height"/>
-        </cl:output>
-        <cl:output std:sid="output-ea057a6a" class="tit" value="Quarterly report filing window opens today.">
-          <cl:verticaldata std:sid="v-data-02238ee4" width="1320px" height="45px" autosize="height"/>
-        </cl:output>
-        <cl:output std:sid="output-844e98b6" value="Listed companies may submit Q2 disclosures through&#xD;&#xA;PIE EDGE portal seamlessly. Please review instructions prior to upload.">
-          <cl:verticaldata std:sid="v-data-2f4b68be" width="1320px" height="41px" autosize="height"/>
-        </cl:output>
-        <cl:verticallayout std:sid="v-layout-ac27fb12" distribution="center" spacing="12"/>
+        <cl:img std:sid="image-1c7ec642">
+          <cl:xylayoutdata std:sid="xyl-data-8b87b37f" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+        </cl:img>
+        <cl:group std:sid="group-6033a086" class="slide-txt">
+          <cl:xylayoutdata std:sid="xyl-data-d4fab4de" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+          <cl:output std:sid="output-848e419d" class="font-caption fw-bold" value="Disclosure Announcement">
+            <cl:verticaldata std:sid="v-data-4b59b59d" width="1320px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-ea057a6a" class="tit" value="Quarterly report filing window opens today.">
+            <cl:verticaldata std:sid="v-data-02238ee4" width="1320px" height="45px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-844e98b6" value="Listed companies may submit Q2 disclosures through&#xD;&#xA;PIE EDGE portal seamlessly. Please review instructions prior to upload.">
+            <cl:verticaldata std:sid="v-data-2f4b68be" width="1320px" height="41px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-ac27fb12" distribution="center" spacing="12"/>
+        </cl:group>
+        <cl:xylayout std:sid="xylayout-8aa37067"/>
       </cl:group>
-      <cl:group std:sid="group-078370d3" class="slide06">
+      <cl:group std:sid="group-078370d3" class="slide">
         <cl:flowlayoutdata std:sid="f-data-b9786870" width="100%" height="323px" autosize="none"/>
-        <cl:output std:sid="output-c127b1c8" class="font-caption fw-bold" value="Disclosure Announcement">
-          <cl:verticaldata std:sid="v-data-69fa2c43" width="1320px" height="20px" autosize="height"/>
-        </cl:output>
-        <cl:output std:sid="output-a01dbae5" class="tit" value="Quarterly report filing window opens today.">
-          <cl:verticaldata std:sid="v-data-8b0f12da" width="1320px" height="45px" autosize="height"/>
-        </cl:output>
-        <cl:output std:sid="output-f84ce3bc" value="Listed companies may submit Q2 disclosures through&#xD;&#xA;PIE EDGE portal seamlessly. Please review instructions prior to upload.">
-          <cl:verticaldata std:sid="v-data-5bdad7eb" width="1320px" height="41px" autosize="height"/>
-        </cl:output>
-        <cl:verticallayout std:sid="v-layout-cbce84eb" distribution="center" spacing="12"/>
+        <cl:img std:sid="image-6054d26c">
+          <cl:xylayoutdata std:sid="xyl-data-14820c61" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+        </cl:img>
+        <cl:group std:sid="group-42a9fb30" class="slide-txt">
+          <cl:xylayoutdata std:sid="xyl-data-c62bb736" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+          <cl:output std:sid="output-c127b1c8" class="font-caption fw-bold" value="Disclosure Announcement">
+            <cl:verticaldata std:sid="v-data-69fa2c43" width="1320px" height="20px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-a01dbae5" class="tit" value="Quarterly report filing window opens today.">
+            <cl:verticaldata std:sid="v-data-8b0f12da" width="1320px" height="45px" autosize="height"/>
+          </cl:output>
+          <cl:output std:sid="output-f84ce3bc" value="Listed companies may submit Q2 disclosures through&#xD;&#xA;PIE EDGE portal seamlessly. Please review instructions prior to upload.">
+            <cl:verticaldata std:sid="v-data-5bdad7eb" width="1320px" height="41px" autosize="height"/>
+          </cl:output>
+          <cl:verticallayout std:sid="v-layout-cbce84eb" distribution="center" spacing="12"/>
+        </cl:group>
+        <cl:xylayout std:sid="xylayout-9fa6ad32"/>
       </cl:group>
       <cl:flowlayout std:sid="f-layout-abdbe0a6" hspacing="0" vspacing="0"/>
     </cl:group>

@@ -217,21 +217,19 @@ function setFluidWidth(pcCtrl, pbFluid, psFluidWidth) {
 
 /**
  * 화면 폭이 FLUID_BREAKPOINT 이하이면 1320px 고정 폭 컨트롤을 가변으로, 초과하면 원래대로 되돌린다.
- *  - 슬라이드(slide01~06) 하위 아웃풋, 탭폴더, grpDashboard: 모든 스크린(PC/태블릿/모바일)에 적용
+ *  - 헤더 슬라이드 텍스트 그룹(slide-txt) 하위 아웃풋, 탭폴더, grpDashboard: 모든 스크린(PC/태블릿/모바일)에 적용
  */
 function applyFluidWidth() {
 	var vbFluid = window.innerWidth <= FLUID_BREAKPOINT;
 	var vsFluidWidth = "100%";
 	
-	// 슬라이드 하위 아웃풋
+	// 헤더 슬라이드 텍스트 그룹(slide > slide-txt) 하위 아웃풋
 	var vcHeaderSlider = app.lookup("grpHeaderSlider");
 	if (vcHeaderSlider) {
 		vcHeaderSlider.getAllRecursiveChildren(false).filter(function(each) {
 			var vcParent = each.getParent();
 			return each instanceof cpr.controls.Output
-				&& vcParent && vcParent.style.getClasses().some(function(cls) {
-					return /^slide0\d$/.test(cls);
-				});
+				&& vcParent && vcParent.style.hasClass("slide-txt");
 		}).forEach(function(each) {
 			setFluidWidth(each, vbFluid, vsFluidWidth);
 		});
@@ -270,7 +268,7 @@ function getSlideTextLeft() {
 	
 	var vaOutputs = vcSlider.getAllRecursiveChildren(false).filter(function(each) {
 		var vcParent = each.getParent();
-		return each instanceof cpr.controls.Output && vcParent && vcParent.style.hasClass("slide01");
+		return each instanceof cpr.controls.Output && vcParent && vcParent.style.hasClass("slide-txt");
 	});
 	if (vaOutputs.length === 0) return 0;
 	
