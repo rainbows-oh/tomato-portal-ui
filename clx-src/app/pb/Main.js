@@ -31,8 +31,12 @@ var MOBILE_MENU_ID = "grpMobileSideMenu";
 var MOBILE_MENU_WIDTH = "300px";
 /** 고급 검색 패널(grpMobileAdvSearch) ID */
 var ADV_SEARCH_ID = "grpMobileAdvSearch";
+/** btnAdvSearch 로 열 때 패널의 상단 위치 (헤더 높이) */
+var ADV_SEARCH_TOP = "64px";
 /** 떠 있는 패널 정보 {id, panel, parent, index, constraint, dim} (닫을 때 원래 위치로 복원). 없으면 null — 한 번에 하나만 열림 */
 var moFloatPanel = null;
+/** 페이지 스크롤을 잠그기 전의 html/body overflow 값 (잠금 해제 시 복원). 잠겨 있지 않으면 null */
+var moScrollBackup = null;
 
 /*
  * 루트 컨테이너에서 load 이벤트 발생 시 호출.
@@ -172,7 +176,8 @@ function onBtnMobileMenuCloseClick(e) {
  * 고급 검색 버튼(btnAdvSearch, btnMAdvSearch)에서 click 이벤트 발생 시 호출.
  */
 function onBtnAdvSearchClick(e) {
-	openAdvSearch();
+	// btnMAdvSearch(767px 이하에서 표시)로 열면 전체 화면, btnAdvSearch로 열면 헤더(64px) 아래 전체 폭
+	openAdvSearch(e.control.id == "btnMAdvSearch");
 }
 
 /************************************************
@@ -184,8 +189,9 @@ function onBtnAdvSearchClick(e) {
  * 닫을 때 원래 위치로 되돌린다. 다른 패널이 떠 있으면 먼저 닫는다.
  * @param {String} psId 띄울 패널 ID
  * @param {Object} poConstraint 떠 있을 때의 위치/크기 (XY 제약)
+ * @param {String} [psDimTop] 어두운 배경의 상단 위치 (기본 "0px"). 헤더를 가리지 않으려면 헤더 높이를 지정
  */
-function openFloatPanel(psId, poConstraint) {
+function openFloatPanel(psId, poConstraint, psDimTop) {
 	if (moFloatPanel) closeFloatPanel();
 
 	var vcPanel = app.lookup(psId);
@@ -203,17 +209,60 @@ function openFloatPanel(psId, poConstraint) {
 		parent: vcParent,
 		index: vcParent.getChildren().indexOf(vcPanel),
 		constraint: vcParent.getConstraint(vcPanel),
-		dim: vcDim
+		dim: vcDim,
+		blocker: null
 	};
 
 	vcPanel.visible = true;
 	app.floatControl(vcDim, {
-		top: "0px",
+		top: psDimTop || "0px",
 		right: "0px",
 		bottom: "0px",
 		left: "0px"
 	});
+	
+	// 헤더를 가리지 않고 아래에서 열 때는 헤더 조작(GNB, 검색 등)을 막는 투명 덮개를 헤더 위에 올린다
+	if (psDimTop && psDimTop !== "0px") {
+		var vcBlocker = new cpr.controls.Container();
+		vcBlocker.setLayout(new cpr.controls.layouts.XYLayout());
+		vcBlocker.style.addClass("header-block");
+		moFloatPanel.blocker = vcBlocker;
+		app.floatControl(vcBlocker, {
+			top: "0px",
+			right: "0px",
+			left: "0px",
+			height: psDimTop
+		});
+	}
 	app.floatControl(vcPanel, poConstraint);
+	
+	// 고급 검색이 열려 있는 동안 뒤의 페이지 스크롤을 막는다
+	if (psId == ADV_SEARCH_ID) {
+		lockPageScroll(true);
+	}
+}
+
+/**
+ * 페이지(html, body) 스크롤을 잠그거나 푼다. (잠그기 전의 overflow 값을 보관했다가 복원)
+ * @param {Boolean} pbLock true: 잠금, false: 해제
+ */
+function lockPageScroll(pbLock) {
+	var vaEls = [document.documentElement, document.body];
+	if (pbLock) {
+		if (moScrollBackup) return;
+		moScrollBackup = vaEls.map(function(el) {
+			return el.style.overflow;
+		});
+		vaEls.forEach(function(el) {
+			el.style.overflow = "hidden";
+		});
+	} else {
+		if (!moScrollBackup) return;
+		vaEls.forEach(function(el, idx) {
+			el.style.overflow = moScrollBackup[idx];
+		});
+		moScrollBackup = null;
+	}
 }
 
 /**
@@ -224,10 +273,14 @@ function closeFloatPanel() {
 
 	var voInfo = moFloatPanel;
 	moFloatPanel = null;
+	lockPageScroll(false);
 
 	voInfo.parent.insertChild(voInfo.index, voInfo.panel, voInfo.constraint);
 	voInfo.panel.visible = false;
 	app.getContainer().removeChild(voInfo.dim, true);
+	if (voInfo.blocker) {
+		app.getContainer().removeChild(voInfo.blocker, true);
+	}
 }
 
 /**
@@ -244,22 +297,21 @@ function openMobileMenu() {
 
 /**
  * 고급 검색(grpMobileAdvSearch)을 띄운다.
- * - PC/태블릿: 화면 상단에 전체 폭으로
- * - 모바일: 화면 전체를 차지해서 최상단에
+ * - btnAdvSearch  : 헤더 높이(ADV_SEARCH_TOP)만큼 아래에서 전체 폭으로
+ * - btnMAdvSearch : 화면 전체를 차지해서 최상단에
+ * @param {Boolean} pbFull true: 화면 전체, false: 헤더 아래 전체 폭
  */
-function openAdvSearch() {
-	var vbMobile = AppProperties.SCREEN_MOBILE_NM.indexOf(app.targetScreen.name) != -1;
-
-	openFloatPanel(ADV_SEARCH_ID, vbMobile ? {
+function openAdvSearch(pbFull) {
+	openFloatPanel(ADV_SEARCH_ID, pbFull ? {
 		top: "0px",
 		right: "0px",
 		bottom: "0px",
 		left: "0px"
 	} : {
-		top: "0px",
+		top: ADV_SEARCH_TOP,
 		right: "0px",
 		left: "0px"
-	});
+	}, pbFull ? "0px" : ADV_SEARCH_TOP);	// 헤더 아래로 열 때는 헤더를 딤 처리하지 않음
 }
 /** 고급 검색 화면(임베디드 앱 AdvancedSearch)의 닫기 버튼에서 callAppMethod("closeAdvSearch") 로 호출된다. */
 exports.closeAdvSearch = closeFloatPanel;
