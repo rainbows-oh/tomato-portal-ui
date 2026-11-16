@@ -1,488 +1,683 @@
-.submission {
-	background-color: #f6f9fc;
+@import (reference) "../../custom-settings.part.less";
+
+
+@keyframes header-ticker-marquee {
+	from { transform: translateX(0); }
+	to   { transform: translateX(calc(-100% / 3)); }   /* 3벌 중 한 벌 */
 }
 
-.cl-container.submission-wrap {
-	background-color: #ffffff;
-	border: 1px solid #e3e8ee;
-	border-radius: 16px;
-	box-shadow: 0 1px 3px rgba(0,55,112,0.08);
-	
-	/* 로고 및 로그아웃 그룹 */
-	.cl-container.top-bar {
-		background-color: #ffffff;
-		border-bottom: 1px solid #e3e8ee;
+.cl-container.main {
+	.cl-container.header-wrap {
+		padding: 0px 24px;
 		
-		.cl-button.logo {
-			color: #0d253d;
-			font-size: 20px;
-			font-weight: 600;
-			letter-spacing: -0.2px;
-			
-			.cl-text {
-				line-height: 1.4;
-			}
+		@media(max-width: 1024px) {
+			padding: 0px 24px;
 		}
 		
-		.cl-button.sign-out {
-			.cl-icon {
-				background-image: url("../../img/icons/ico_logout.svg") !important;
-				margin: 0;
-			}
-			
-			.cl-text {
-				#sound-only();
-			}
-			 
-			&:not(.cl-disabled):hover,
-			&:not(.cl-disabled).cl-hover {
-				background-color: #eef1f5;
-			}
-	
-			&:not(.cl-disabled):active,
-			&:not(.cl-disabled).cl-activated,
-			&:not(.cl-disabled).cl-focus {
-				background-color: #eef1f5;
-			}
+		@media(max-width: 375px) {
+			padding: 0px 16px;
+		}
+	}
+
+	.cl-container.footer-wrap {
+		padding: 32px 40px 60px 40px;   // 헤더(header-wrap)와 같은 좌우 여백
+		
+		@media(max-width: 1024px) {
+			padding: 32px 24px 60px 24px;
+		}
+		
+		@media(max-width: 375px) {
+			padding: 32px 20px;
 		}
 	}
 	
-	/* 사용자 정보 및 프로그램 제목 그룹 */
-	.cl-container.page-header {
-		.cl-container.user {
-			border-bottom: 1px solid #e3e8ee;
-			
-			.cl-button.gnb-toggle {
-				border-radius: 6px;
-
-				.cl-icon {
-					background-image: url("../../img/icons/ico_arrow_left.svg") !important;
-					margin: 0;
-				}
+	.cl-container.header-wrap {
+		.cl-container.header {
+			.cl-container.left {
+				padding: 12px 0px;
 				
-				.cl-text {
-					#sound-only();
-				}
-				
-				&:not(.cl-disabled):hover,
-				&:not(.cl-disabled).cl-hover {
-					background-color: #eef1f5;
-				}
-		
-				&:not(.cl-disabled):active,
-				&:not(.cl-disabled).cl-activated,
-				&:not(.cl-disabled).cl-focus {
-					background-color: #eef1f5;
-				}
-				
-				&.active {
+				.cl-button.btn-m-menu {
 					.cl-icon {
-						transform: rotate(-180deg);
+						background-image: url("../../img/main/ico_menu_mo.svg") !important;
+					}
+				}
+				
+				.cl-button.logo {
+					.cl-icon {
+						background-image: url("../../img/main/logo_header.svg") !important;
+						width: 77px;
+						height: 36px;
 					}
 				}
 			}
 			
-			.cl-button.name {
-				border-radius: 6px;
-				color: #0d253d;
-				font-size: 13px;
-				font-weight: 600;
-				padding: 4px;
-				text-align: left;
+			.cl-button.btn-m-search {
+				.cl-icon {
+					background-image: url("../../img/main/ico_search_mo.svg") !important;
+					width: 24px;
+					height: 24px;
+				}
+			}
+			
+			.cl-button.btn-m-adv-search {
+				.cl-icon {
+					background-image: url("../../img/main/ico_adv_search_mo.svg") !important;
+					width: 24px;
+					height: 24px;
+				}
+			}
+		}
+
+		.cl-container.header-utils {
+			padding: 12px 0px;
+			
+			.cl-searchinput {
+				border-radius: @border-radius-full;
+				background-color: #E9EEF4;
+				border: none;
 				
 				.cl-text {
-					&::after {
-						content: "";
-						position: relative;
-						display: inline-block;
-						top: 2px;
-						width: 14px;
-						height: 14px;
-						background: url("../../img/icons/ico_angle_right.svg") no-repeat center / contain;
-						float: right;
-					}
+					padding: 0px 12px 0px 4px;
 				}
 				
-				&:not(.cl-disabled):hover,
-				&:not(.cl-disabled).cl-hover {
-					background-color: #eef1f5;
-				}
-		
-				&:not(.cl-disabled):active,
-				&:not(.cl-disabled).cl-activated,
-				&:not(.cl-disabled).cl-focus {
-					background-color: #eef1f5;
-				}
-				
-			}
-		}
-		
-		.cl-button.calendar {
-			.cl-icon {
-				background-image: url("../../img/icons/ico_date.svg") !important;
-				margin: 0;
-			}
-			
-			.num {
-				position: absolute;
-				display: block;
-				top: 0;
-				right: 0;
-				width: 16px;
-				height: 16px;
-				background-color: #533afd;
-				border-radius: 50%;
-				color: #ffffff;
-				font-size: 10px;
-				font-weight: 700;
-			}
-		}
-	}
-	
-	.cl-container.gnb-panel {
-		background-color: #f6f9fc;
-		border-right: 1px solid #e3e8ee;
-	}
-	
-	.cl-sidenavigation.side-menu {
-		color: #0d253d;
-		font-size: 13px;
-		font-weight: 400;
-		line-height: 1.4;
-		padding: 4px 16px 8px 16px;
-		
-		.cl-sidenavigation-item {
-			border-radius: 6px;
-			padding: 8px 12px;
-			
-			.cl-icon {
-				width: 18px;
-				height: 18px;
-				min-width: 18px;
-				margin-right: 8px;
-			}
-			
-			.cl-expand-icon {
-				display: none;
-			}
-			
-			&.cl-folder {
-				&.cl-collapsed {
-					> .cl-icon {
-						background-image: url("../../img/icons/ico_angle_right.svg");
-					}
-				}
-				
-				&.cl-expanded {
-					> .cl-icon {
-						background-image: url("../../img/icons/ico_angle.svg");
-					}
+				.cl-searchinput-search.cl-left {
+					margin-left: 12px;
+					margin-right: 0;
 				}
 			}
 			
-			&.cl-hover, &:hover {
-				background-color: #eef1f5;
-				color: #0d253d;
-			}
-			
-			&.cl-selected {
-				background-color: #eef1f5;
-				color: #533afd;
-			}
-			
-			&.cl-level-1 {
+			.cl-button.btn-advsearch {
+				padding: 0px 12px;
+				border-color: #CBD5E1;
+				border-radius: @border-radius-full;
 				font-weight: 600;
+				color: #1E293B;
+				
+				.cl-icon {
+					background-image: url("../../img/icons/ico_filter.svg") !important;
+					width: 20px;
+					height: 20px;
+				}
 			}
 		}
 	}
 	
-	.cl-container.deadline {
-		&:not(.collapsed) {
-			border-bottom: 1px solid #e3e8ee;
-		}
-	}
-	
-	.cl-container.side-bar {
-		background-color: #f6f9fc;
-		border-left: 1px solid #e3e8ee;
+	.cl-container.footer-wrap {
+		background-color: @charcoal-80;
 		
-		.cl-output.title {
-			color: #0d253d;
-			font-size: 13px;
-			font-weight: 600;
-			letter-spacing: -0.39px;
-			line-height: 1.4;
+		.cl-formlayout-horizontal-separator {
+			background-color: #595959;
 		}
-		
-		.cl-button.date {
-			.cl-icon {
-				background-image: url("../../img/icons/ico_date.svg") !important;
+		.cl-container.footer-top {
+			.cl-button {
+				color: @white;
+				font-size: 12px;
+				font-weight: 600;
+				padding: 0px;
 			}
 		}
-		
-		.cl-button.side-toggle {
-			border-radius: 6px;
 
-			.cl-icon {
-				background-image: url("../../img/icons/ico_arrow_left.svg") !important;
-				margin: 0;
+		.cl-container.footer-bottom {
+			.cl-container.f-b-left {
+				.cl-button {
+					color: @white;
+					font-size: 19px;
+					font-weight: 800;
+					padding: 0px;
+				}
+				
+				.cl-output {
+					color: #B2B2B2;
+					font-size: 12px;
+				}
 			}
-			
-			.cl-text {
-				#sound-only();
+			.cl-container.f-b-right {
+				.cl-button.btn-sns {
+					.cl-icon {
+						width: 24px;
+						height: 24px;
+					}
+
+					&.fb {
+						.cl-icon {
+							background-image: url("../../img/main/ico_footer_sns1.svg") !important;
+						}
+					}
+
+					&.tw {
+						.cl-icon {
+							background-image: url("../../img/main/ico_footer_sns2.svg") !important;
+						}
+					}
+				}
 			}
-			
-			&:not(.cl-disabled):hover,
-			&:not(.cl-disabled).cl-hover {
-				background-color: #eef1f5;
-			}
-	
-			&:not(.cl-disabled):active,
-			&:not(.cl-disabled).cl-activated,
-			&:not(.cl-disabled).cl-focus {
-				background-color: #eef1f5;
-			}
+		}
+	}
+}
+
+.cl-container.main-content {
+	.cl-container.slidify-pagination {
+		.cl-button.slidify-bullet {
+			min-width: 0;
+			min-height: 0;
+			padding: 0;
+			border: 0;
+			border-radius: 50%;
+			background-color: @white;
+			opacity: 0.4;
 			
 			&.active {
-				.cl-icon {
-					transform: rotate(-180deg);
-				}
+				opacity: 1;
 			}
 		}
 	}
+
+	.header-slide-bg(@from, @to) {
+		background-image: url("../../img/main/bg_header.svg"), linear-gradient(90deg, @from 0%, @to 100%);
+		background-position: right 100px bottom, 0 0;
+		background-repeat: no-repeat;
+
+		@media (max-width: 375px) {
+			background-image: url("../../img/main/bg_header_mo.svg"), linear-gradient(90deg, @from 0%, @to 100%);
+			background-position: right bottom, 0 0;   // 모바일 이미지에 맞게 조정
+		}
+	}
+
+	.cl-container.header-slider {
+		.cl-container.slide01,
+		.cl-container.slide02,
+		.cl-container.slide03,
+		.cl-container.slide04,
+		.cl-container.slide05,
+		.cl-container.slide06 {
+			padding: 40px 40px 80px 40px;
+
+			.cl-output {
+				color: @white;
+				text-align: left;
+			}
+
+			.cl-output.tit {
+				font-weight: 900;
+				font-size: 39px;
+			}
+
+			@media(max-width: 1024px) {
+				padding: 24px 24px 80px 24px;
+
+				.cl-output.tit {
+					font-weight: 900;
+					font-size: 26px;
+				}
+			}
+
+			@media(max-width: 375px) {
+				padding: 20px 16px 40px 16px;
+			}
+		}
+
+		.cl-container.slide01 { .header-slide-bg(#141B4D, #4E5587); }
+		.cl-container.slide02 { .header-slide-bg(#0F2E6B, #4A74B8); }
+		.cl-container.slide03 { .header-slide-bg(#10351F, #477A54); }
+		.cl-container.slide04 { .header-slide-bg(#4A1026, #93405C); }
+		.cl-container.slide05 { .header-slide-bg(#2E1147, #6B4C9A); }
+
+		.cl-container.slide06 {
+			// 사진 배경은 별도
+			background-image: linear-gradient(90deg, rgba(15, 23, 41, 0.70) 0%, rgba(15, 23, 41, 0.30) 55%, rgba(15, 23, 41, 0.00) 100%),
+									linear-gradient(rgba(15, 23, 41, 0.22), rgba(15, 23, 41, 0.22)),
+									url("../../img/main/bg_header02.svg");
+			background-position: 0 0, 0 0, center;
+			background-size: auto, auto, cover;
+			background-repeat: no-repeat;
+		}
+	}
 	
-	.cl-container.calendar-wrap {
-		.cl-container.calendar-head {
-			border-bottom: 1px solid #e3e8ee;
-			
-			.cl-button.prev,
-			.cl-button.next {
-				.cl-icon {
-					margin: 0;
-				}
-				
-				.cl-text {
-					#sound-only();
-				}
-			}
-			
-			.cl-button.prev {
-				.cl-icon {
-					background-image: url("../../img/icons/ico_angle_left.svg") !important;
-				}
-			}
-			
-			.cl-button.next {
-				.cl-icon {
-					background-image: url("../../img/icons/ico_angle_right.svg") !important;
-				}
-			}
-			
-			.cl-output.head-text {
-				color: #0d253d;
-				font-size: 14px;
-				text-align: center;
+	.cl-container.header-ticker {
+		padding: 20px;
+		overflow: hidden;
+		background: linear-gradient(90deg, #2A588F 0%, #68BA94 43.75%, #5F5397 100%);
+		
+		.cl-output {
+			font-weight: 600;
+			color: @white;
+		}
+		
+		.cl-container.header-ticker-track {
+			width: max-content !important;
+			overflow: visible !important;
+			padding-right: 40px;
+			animation: header-ticker-marquee 40s linear infinite;
+
+			.cl-layout,
+			.cl-layout-content,
+			.cl-layout-wrap {
+				overflow: visible !important;
 			}
 		}
 		
-		.cl-container.calendar-body {
-			.cl-calendar:not(.cl-anniversaries) {
-				background-color: transparent;
-				border: none;
-				border-radius: 0;
-				padding: 0;
+		.cl-output.header-ticker-item {
+			text-align: center;
+		}
+	}
+	
+	.cl-container.dashboard {
+		// ===== 좌측 메인 영역 =====
+		.cl-container.dashboard-main {
+			.cl-container.disclosure-panel {
+				border-radius: 10px;
+				background-color: @mist-10;
+				padding: 20px;
 				
-				&,
-				.cl-calendar-field,
-				.cl-calendar-content-wrapper {
-					overflow: visible !important;
-				}
-				
-				
-				.cl-calendar-content-wrapper {
-					padding: 0;
-					
-					.cl-calendar-content {
-						gap: 4px;
-					}
-				}
-				
-				.cl-calendar-content {
-					padding: 0 16px;
-					
-					.cl-calendar-content-header {
-						width: 32px;
-						color: #64748d;
-						font-weight: 400;
-						line-height: 1.4;
-						padding: 4px 0;
-						text-transform: none;
-					}
-					
-					.cl-calendar-content-day,
-					.cl-other-month {
-						width: 32px;
-						height: 32px;
-						border-radius: 6px;
-					}
-					
-					.cl-calendar-content-day {
-						color: #0d253d;
+				.cl-container.panel-header {
+					.cl-output.panel-title {
+						font-size: 19px;
+						font-weight: 700;
 						
-						&.cl-calendar-anniversary {
-							
-							&.normal {
-								background-color: #ffffff;
-								box-shadow: inset 0 0 0 1px #e3e8ee;
-								
-								.cl-text::before {
-									content: none;
-								}
+							@media(max-width: 375px) {
+								font-size: 16px;
 							}
-							
-							&.urgent {
-								background-color: #fdeaf0;
-								box-shadow: inset 0 0 0 1px #f6b8ce;
-								
-								.cl-text::before {
-									top: 0;
-									right: 0;
-									left: unset;
-									width: 10px;
-									height: 10px;
-									background: url("../../img/icons/ico_system_info.svg") no-repeat center / contain;
-									transform: none;
-								}
-							}
-						}
 					}
 				}
 				
-				&:not(.cl-disabled) {
-					.cl-calendar-content {
-						.cl-calendar-content-day {
-							background-color: transparent;
-							box-shadow: inset 0 0 0 1px transparent;
+				.cl-container.disclosure-col {
+					.cl-container.disclosure-card-list {
+						.cl-container.disclosure-card {
+							border-radius: 10px;
+							background-color: @white;
+							padding: 14px 16px;
 							
-							&:not(.cl-disabled):hover,
-							&.cl-selected:not(.cl-disabled):hover {
-								background-color: #eeecff;
-								box-shadow: inset 0 0 0 1px #533afd, 0 1px 3px rgba(0, 55, 112, 0.08);
-								color: #0d253d;
-								transform: scale(1.06);
+							.cl-container.disclosure-card-meta {
+								.cl-output {
+									#font-caption();
+								}
+								
+								.cl-output.disclosure-card-ref {
+									color: #7B8AA0;
+								}
 							}
 							
-							&.cl-selected {
+							.cl-button.company-name {
+								text-align: left;
+								padding: 0px;
+								color: @gray-80;
+								font-weight: 600;
+							}
+							
+							.cl-button.disclosure-card-title {
+								text-align: left;
+								padding: 0px;
+								color: @gray-60;
 							}
 						}
 					}
 				}
 			}
 			
-			.cl-container.btn-wrap {
-				padding: 0 16px;
+			// 테이블형 카드 (Dividends & Rights / Market Actions)
+			.cl-container.data-card,
+			.cl-container.notice-card {
+				border-radius: 6px;
+				border: 1px solid #DFE3E8;
+				background-color: @white;
+				padding: 20px;
 				
-				.cl-button.today {
-					border-radius: 6px;
-					color: #533afd;
-					padding: 6px 8px;
-					
-					.cl-icon {
-						background-image: url("../../img/icons/ico_date.svg") !important;
+				.cl-output.card-tit {
+					font-size: 17px;
+					font-weight: 700;
+				}
+				
+				.cl-grid .cl-grid-cell .cl-button.btn-link {
+					padding: 8px 12px !important;
+					text-align: left;
+					color: @primary-80;
+				}
+			}
+		}
+
+		// ===== 우측 사이드 영역 =====
+		.cl-container.dashboard-aside {
+			
+			.cl-container.side-slider {
+				border-radius: 6px;
+				
+				.cl-output {
+					color: @white;
+				}
+				
+				// Market Highlights
+				.cl-container.slide01 {
+					padding: 24px 20px;
+					background-repeat:  no-repeat;
+					background-position: right 12px bottom 8px, 0 0;
+					background-image: url("../../img/main/ico_MarketHighligh.svg"), linear-gradient(90deg, #6DCC9D -7.41%, #437E88 99.86%); // 앞쪽 레이어가 위에 표시
+				}
+			}
+
+			.cl-container.ranking-card {
+				border-radius: 10px;
+				background-color: @mist-10;
+				padding: 20px;
+				
+				.cl-container.ranking-group {
+					.cl-container.calendar-group {
+
+					}
+					.cl-container.ranking-item {
+						.cl-button {
+							padding: 0px;
+							text-align: left;
+							font-size: 13px;
+							font-weight: 600;
+						}
 					}
 				}
 			}
-			
-			.cl-container.card-list {
-				border-top: 1px solid #e3e8ee;
+
+			// 프로모션 배너
+			.cl-button.promo-banner {
+				padding: 24px 20px;
+				white-space: pre-line;
+				text-align: left;
+				border: none;
+				border-radius: 6px;
+				background-repeat:  no-repeat;
+				background-position: right 0px bottom 8px, 0 0; // 이미지, 그라데이션 순서
 				
-				.cl-container.item {
-					background-color: #ffffff;
-					border: 1px solid #e3e8ee;
-					box-shadow: 0 1px 3px rgba(0,55,112,0.08);
-					border-radius: 12px;
+				&.orange {
+					background-image: url("../../img/main/ico_banner1.svg"), linear-gradient(90deg, #FFEDD5 0%, #FFCD93 100%); // 앞쪽 레이어가 위에 표시
+					color: #7C2D12;
+					font-size: 14px;
+					font-weight: 700;
 					
-					.cl-output.c-cate {
-						color: #ea2261;
-						font-size: 11px;
-					}
-					
-					.cl-button.c-tit {
-						color: #0d253d;
+					.info {
 						font-size: 13px;
-						font-weight: 600;
-						letter-spacing: -0.39px;
-						text-align: left;
+						font-weight: 400;
 					}
+				}
+				&.green {
+					background-image: url("../../img/main/ico_banner2.svg"), linear-gradient(90deg, #C2EFE4 0%, #72DAB6 100%); // 앞쪽 레이어가 위에 표시
+					color: #0C4A6E;
+					font-size: 14px;
+					font-weight: 700;
 					
-					.cl-output.c-date {
-						color: #64748d;
+					.info {
 						font-size: 13px;
-					}
-					
-					&.urgent {
-						background-color: #fdeaf0;
-						border-color: #f6b8ce;
+						font-weight: 400;
 					}
 				}
 			}
 		}
 	}
-	
-	.cl-container.gnb-panel,
-	.cl-container.side-bar {
-	  transition: width .2s cubic-bezier(0, 0, .2, 1);
-	}
-	.cl-container.collapsed { /* 여기엔 transition 없이 상태 값만 */ }
 }
 
-.cl-container.gnb-user-detail-popover {
-	background-color: #ffffff;
-	border: 1px solid #e3e8ee;
-	border-radius: 12px;
-	
-	.cl-button.close {
-		.cl-icon {
-			background-image: url("../../img/icons/ico_close.svg") !important;
+// ==========================================================================
+// 그리드 스타일 — 이 화면 전용 (공통 부분은 component/grid.part.less 를 사용하고, 다른 부분만 덮어씀)
+//  - 공통 그리드 스타일과 다른 값만 정의 (헤더/셀 색·여백·폰트, 행 상태, hover)
+// ==========================================================================
+@grid-main--color-row-border: #DAE2EC;   // 행 간 보더 (팔레트에 없는 값)
+@grid-main--color-row-hover:  @gray-10;  // #F1F5F9 — 행 hover 배경
+@grid-main--head-background:  #E9EEF4;   // 헤더 배경 (팔레트에 없는 값)
+@grid-main--padding:          8px 12px;  // 헤더·데이터 셀 공통 여백
+@grid-main--cell-font-size:   13px;
+
+.cl-container.main-content {
+	.cl-grid {
+		border: none;
+		border-radius: 0;
+		color: @gray-70;   // #334155
+
+		.cl-grid-cell {
+			border-bottom-color: @grid-main--color-row-border;
+
+			// 선택된 셀: 행 배경을 따름 (기본 흰 바탕)
+			&.cl-selected {
+				background-color: inherit;
+			}
+		}
+
+		// 데이터 셀 여백
+		.cl-grid-cell,
+		.cl-default-cell {
+			.cl-control {
+				&.cl-default-cell,
+				&.cl-output,
+				&.cl-checkbox,
+				&.cl-checkboxgroup,
+				&.cl-radiobutton {
+					padding: @grid-main--padding;
+				}
+			}
+		}
+
+		/* ---------- 헤더 ---------- */
+		.cl-grid-header {
+			background-color: @grid-main--head-background;
+			color: @gray-60;   // #475569
+			font-weight: @font-weight-semibold;
+
+			.cl-grid-cell {
+				border-bottom: 0;
+
+				.cl-control.cl-default-cell,
+				.cl-control.cl-output {
+					padding: @grid-main--padding;
+				}
+			}
+
+			// 정렬 가능한 헤더 텍스트는 아이콘과 붙도록 우측 여백 없음
+			.cl-sortable-cell > .cl-grid-cell-inherit {
+				.cl-control.cl-default-cell,
+				.cl-control.cl-output {
+					padding-right: 0;
+				}
+			}
+		}
+
+		/* ---------- 디테일 ---------- */
+		.cl-grid-detail {
+			font-size: @grid-main--cell-font-size;
+
+			.cl-grid-cell .cl-control {
+				font-size: inherit;
+			}
+
+			.cl-grid-row {
+				color: @gray-70;
+
+				// 행 상태는 모두 기본(흰 바탕). 삭제 행 글자색은 공통 스타일 그대로 유지
+				&.cl-inserted,
+				&.cl-modified,
+				&.cl-deleted,
+				&.cl-nullified,
+				&.cl-selected,
+				&.cl-editing {
+					background: transparent;
+				}
+
+				.cl-grid-cell.cl-selected {
+					background: inherit;
+				}
+
+				// hover — 행 상태 규칙보다 뒤에 선언해 어떤 상태에서도 hover 색이 보이게 함
+				&:hover {
+					background-color: @grid-main--color-row-hover;
+
+					.cl-grid-cell {
+						background-color: inherit;
+					}
+				}
+			}
+		}
+	}
+}
+
+.cl-container.advanced-search {
+	/* 띄울 때 헤더(z-index: 10) 위에 흰 배경으로 보이도록 (런타임이 z-index 를 지정하므로 !important) */
+	background-color: #FFF;
+	z-index: 12 !important;
+//	padding: 0px 24px;   // 헤더(header-wrap)와 같은 좌우 여백. 내용 폭은 1320px 고정, 1400px 이하는 가변(Main.js)
+//	
+//	@media(max-width: 1024px) {
+//		padding: 0px 24px;
+//	}
+//	
+//	@media(max-width: 375px) {
+//		padding: 0px 16px;
+//	}
+
+	.cl-container.header {
+		padding: 18px 0px;
+		
+		.cl-output.tit {
+			color: @secondary-90;
+			font-size: 17px;
+			font-weight: 700;
 		}
 		
-		.cl-text {
-			#sound-only();
+		.cl-button.btn-close {
+			border-radius: 8px;
+			border: 1px solid @gray-30;
+			background-color: @white;
 		}
 	}
 	
-	.cl-container.line {
-		border-bottom: 1px solid #e3e8ee;
-		padding-bottom: 16px;
+	.cl-container.content {
+		padding: 24px 0px;
+		border-top: 1px solid #DAE2EC;
+		border-bottom: 1px solid #DAE2EC;
 	}
 	
-	.cl-container.popover-head {
-		background-color: #ffffff;
-		padding-bottom: 16px;
-		border-bottom: 1px solid #e3e8ee;
+	.cl-container.footer {
+		padding: 16px 0px 28px 0px;
+	}
+	
+	@media(max-width: 1400px) {
+		.cl-container.header {
+			padding: 18px 24px;
+		}
 		
-		.cl-output.name {
-			color: #0d253d;
-			font-size: 15px;
-			font-weight: 600;
-			
-			&.full {
-				color: #64748d;
-				font-size: 11px;
+		.cl-container.content {
+			padding: 20px 24px;
+		}
+		
+		.cl-container.footer {
+			padding: 24px;
+		}
+	}
+
+	@media(max-width: 375px) {
+		.cl-container.header {
+			padding: 16px;
+		}
+		
+		.cl-container.content {
+			padding: 20px 16px;
+			border-bottom: none;
+		}
+		
+		.cl-container.footer {
+			padding: 0px 16px 24px 16px;
+		}
+	}
+}
+
+/* 모바일 메뉴가 떠 있을 때 뒤에 깔리는 어두운 배경 */
+/* 헤더(z-index: 10, layout.part.less)보다 위에 떠야 하므로 어두운 배경 11, 패널 12 (런타임이 1, 2 를 지정하므로 !important) */
+.cl-container.mobile-dim {
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 11 !important;
+}
+
+.cl-container.mobile-menu {
+	padding: 16px 16px 24px 16px;
+	background-color: #FFF;
+	z-index: 12 !important;
+	
+	.cl-container.header {
+	}
+
+	/* 모바일 메뉴 사이드 내비게이션 — 뎁스별 글자 스타일 (선택/호버/포커스 스타일 없음) */
+	.cl-sidenavigation {
+		border-top: 1px solid #E2E8F0;
+		border-bottom: 1px solid #E2E8F0;
+		padding: 8px 0px;
+		
+		.cl-sidenavigation-item {
+			min-height: 0;
+			padding-right: 8px;
+
+			/* 항목 아이콘 — 사용하지 않음 (빈 영역이 폭을 차지하므로 제거) */
+			.cl-icon {
+				display: none;
+			}
+
+			/* 펼침 화살표 — 텍스트 왼쪽에 배치 (아이템이 인라인 grid 로 그려지므로 !important 로 열 위치를 덮어씀) */
+			.cl-expand-icon {
+				grid-column: 1 !important;
+				width: 16px;
+				height: 16px;
+				margin-right: 8px;
+			}
+
+			/* 선택(cl-selected)된 항목은 런타임 CSS 가 화살표를 선택용 이미지로 바꿔 보이지 않으므로, 선택 여부와 관계없이 같은 화살표를 유지 */
+			&.cl-folder.cl-collapsed .cl-expand-icon,
+			&.cl-folder.cl-expanded .cl-expand-icon {
+				background-image: url("../../img/icons/ico_angle.svg") !important;
+				background-position: center !important;
+				background-repeat: no-repeat !important;
+				background-size: contain !important;
+			}
+
+			/* 하위가 없는 항목 — 화살표 자리만큼 들여써서 텍스트 시작 위치를 맞춤 (16px 아이콘 + 8px 간격) */
+			&:not(.cl-folder) .cl-text {
+				padding-left: 24px;
+			}
+
+			&.cl-level-1 {
+				padding-top: 12px;
+				padding-bottom: 12px;
+				padding-left: 0;
+				color: #1E293B;
+				font-size: 15px;
+				font-weight: 700;
+			}
+
+			&.cl-level-2 {
+				padding-top: 9px;
+				padding-bottom: 9px;
+				padding-left: 16px;
+				color: #1E293B;
+				font-size: 14px;
+				font-weight: 700;
+			}
+
+			&.cl-level-3 {
+				padding-top: 9px;
+				padding-bottom: 9px;
+				padding-left: 32px;
+				color: #475569;
+				font-size: 14px;
 				font-weight: 400;
 			}
 		}
 	}
 	
-	.cl-container.btn-wrap {
-		.cl-button.primary {
-			background-color: #533afd;
-			border-radius: 0;
-			color: #ffffff;
-			font-size: 13px;
-			font-weight: 600;
-			letter-spacing: -0.39px;
-			padding: 8px 12px;
+	.cl-button.btn-site {
+		border-radius: 8px;
+		border: 1px solid @gray-20;
+		background: @gray-5;
+		padding: 14px;
+
+		/* 텍스트는 왼쪽 끝, 아이콘은 오른쪽 끝 (런타임이 인라인 스타일로 가운데 정렬하므로 !important) */
+		.cl-text-wrapper {
+			display: flex !important;
+			width: 100% !important;
+			justify-content: space-between !important;
+		}
+
+		.cl-icon {
+			background-image: url("../../img/main/ico_external.svg") !important;
 		}
 	}
 }

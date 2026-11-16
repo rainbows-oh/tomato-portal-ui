@@ -1,237 +1,253 @@
-@import "../../custom-settings.part.less";
-@import (reference) "../common/_include.part.less";
+@import (reference) "../../custom-settings.part.less";
 
-/************************************************
- * [UDC] 앱헤더
- ************************************************/
-.cl-container.app-header {
-	.cl-output {
-		font-weight: 600;
-		font-size: 15px;
-		color: #0d253d;
-	}
-}
+/* ==========================================================================
+ * udcComGnb — 헤더 내비게이션(메가메뉴)
+ *  - 쉘로 직접 그린 DOM 용 스타일 (.gnb-*)
+ *  - 상단 바: 메뉴가 텍스트 길이만큼만 차지
+ *  - 패널: 화면 전체 폭(position: fixed), 내용은 컨텐츠 영역(1320px)에 맞춰 정렬
+ * ========================================================================== */
+@gnb-bar-height:      64px;
+@gnb-color-text:      #475569;
+@gnb-color-text-hover:#1E293B;
+@gnb-color-accent:    #1BAADE;
+@gnb-color-divider:   #E2E8F0;
+@gnb-color-title:     #121738;   // 열 제목, 그룹 제목
+@gnb-color-item:      #262B33;   // 하위 항목
 
-/************************************************
- * [UDC] 조회영역 토글
- ************************************************/
-.cl-container.udc-search-toggle {
-	.cl-button.btn-expand {
-		text-align: left;
-		font-size: 15px;
-		font-weight: 600;
-		padding: 0px;
-		background: url("../../img/icons/ico_angle_down.svg") no-repeat center right;
-		background-size: 18px;
-		
-		&:not(.cl-disabled):hover,
-		&:not(.cl-disabled).cl-hover {
-			background-color: #EFF1F5;
-		}
-		
-		
-		&.collapse {
-			background: url("../../img/icons/ico_angle_up.svg") no-repeat center right;
-			background-size: 18px;
-		}
-	}
-}
+.gnb {
+	font-family: inherit;
 
-/************************************************
- * [UDC] 컨텐츠 그리드/카드 토글
- ************************************************/
-.cl-container.viewmode {
-	.cl-button {
-		border-radius: 6px;
-		padding: 0;
-		
-		.cl-icon {
-			margin: 0;
-		}
-		
-		&.btn-grid {
-			.cl-icon {
-				background-image: url("@{img-path}/icons/pages/ico_grid.svg") !important;
-			}
-		}
-		
-		&.btn-card {
-			.cl-icon {
-				background-image: url("@{img-path}/icons/pages/ico_card.svg") !important;
-			}
-		}
-		
-		&.active {
-			background-color: #eef1f5;
-		}
-	}
-}
-
-/************************************************
- * [UDC] 페이지 인덱서
- ************************************************/
-.cl-container.pagination {
-	margin-top: 16px;
-	padding: 12px 0;
-	
-	.cl-output.page-info {
-		color: #64748d;
-		font-size: 13px;
-		font-weight: @font-weight-normal;
-		letter-spacing: -0.39px;
-	}
-	
-	.cl-combobox.page-size {
-		.cl-text {
-			padding: 0 12px;
-		}
-	}
-	
-	.cl-button.page-navi {
-		border: 1px solid #e3e8ee;
-		padding: 8px 12px;
-		
-		.shortcut {
-			min-height: 16px !important;
-			min-width: 16px !important;
-			margin-bottom: 1px;
-		}
-		
-		&.prev {
-			border-radius: @border-radius-full 0 0 @border-radius-full;
-			border-right-color: transparent;
-			
-			.shortcut {
-				margin-right: 4px;
-			}
-			
-			.cl-icon {
-	 			background-image: url("../../img/icons/ico_angle_left.svg") !important;
-	 		}
-	 		
-	 		&.cl-disabled {
-	 			.cl-icon {
-	 				background-image: url("../../img/icons/ico_pagination_left_disable.svg") !important;
-	 			}
-	 		}
-		}
-		
-		&.next {
-			border-radius: 0 @border-radius-full @border-radius-full 0;
-			
-			.shortcut {
-				margin-left: 4px;
-			}
-			
-			.cl-icon {
-	 			background-image: url("../../img/icons/ico_angle_right.svg") !important;
-	 		}
-	 		
-	 		&.cl-disabled {
-	 			.cl-icon {
-	 				background-image: url("../../img/icons/ico_pagination_right_disable.svg") !important;
-	 			}
-	 		}
-		}
-		
-		&.cl-disabled {
-			background-color: #ffffff;
-			border-color: #e3e8ee;
-			opacity: .4;
-		}
-	}
-}
-
-/************************************************
- * [UDC] 리스트 상세 화면들의 Replies 컨텐츠 상단 open-closed 토글 버튼
- ************************************************/
-.cl-radiobutton.rep-toggle {
-	border: 1px solid #e3e8ee;
-	border-radius: 999px;
-	overflow: hidden !important;
-	max-height: 32px;
-	
-	.cl-radiobutton-item {
-		padding: 6px 12px;
-		
-		&.open {
-			background-color: #fcf4d6;
-			color: #8e6a00;
-		}
-		
-		&.close {
-			background-color: #ebedef;
-			color: #313b49;
-		}
-	}
-}
-
-/************************************************
- * [UDC] 파일 드롭존 업로드
- ************************************************/
-.cl-container.udc-file-dropzone {
-	.dropzone {
-		border: 1px dashed #533afd;
-		border-radius: 8px;
+	button {
+		font-family: inherit;
 		cursor: pointer;
-		padding: 16 + 24px 16px 16px 16px;
-		background-image: url("../../img/icons/ico_upload.svg");
-		background-position: center top 20px;
-		background-repeat: no-repeat;
-		background-color: #f6f9fc;
-		
-		.cl-output.tit {
-			color: #0d253d;
-			font-weight: 600;
-			text-align: center;
-		}
-		
-		.cl-output.info {
-			color: #64748d;
-			font-size: 11px;
-			text-align: center;
-		}
-		
-		&.dragover {
-			background-color: @primary-5;
-			border-color: @primary;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	/* ---------- 상단 바 ---------- */
+	.gnb-bar {
+		display: flex;
+		align-items: stretch;
+		height: @gnb-bar-height;
+
+		.gnb-bar-item + .gnb-bar-item {
+			margin-left: 24px;
 		}
 	}
-	
-	.attachments {
-		align-items: center;
-		background-color: #ffffff;
-		border: 1px solid #e3e8ee;
-		border-radius: 6px;
-		padding: 8px;
-		background-image: url("../../img/icons/ico_file.svg");
-		background-position: center left 8px;
-		background-repeat: no-repeat;
-		
-		.name {
-			#ellipsis();
-			font-weight: 600;
-			
-			.size {
-				color: #64748d;
-				font-weight: 400;
+
+	.gnb-trigger {
+		height: 100%;
+		padding: 0;
+		background: transparent;
+		border: 0;
+		border-bottom: 3px solid transparent;   // focus 시 색만 바뀌도록 자리 확보
+		color: @gnb-color-text;
+		font-size: 16px;
+		font-weight: 700;
+		white-space: nowrap;
+
+		&:hover {
+			color: @gnb-color-text-hover;
+		}
+
+		// focus(클릭) / 패널이 열려 있는 메뉴
+		&:focus,
+		&[aria-expanded="true"] {
+			color: @gnb-color-accent;
+			border-bottom-color: @gnb-color-accent;
+			outline: 0;
+		}
+	}
+
+	/* ---------- 패널 ---------- */
+	.gnb-panel {
+		display: none;
+		position: fixed;
+		left: 0;
+		right: 0;
+		z-index: 10;
+		background-color: @white;
+		box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+
+		&.is-open {
+			display: block;
+		}
+	}
+
+	.gnb-panel-inner {
+		box-sizing: border-box;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr)) 320px;   // 메뉴 열 3 + 우측 별도 영역
+		max-width: @content-width;
+		margin: 0 auto;
+		padding: 32px 24px 40px;
+	}
+
+	/* 열 */
+	.gnb-col {
+		padding: 0 32px;
+		border-left: 1px solid @gnb-color-divider;
+
+		&:first-child {
+			padding-left: 0;
+			border-left: 0;
+		}
+	}
+
+	/* 열 제목 (최상위 메뉴와 같은 링크) */
+	.gnb-col-title {
+		margin: 0 0 22px;
+		line-height: 24px;
+	}
+
+	.gnb-col-link {
+		padding: 0;
+		background: transparent;
+		border: 0;
+		color: @gnb-color-title;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 24px;
+		text-align: left;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+
+	/* 그룹 (PSE, PDEx) */
+	.gnb-group + .gnb-group {
+		margin-top: 22px;
+	}
+
+	// 그룹 제목은 링크가 아닌 제목
+	.gnb-group-title {
+		margin: 0 0 10px;
+		color: @gnb-color-title;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 22px;
+	}
+
+	/* 하위 항목 */
+	.gnb-list {
+		.gnb-item + .gnb-item {
+			margin-top: 14px;
+		}
+
+		.gnb-link {
+			padding: 0 0 0 10px;   // 좌측 들여쓰기
+			background: transparent;
+			border: 0;
+			color: @gnb-color-item;
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 22px;
+			text-align: left;
+
+			&:hover,
+			&:focus {
+				text-decoration: underline;
 			}
 		}
 	}
-	
-	.cl-button.remove {
-		background-color: transparent;
-		background-image: url("../../img/icons/ico_close.svg");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: 14px;
-		min-width: 20px;
-		padding: 0;
 
-		&:not(.cl-disabled):hover,
-		&:not(.cl-disabled).cl-hover {
-			background-color: #ebedef;
-			border-radius: 999px;
+	/* ---------- 우측 별도 영역 ---------- */
+	.gnb-aside {
+		padding: 0 0 0 32px;
+		border-left: 1px solid @gnb-color-divider;
+	}
+
+	.gnb-card {
+		padding: 16px;
+		background-color: @gray-5;
+		border: 1px solid @gray-20;
+		border-radius: 8px;
+	}
+
+	.gnb-card-head {
+		display: flex;
+		align-items: flex-start;
+		gap: 12px;
+	}
+
+	.gnb-card-icon {
+		flex: 0 0 40px;
+		width: 40px;
+		height: 40px;
+		background: @gray-80 url("../../img/main/ico_market_cal.svg") center / 20px 20px no-repeat;
+		border-radius: 8px;
+	}
+
+	.gnb-card-title {
+		display: block;
+		color: #121738;
+		font-size: 16px;
+		font-weight: 700;
+	}
+
+	.gnb-card-desc {
+		margin: 2px 0 0;
+		color: @gnb-color-text;
+		font-size: 12px;
+		color: #6B7380;
+		white-space: pre-line;   // 문구의 줄바꿈 문자에서 줄을 바꿈
+	}
+
+	.gnb-card-btn {
+		display: block;
+		box-sizing: border-box;
+		width: 100%;
+		height: 36px;
+		margin: 12px 0 0;
+		padding: 0 16px;
+		background-color: #5AC0E4;
+		border: 0;
+		border-radius: 999px;
+		color: @white;
+		font-size: 15px;
+		font-weight: 700;
+
+		&:hover {
+			opacity: 0.9;
 		}
+	}
+
+	.gnb-site-list {
+		margin-top: 12px;
+
+		.gnb-site-item + .gnb-site-item {
+			margin-top: 8px;
+		}
+	}
+
+	.gnb-site-link {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px 12px;
+		background-color: #FFF;
+		border: 1px solid #E5E8ED;
+		border-radius: 8px;
+		color: @gnb-color-title;   // #121738
+		font-size: 14px;
+		font-weight: 700;
+		text-decoration: none;
+
+		&:hover {
+			background-color: @gray-5;
+		}
+	}
+
+	.gnb-site-icon {
+		flex: 0 0 16px;
+		width: 16px;
+		height: 16px;
+		background: url("../../img/main/ico_external.svg") center / contain no-repeat;
 	}
 }

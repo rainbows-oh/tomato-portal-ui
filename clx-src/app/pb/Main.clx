@@ -1,0 +1,405 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-f51cf9b7" version="1.0.6164">
+  <head std:sid="head-55e86b60">
+    <screen std:sid="screen-23c0e215" id="default" name="default" width="1025px" height="768px" useCustomWidth="true" useCustomHeight="true" customHeight="2000" customWidth="1920" active="true"/>
+    <screen std:sid="screen-5c35466f" id="tablet" name="tablet" width="376px" height="667px" useCustomWidth="true" customWidth="1024"/>
+    <screen std:sid="screen-f95919f1" id="mobile" name="mobile" width="375px" height="525px"/>
+    <cl:model std:sid="model-2a65c7ab">
+      <cl:dataset std:sid="d-set-a21f8a84" id="dsMobileMenu">
+        <cl:datacolumnlist>
+          <cl:datacolumn std:sid="d-column-04698abe" name="MENU_NM"/>
+          <cl:datacolumn std:sid="d-column-18ee01d6" name="MENU_ID"/>
+          <cl:datacolumn std:sid="d-column-bdeec332" name="UP_MENU_ID"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Company List]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M01]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[PSE]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M0101]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M01]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Listed Companies]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M010101]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0101]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Green Equity Label]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M010102]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0101]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[PMRC Companies]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M010103]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0101]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Watch List]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M010104]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0101]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[PDEx]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M0102]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M01]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Issuers]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M010201]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0102]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Green Equity Label (TBD)]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M010202]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0102]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Watch List]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M010203]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0102]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Disclosures]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M02]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[PSE]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M0201]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M02]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Company Disclosures]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M020101]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0201]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Company Announcements]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M02010101]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M020101]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Financial Reports]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M02010102]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M020101]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Other Reports]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M02010103]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M020101]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Dividends & Rights]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M020102]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0201]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Market Actions]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M020103]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0201]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Exchange Notices]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M020104]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0201]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Disclosure Notices]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M02010401]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M020104]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Listing Notices]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M02010402]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M020104]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[PDEx]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M0202]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M02]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Company Disclosures]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M020201]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0202]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Company Announcements]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M02020101]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M020201]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Financial Reports]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M02020102]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M020201]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Other Reports]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M02020103]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M020201]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Dividends & Rights]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M020202]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0202]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Market Actions]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M020203]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0202]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Exchange Notices]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M020204]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0202]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Disclosure Notices]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M02020401]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M020204]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Listing Notices]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M02020402]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M020204]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Products]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M03]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[PSEi]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M0301]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M03]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[ETF]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M0302]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M03]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[REIT]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M0303]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M03]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[GPDR]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M0304]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M03]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Structured Warrants]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M0305]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M03]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Market Calendar]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M04]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-744fe03d" class="main">
+    <cl:listener std:sid="listener-9041fa2d" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-7d22c792" name="screen-change" handler="onBodyScreenChange"/>
+    <cl:group std:sid="group-aebb1bb3" class="header-wrap">
+      <cl:verticaldata std:sid="v-data-d64fb57d" width="1920px" height="64px" autosize="height"/>
+      <cl:group std:sid="group-b39dea1e" id="grpHeader" class="header">
+        <cl:verticaldata std:sid="v-data-d2f86ea9" width="1320px" height="64px" autosize="height"/>
+        <cl:group std:sid="group-e17a5e08" class="left">
+          <cl:formdata std:sid="f-data-7b7deb61" row="0" col="0"/>
+          <cl:button std:sid="button-ae4d2404" id="btnMMenu" class="icon btn-m-menu" visible="false" value="Button" icon="0">
+            <cl:listener std:sid="listener-66349aee" name="click" handler="onBtnMMenuClick"/>
+            <cl:flowlayoutdata std:sid="f-data-15b0749b" width="24px" height="40px" autosize="none"/>
+          </cl:button>
+          <cl:button std:sid="button-a5478be6" class="logo icon" icon="0">
+            <cl:flowlayoutdata std:sid="f-data-c54727ef" width="100px" height="40px" autosize="width"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-cc430526" hspacing="16"/>
+        </cl:group>
+        <cl:udc std:sid="ud-control-bd3993c4" id="udcComGnb1" type="udc.com.udcComGnb">
+          <cl:formdata std:sid="f-data-6e34723e" row="0" col="1"/>
+        </cl:udc>
+        <cl:group std:sid="group-d7bbd2b1" class="header-utils">
+          <cl:formdata std:sid="f-data-647ee846" valign="FILL" height="40" row="0" col="2"/>
+          <cl:searchinput std:sid="s-input-cf6a1835" id="iptSearch" searchposition="left" placeholder="Search companies, disclosures...">
+            <cl:flowlayoutdata std:sid="f-data-d73c0f0f" width="240px" height="40px" autosize="none"/>
+          </cl:searchinput>
+          <cl:button std:sid="button-813d2796" id="btnAdvSearch" class="btn-advsearch" value="Advanced Search" icon="0">
+            <cl:listener std:sid="listener-5e21a7c0" name="click" handler="onBtnAdvSearchClick"/>
+            <cl:flowlayoutdata std:sid="f-data-4445046d" width="165px" height="40px" autosize="width"/>
+          </cl:button>
+          <cl:button std:sid="button-092b9cd5" id="btnMSearch" class="icon btn-m-search" visible="false" value="Button" icon="0">
+            <cl:flowlayoutdata std:sid="f-data-e254a0ef" width="24px" height="40px"/>
+          </cl:button>
+          <cl:button std:sid="button-fdf46ba8" id="btnMAdvSearch" class="icon btn-m-adv-search" visible="false" value="Button" icon="0">
+            <cl:listener std:sid="listener-8d47b6f2" name="click" handler="onBtnAdvSearchClick"/>
+            <cl:flowlayoutdata std:sid="f-data-62025dae" width="24px" height="40px" autosize="none"/>
+          </cl:button>
+          <cl:flowlayout std:sid="f-layout-d2604cfa" halign="right"/>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-83e8d125" scrollable="false" hspace="16px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="150" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+          <cl:columns length="500" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-a72f52ba" distribution="center" spacing="0"/>
+    </cl:group>
+    <cl:group std:sid="group-da8d7bc0">
+      <cl:verticaldata std:sid="v-data-4f5667c6" width="1920px" height="1000px" autosize="height"/>
+      <cl:embeddedapp std:sid="e-app-50700049" id="ea1" src="Main_content.clx">
+        <cl:verticaldata std:sid="v-data-1be7c01f" width="320px" height="1000px" autosize="height"/>
+      </cl:embeddedapp>
+      <cl:verticallayout std:sid="v-layout-0fc4b2e1"/>
+    </cl:group>
+    <cl:group std:sid="group-05c3c2de" class="footer-wrap">
+      <cl:verticaldata std:sid="v-data-b92245af" width="1920px" height="256px" autosize="height"/>
+      <cl:group std:sid="group-99c161b7" id="grpFooter">
+        <cl:verticaldata std:sid="v-data-b02bd6e4" width="1320px" height="164px" autosize="height"/>
+        <cl:group std:sid="group-6dec15c2" class="footer-top">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-88a01222" width="100" height="-55" row="0" col="0" rowspan="1" colspan="1"/>
+          <cl:group std:sid="group-ae3bc1eb">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-73890230" row="0" col="0"/>
+            <cl:button std:sid="button-38d648b9" value="About PSE EDGE">
+              <cl:flowlayoutdata std:sid="f-data-628f749c" width="127px" height="20px" autosize="both"/>
+            </cl:button>
+            <cl:button std:sid="button-f7497264" value="Disclaimer">
+              <cl:flowlayoutdata std:sid="f-data-0d91d099" width="127px" height="20px" autosize="both"/>
+            </cl:button>
+            <cl:button std:sid="button-b637a3e9" value="Privacy Policy">
+              <cl:flowlayoutdata std:sid="f-data-c0a7c6a9" width="127px" height="20px" autosize="both"/>
+            </cl:button>
+            <cl:button std:sid="button-037cb8b9" value="Link Policy">
+              <cl:flowlayoutdata std:sid="f-data-bdf770ba" width="127px" height="20px" autosize="both"/>
+            </cl:button>
+            <cl:button std:sid="button-1d603fd5" value="Site Map">
+              <cl:flowlayoutdata std:sid="f-data-9141357d" width="127px" height="20px" autosize="both"/>
+            </cl:button>
+            <cl:button std:sid="button-1c8da00a" value="Contact Us">
+              <cl:flowlayoutdata std:sid="f-data-6d7c0777" width="127px" height="20px" autosize="both"/>
+            </cl:button>
+            <cl:button std:sid="button-9c312e9c" value="FAQs">
+              <cl:flowlayoutdata std:sid="f-data-6bddfde4" width="127px" height="20px" autosize="both"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-c5d1fd9c" hspacing="16" vspacing="10"/>
+          </cl:group>
+          <cl:group std:sid="group-f3acda04">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-c37cdcca" row="0" col="1"/>
+            <cl:button std:sid="button-f194e598" value="PSE Website ↗">
+              <cl:flowlayoutdata std:sid="f-data-bf3ee841" width="116px" height="20px" autosize="both"/>
+            </cl:button>
+            <cl:button std:sid="button-d1ccad61" value="PDS Website ↗">
+              <cl:flowlayoutdata std:sid="f-data-bc0b7fa8" width="116px" height="20px" autosize="both"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-7790ca1d" hspacing="16"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-dcb32e7c" scrollable="false" hspace="1fr" vspace="16px" hseparatorwidth="1">
+            <cl:rows length="20" unit="PIXEL" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+            <cl:columns length="1004" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="300" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-04e609df" class="footer-bottom">
+          <cl:attribute name="mobile-column-count" value="1"/>
+          <cl:attribute name="needs-auto-height" value="true"/>
+          <cl:formdata std:sid="f-data-6d4401ba" width="100" height="-15" row="1" col="0"/>
+          <cl:group std:sid="group-2df03543" class="f-b-left">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-da8df612" width="100" height="-15" row="0" col="0"/>
+            <cl:button std:sid="button-8cb39a85" value="PSE EDGE">
+              <cl:verticaldata std:sid="v-data-9a2adf00" width="124px" height="24px" autosize="both"/>
+            </cl:button>
+            <cl:group std:sid="group-32da80ed">
+              <cl:verticaldata std:sid="v-data-966feef0" width="863px" height="75px" autosize="both"/>
+              <cl:output std:sid="output-5b28bdb6" value="All materials on this website are protected by copyright and intellectual property laws and are the property of The Philippine Stock Exchange, Inc. &#xD;&#xA;Unless stated otherwise, you may access and download the materials located on the website only for personal, non-commercial use.">
+                <cl:verticaldata std:sid="v-data-9e38f49e" width="852px" height="43px" autosize="height"/>
+              </cl:output>
+              <cl:output std:sid="output-d9c2ae60" value="© 2027 The Philippine Stock Exchange, Inc. All Rights Reserved.">
+                <cl:verticaldata std:sid="v-data-68914e79" width="100px" height="20px" autosize="height"/>
+              </cl:output>
+              <cl:verticallayout std:sid="v-layout-dc6dbb3e" spacing="12"/>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-924cecc2" distribution="leading" spacing="16"/>
+          </cl:group>
+          <cl:group std:sid="group-1cd6231b" class="f-b-right">
+            <cl:attribute name="needs-auto-height" value="true"/>
+            <cl:formdata std:sid="f-data-4c916444" row="0" col="1"/>
+            <cl:button std:sid="button-6a74ce2b" class="btn-sns fb icon" value="Contact Us" icon="0">
+              <cl:flowlayoutdata std:sid="f-data-3fe3c495" width="24px" height="24px" autosize="both"/>
+            </cl:button>
+            <cl:button std:sid="button-abd2344e" class="btn-sns tw icon" value="FAQs" icon="0">
+              <cl:flowlayoutdata std:sid="f-data-21e6818b" width="24px" height="24px" autosize="both"/>
+            </cl:button>
+            <cl:flowlayout std:sid="f-layout-eabd1b9f" hspacing="12"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-4ac4dc3e" scrollable="false" hspace="1fr" vspace="16px" hseparatorwidth="1">
+            <cl:rows length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1004" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="300" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:formlayout std:sid="f-layout-7cc17211" scrollable="false" hspace="0px" vspace="32px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px" hseparatorwidth="1" hseparatortype="BY_CLASS">
+          <cl:rows length="20" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:rows length="112" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-02912f10" distribution="center" spacing="0"/>
+    </cl:group>
+    <cl:group std:sid="group-6829217a" id="grpMobileSideMenu" class="mobile-menu" visible="false">
+      <cl:verticaldata std:sid="v-data-dbe42536" width="375px" height="366px" autosize="height"/>
+      <cl:group std:sid="group-b54bfff8" class="header">
+        <cl:verticaldata std:sid="v-data-04839180" width="400px" height="40px" autosize="height"/>
+        <cl:button std:sid="button-d33a0e7c" id="btnMobileMenuClose" class="icon btn-close" icon="0">
+          <cl:listener std:sid="listener-3b9c1e47" name="click" handler="onBtnMobileMenuCloseClick"/>
+          <cl:flowlayoutdata std:sid="f-data-aeed8026" width="40px" height="40px" autosize="none"/>
+        </cl:button>
+        <cl:output std:sid="output-11c31095" value="PSE EDGE">
+          <cl:flowlayoutdata std:sid="f-data-6e1965f1" width="100px" height="20px" autosize="both"/>
+        </cl:output>
+        <cl:flowlayout std:sid="f-layout-527bb95e" hspacing="10"/>
+      </cl:group>
+      <cl:sidenavigation std:sid="s-navigation-30ce4843" id="snbMenu">
+        <cl:verticaldata std:sid="v-data-514b4bff" width="200px" height="150px" autosize="height"/>
+        <cl:treeitemset datasetid="dsMobileMenu" label="MENU_NM" value="MENU_ID" parent="UP_MENU_ID"/>
+      </cl:sidenavigation>
+      <cl:group std:sid="group-cc077e51">
+        <cl:verticaldata std:sid="v-data-7cd02cf9" width="343px" height="104px" autosize="height"/>
+        <cl:button std:sid="button-dc348a97" class="btn-site" value="PSE Site" icon="0" iconalign="right">
+          <cl:verticaldata std:sid="v-data-686e673a" width="100px" height="47px" autosize="height"/>
+        </cl:button>
+        <cl:button std:sid="button-eb90d6c8" class="btn-site" value="PDEx Site" icon="0" iconalign="right">
+          <cl:verticaldata std:sid="v-data-44211e57" width="100px" height="47px" autosize="height"/>
+        </cl:button>
+        <cl:verticallayout std:sid="v-layout-607e6250" spacing="10"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-5e1a7595" spacing="16"/>
+    </cl:group>
+    <cl:group std:sid="group-64a06cb1" id="grpMobileAdvSearch" class="advanced-search" visible="false">
+      <cl:verticaldata std:sid="v-data-4616145e" width="1200px" height="415px" autosize="height"/>
+      <cl:embeddedapp std:sid="e-app-abbcaca7" id="emaAdvSearch" src="AdvancedSearch.clx">
+        <cl:verticaldata std:sid="v-data-320d2322" width="100%" height="415px" autosize="height"/>
+      </cl:embeddedapp>
+      <cl:verticallayout std:sid="v-layout-b1fe559f" distribution="center" spacing="0"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-ae1cafcf" spacing="0"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

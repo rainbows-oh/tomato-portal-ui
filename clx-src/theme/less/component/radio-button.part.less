@@ -10,6 +10,9 @@
 
 @import (reference) "../common/_include.part.less";
 
+/* 파일 지역 변수 (@radio-- 접두어) — 아이콘·텍스트 간격 */
+@radio--gap: @gap-4; /* 8px */
+
 /* ==========================================================================
  Mixins
  ========================================================================== */
@@ -31,11 +34,15 @@
 }
 
 #radio--hover() {
-	background-image: url("@{img-path}/icons/ico_radio.svg");
+	background-image: url("@{img-path}/icons/ico_radio_hover.svg");
 }
 
 #radio--selected() {
 	background-image: url("@{img-path}/icons/ico_radio_selected.svg");
+}
+
+#radio--selected-hover() {
+	background-image: url("@{img-path}/icons/ico_radio_selected_hover.svg");
 }
 
 #radio--focus() {
@@ -65,19 +72,19 @@
 	
 	/* --- Layout — 정렬 --- */
 	&.cl-iconalign-left .cl-text {
-		padding: 0 0 0 @size-component-gap;
+		padding: 0 0 0 @radio--gap;
 	}
 	
 	&.cl-iconalign-right .cl-text {
-		padding: 0 @size-component-gap 0 0;
+		padding: 0 @radio--gap 0 0;
 	}
 	
 	&.cl-iconalign-top .cl-text {
-		padding: @size-component-gap 0 0 0;
+		padding: @radio--gap 0 0 0;
 	}
 	
 	&.cl-iconalign-bottom .cl-text {
-		padding: 0 0 @size-component-gap 0;
+		padding: 0 0 @radio--gap 0;
 	}
 	
 	&.cl-iconalign-none .cl-text {
@@ -95,18 +102,18 @@
 		padding: 0;
 		
 		.cl-radiobutton-field .cl-text {
-			line-height: @line-height-base;
+			#font-label();
 		}
 		
 		.cl-icon-wrapper {
 			line-height: 0;
-			padding-top: @gap-1;
+			padding-top: 1px; /* 아이콘(16px) 중앙 = 텍스트 줄 높이(@line-height-label 18px) 중앙 */
 			vertical-align: top;
 		}
 		
 		.cl-text {
 			padding: 0;
-			padding-left: @size-component-gap;
+			padding-left: @radio--gap;
 		}
 		
 		.cl-radiobutton-icon {
@@ -119,10 +126,13 @@
 			#radio--hover();
 		}
 		
-		&.cl-selected .cl-radiobutton-icon,
+		&.cl-selected .cl-radiobutton-icon {
+			#radio--selected();
+		}
+		
 		&.cl-selected.cl-hover .cl-radiobutton-icon,
 		&.cl-selected:hover .cl-radiobutton-icon {
-			#radio--selected();
+			#radio--selected-hover();
 		}
 	}
 	
@@ -145,9 +155,11 @@
 		}
 	}
 	
-	/* --- Disabled — ① 그룹 자체 비활성  ② 항목 비활성 --- */
+	/* --- Disabled / ReadOnly — ① 그룹 자체 비활성·읽기전용  ② 항목 비활성·읽기전용 (읽기전용은 비활성과 동일한 스타일) --- */
 	&.cl-disabled .cl-radiobutton-item,
-	.cl-radiobutton-item.cl-disabled {
+	&.cl-readonly .cl-radiobutton-item,
+	.cl-radiobutton-item.cl-disabled,
+	.cl-radiobutton-item.cl-readonly {
 		color: @color-component-text-disabled;
 		
 		.cl-radiobutton-icon,
@@ -164,25 +176,46 @@
 	}
 	
 	/* --- Size — .large --- */
-	&.large {
-		.cl-radiobutton-item .cl-radiobutton-icon {
-			#radio--button(@size-8);
+	&.large .cl-radiobutton-item .cl-radiobutton-icon {
+		#radio--button(@size-8);
+	}
+}
+
+.cl-radiobutton.rdb-select {
+	&.use {
+		.cl-radiobutton-item {
+			background-image: url("../../img/icons/ico_badge_use.svg");
+			background-position: top 10px right 14px;
+			background-repeat: no-repeat;
+		}
+	}
+	
+	.cl-radiobutton-item {
+		border-radius: 6px;
+		border: 1px solid @gray-20;
+		background-color: @white;
+		padding: 10px 14px;
+		
+	
+		
+		.cl-text {
+		#font-title();
+			
+			.caption {
+				color: @gray-50;
+				#font-caption();
+			}
 		}
 		
-		&.cl-iconalign-left .cl-text {
-			padding: 0 0 0 @size-component-gap-large;
+		&.cl-selected {
+			border: 1.5px solid @primary-70;
+			background-color: @primary-5;
 		}
 		
-		&.cl-iconalign-right .cl-text {
-			padding: 0 @size-component-gap-large 0 0;
-		}
-		
-		&.cl-iconalign-top .cl-text {
-			padding: @size-component-gap-large 0 0 0;
-		}
-		
-		&.cl-iconalign-bottom .cl-text {
-			padding: 0 0 @size-component-gap-large 0;
+		&.cl-disabled {
+			.caption {
+				color: @gray-40;
+			}
 		}
 	}
 }

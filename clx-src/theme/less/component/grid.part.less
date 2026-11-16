@@ -14,6 +14,19 @@
 @import (reference) "checkbox.part.less";
 @import (reference) "button.part.less";
 
+/* 파일 지역 변수 (@grid-- 접두어) — 공통 그리드 스타일 */
+@grid--color-background:   @white;
+@grid--color-border:       #D1D5DB;  /* 바깥 보더 (팔레트에 없는 값) */
+@grid--color-row-border:   @gray-20; /* #E2E8F0 — 행 간 보더 */
+@grid--border-radius:      @border-radius-5; /* 8px */
+@grid--head-color-text:    @gray-50; /* #64748B */
+@grid--head-color-sorted:  @primary-70; /* #1D4ED8 */
+@grid--head-padding:       10px 16px;
+@grid--cell-color-text:    #273951;  /* 데이터 텍스트 (팔레트에 없는 값) */
+@grid--cell-padding:       12px 16px;
+@grid--sort-gap:           6px;  /* 헤더 텍스트 ~ 정렬 아이콘 */
+@grid--sort-icon-size:     12px;
+
 /* ==========================================================================
  Mixins
  ========================================================================== */
@@ -32,14 +45,8 @@
 		&.cl-checkbox,
 		&.cl-checkboxgroup,
 		&.cl-radiobutton {
-			padding: 8px 12px;
+			padding: @grid--cell-padding;
 			text-align: left;
-		}
-		
-		&.cl-output.cl-number-format,
-		&.cl-output.cl-format-number,
-		&.cl-numbereditor {
-			text-align: right;
 		}
 		
 		&.cl-checkbox,
@@ -52,8 +59,8 @@
 			text-align: left;
 		}
 		
-		.badge {
-			padding: 4px 8px;
+		.badge.count {
+			margin-left: 8px;
 		}
 	}
 }
@@ -67,7 +74,7 @@
 	background-color: @primary;
 	border-radius: @size-component-radius;
 	color: @white;
-	font-size: @font-size-label-xxsmall;
+	#font-micro();
 	font-weight: @font-weight-medium;
 	line-height: 1;
 	min-width: 14px;
@@ -79,8 +86,8 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: @size-icon-small;
-	height: @size-icon-small;
+	width: @grid--sort-icon-size;
+	height: @grid--sort-icon-size !important; /* 런타임 inline height 50% 해제 */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -90,13 +97,14 @@
  Base — 루트
  ========================================================================== */
 .cl-grid {
-	background-color: @color-grid-surface;
-	border: none;
-	border-top: 1px solid #e3e8ee;
-	border-bottom: 1px solid #e3e8ee;
-	border-radius: @size-grid-radius;
-	font-size: @size-grid-font;
-	
+	background-color: @grid--color-background;
+	border: 1px solid @grid--color-border;
+	border-radius: @grid--border-radius;
+	color: @grid--cell-color-text;
+	#font-body(); /* 14px / 20px */
+	font-weight: @font-weight-normal;
+	overflow: hidden; /* radius 안쪽으로 헤더·행 배경 자르기 */
+
 	> :not([class]) {
 		min-height: auto !important;
 	}
@@ -175,7 +183,7 @@
 .cl-grid .cl-grid-cell {
 	#grid--cell-base();
 	border: 0;
-	border-bottom: 1px solid #e3e8ee;
+	border-bottom: 1px solid @grid--color-row-border;
 	border-right: none;
 
 	&.cl-last-column {
@@ -207,6 +215,30 @@
 		padding: 0;
 		text-align: center;
 		vertical-align: middle;
+	}
+	
+	/* 셀 안의 버튼 — 가운데 정렬 (링크 버튼은 셀 정렬 유지) */
+	.cl-button:not(.btn-link),
+	.cl-button.icon {
+		text-align: center;
+	}
+
+	/* 셀 안의 버튼 — 런타임 inline 위치/크기를 해제하고 셀 정중앙에 배치 */
+	.cl-button:not(.btn-link) {
+		position: absolute !important;
+		top: 50% !important;
+		right: auto !important;
+		bottom: auto !important;
+		left: 50% !important;
+		transform: translate(-50%, -50%);
+	}
+
+	/* 텍스트 버튼은 폭만 본인 패딩 + 글자 크기만큼 차지, 높이는 36px 고정 (아이콘 버튼은 지정 크기 유지) */
+	.cl-button:not(.btn-link):not(.icon) {
+		width: auto !important;
+		min-width: 0 !important; 
+		height: 36px !important;
+		max-width: 100%;
 	}
 	
 	/* expander (행 확장/접기) — 직접 url */
@@ -252,18 +284,24 @@
  Base — 헤더
  ========================================================================== */
 .cl-grid .cl-grid-header {
-	background-color: #f6f9fc;
+	background-color: @grid--color-background;
 	background-image: none;
 	border: 0;
-	color: @color-grid-head-text;
+	color: @grid--head-color-text;
 	cursor: default;
-	font-size: @size-grid-head-font;
-	font-weight: @size-grid-head-font-weight;
-	text-align: center;
+	#font-caption(); /* 12px / 16px */
+	font-weight: @font-weight-medium;
+	text-align: left;
 	
 	.cl-grid-cell {
-		border-bottom: 1px solid @color-grid-head-border;
+		border-bottom: 1px solid @grid--color-row-border;
 		border-right: none;
+		
+		/* 헤더 항목 padding (셀 공통 데이터 padding 덮어씀) */
+		.cl-control.cl-default-cell,
+		.cl-control.cl-output {
+			padding: @grid--head-padding;
+		}
 
 		&:focus {
 			outline: none;
@@ -316,77 +354,64 @@
 			}
 		}
 		
-		+ .cl-sortable-cell {
-			&.cl-sort-asc,
-			&.cl-sort-desc {
-				.cl-sort {
-					position: absolute;
-					top: 0;
-					right: (14px + @gap-1);
-					float: none !important;
-					z-index: 1;
-				}
-			}
-			
-			> .cl-grid-cell-inherit {
-				width: 100%;
-			}
-		}
 	}
 	
-	/* 정렬 아이콘 3단계 — 직접 url */
 	.cl-sortable-cell {
-		&.cl-sort-asc,
-		&.cl-sort-desc {
-			color: #533afd;
-			font-weight: @font-weight-semibold;
+		display: flex;
+		align-items: center;
+
+		/* 헤더 텍스트 — 내용 너비만큼, 넘치면 줄어듦 */
+		> .cl-grid-cell-inherit {
+			flex: 0 1 auto;
+			width: auto;
+			min-width: 0;
+
+			.cl-control.cl-default-cell,
+			.cl-control.cl-output {
+				padding-right: 0;
+			}
 		}
 
+		/* 아이콘 영역 */
 		.cl-sort {
-			display: none;
-			width: auto;
-			font-size: @font-size-label-xxsmall;
-			
-			.cl-sort-icon {
-				#grid--sort-icon();
-			}
-		}
-		
-		&.cl-sortable .cl-sort {
 			display: inline-flex;
 			align-items: center;
-			flex-direction: column;
-			
+			flex-shrink: 0;
+			order: 1;
+			gap: @gap-1;
+			width: auto;
+			height: auto !important; /* 런타임 inline height(행 높이) 해제 → 세로 가운데 */
+			margin-left: @grid--sort-gap;
+			#font-micro();
+
 			.cl-sort-icon {
-				background-image: url("@{img-path}/icons/ico_sort.svg");
+				#grid--sort-icon();
+				background-image: url("@{img-path}/icons/ico_sortabled.svg"); /* 정렬 가능(미정렬) */
+
+				&::before {
+					content: none; /* 런타임 △ ▲ ▼ 텍스트 아이콘 제거 */
+				}
 			}
-			
+
 			.cl-sort-seq {
 				display: none;
 			}
 		}
-		
-		&.cl-sort-asc .cl-sort,
-		&.cl-sort-desc .cl-sort {
-			display: inline-flex;
-			align-items: center;
-			flex-direction: column;
-			
-			.cl-sort-icon {
-				&::before {
-					content: none;
-				}
-			}
-			
-			.cl-sort-seq:not(:empty) {
+
+		/* 정렬됨 — 텍스트 색 + 다중 정렬 순번 */
+		&.cl-sort-asc,
+		&.cl-sort-desc {
+			color: @grid--head-color-sorted;
+
+			.cl-sort .cl-sort-seq:not(:empty) {
 				#grid--sort-seq();
 			}
 		}
-		
+
 		&.cl-sort-asc .cl-sort .cl-sort-icon {
 			background-image: url("@{img-path}/icons/ico_sort_asc.svg");
 		}
-		
+
 		&.cl-sort-desc .cl-sort .cl-sort-icon {
 			background-image: url("@{img-path}/icons/ico_sort_desc.svg");
 		}
@@ -458,7 +483,7 @@
  행 상태
  ========================================================================== */
 .cl-grid .cl-grid-detail .cl-grid-row {
-	color: @color-grid-text;
+	color: @grid--cell-color-text;
 	
 	.cl-default-cell,
 	.cl-grid-ctrl-inherit {
@@ -538,11 +563,25 @@
 			font-weight: inherit;
 		}
 	}
+	
+	/* 강조 — .highlight 는 추가/수정/삭제/선택/편집 등 모든 행·셀 상태 배경보다 우선 (행 또는 셀에 지정) */
+	&.highlight,
+	&.highlight .cl-grid-cell.cl-selected,
+	.cl-grid-cell.highlight {
+		background: @primary-5 !important;
+	}
 }
 
 /* ==========================================================================
  Variants
  ========================================================================== */
+/* 셀 하단 보더 제거 — 그리드 셀(또는 헤더 셀)의 class 속성에 border-b-none 지정
+   (헤더 셀은 .cl-grid-header .cl-grid-cell 규칙이 우선순위가 더 높아 별도로 지정) */
+.cl-grid .cl-grid-cell.border-b-none,
+.cl-grid .cl-grid-header .cl-grid-cell.border-b-none {
+	border-bottom: none;
+}
+
 /* 헤더 필수입력 셀 — 좌상단 삼각형 마커 */
 .cl-grid .cl-grid-header .cl-grid-cell.required,
 .cl-grid .cl-grid-header .cl-grid-cell .cl-grid-cell-inherit.required {
@@ -615,7 +654,7 @@
 		background-image: none;
 		border-bottom: 1px solid @color-grid-head-border;
 		color: @color-grid-head-text;
-		font-size: @font-size-heading-xsmall;
+		#font-heading();
 		font-weight: @font-weight-medium;
 		padding: @padding-3 @padding-6;
 		
