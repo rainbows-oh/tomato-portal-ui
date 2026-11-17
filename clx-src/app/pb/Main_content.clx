@@ -131,7 +131,7 @@
       <cl:verticaldata std:sid="v-data-113c2e06" width="400px" height="323px" autosize="none"/>
       <cl:group std:sid="group-71e40a45" class="slide">
         <cl:flowlayoutdata std:sid="f-data-d9a0531b" width="1920px" height="323px"/>
-        <cl:img std:sid="image-b41add0c">
+        <cl:img std:sid="image-b41add0c" src="../../theme/img/main/bg_header02.svg">
           <cl:xylayoutdata std:sid="xyl-data-008c8baa" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
         </cl:img>
         <cl:group std:sid="group-09867650" class="slide-txt">
