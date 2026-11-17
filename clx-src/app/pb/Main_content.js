@@ -186,6 +186,54 @@ function applyHeaderPagingOffset(psScreenName) {
 	}
 }
 
+/*
+ * "Button" 버튼(btnTickerCollapse)에서 click 이벤트 발생 시 호출.
+ * 사용자가 컨트롤을 클릭할 때 발생하는 이벤트.
+ * 헤더 슬라이더 영역을 접거나 펼치고, 버튼 화살표 방향을 바꾼다.
+ * 펼침: (기본) / 접힘: btn-ticker-expand (화살표 반전)
+ * 접근성: 상태에 맞게 버튼의 fieldLabel(대체 텍스트)도 함께 바꾼다.
+ */
+function onBtnTickerCollapseClick(e) {
+	var vcButton = e.control;
+	var vbCollapse = !vcButton.style.hasClass("btn-ticker-expand");
+	
+	doToggleHeaderSlider(vbCollapse);
+	
+	if (vbCollapse) {
+		vcButton.style.addClass("btn-ticker-expand");
+		vcButton.fieldLabel = "Expand header slider";
+	} else {
+		vcButton.style.removeClass("btn-ticker-expand");
+		vcButton.fieldLabel = "Collapse header slider";
+	}
+}
+
+/**
+ * 헤더 슬라이더 영역(grpHeaderSlider)을 접거나 펼친다.
+ * 페이지네이션 점은 슬라이더와 별개로 떠 있는(float) 컨트롤이라 함께 숨기거나 보인다.
+ * @param {Boolean} pbCollapse true: 접기(숨김), false: 펼치기
+ */
+function doToggleHeaderSlider(pbCollapse) {
+	var vcSlider = app.lookup("grpHeaderSlider");
+	if (!vcSlider) return;
+	
+	var vcPagination = (moHeaderSlider && moHeaderSlider._pagination) ? moHeaderSlider._pagination.control : null;
+	
+	vcSlider.visible = !pbCollapse;
+	if (vcPagination && !vcPagination.disposed) {
+		vcPagination.visible = !pbCollapse;
+	}
+	
+	// 펼친 뒤 레이아웃이 반영되면 페이지네이션 점 위치를 다시 맞춤
+	if (!pbCollapse) {
+		cpr.core.DeferredUpdateManager.INSTANCE.asyncExec(function() {
+			if (moHeaderSlider) {
+				moHeaderSlider.refreshPagination();
+			}
+		});
+	}
+}
+
 /************************************************
  * 컨텐츠 폭 가변 (FLUID_BREAKPOINT 이하)
  ************************************************/

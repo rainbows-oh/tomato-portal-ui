@@ -203,16 +203,67 @@
 		}
 	}
 	
+	/* 티커 영역 — XY 레이아웃 래퍼(header-ticker-wrap) 안에 티커(header-ticker)와 접기/펼치기 버튼이 겹쳐 배치됨 */
+	.cl-container.header-ticker-wrap {
+		/* 버튼 뒤로 지나가는 글자가 흐려 보이도록 우측 끝에 깔리는 페이드 (버튼보다 앞에 선언되어 버튼 아래에 위치) */
+		.cl-container.ticker-fade {
+			background: linear-gradient(90deg, rgba(95, 83, 151, 0.00) 0%, rgba(95, 83, 151, 0.85) 55%, #5F5397 100%);
+			pointer-events: none;
+		}
+
+		/* 접기/펼치기 버튼: 36x36 아이콘 이미지가 원형 배경/테두리/화살표를 모두 포함 */
+		.cl-button.btn-ticker-collapse {
+			border: 0;
+			background-color: transparent;
+
+			.cl-icon {
+				width: 36px;
+				height: 36px;
+				background-image: url("../../img/main/ico_slide_collapse.svg") !important;
+			}
+			
+			/* 접힌 상태(btn-ticker-expand): 화살표를 위/아래 반전 (원형 아이콘이라 회전해도 모양이 같음) */
+			&.btn-ticker-expand .cl-icon {
+				transform: rotate(180deg);
+			}
+		}
+
+		/* 버튼 우측 위치: PC/태블릿은 오른쪽에서 20px(clx 제약), 모바일(375px 이하)은 10px — 화면 폭과 무관하게 오른쪽에 고정 */
+		@media(max-width: 375px) {
+			.cl-button.btn-ticker-collapse {
+				right: 10px !important;
+			}
+		}
+	}
+
 	.cl-container.header-ticker {
-		padding: 20px;
+		/* 좌우 여백 150px (1400px 이하 40px, 1024px 이하 24px, 375px 이하 16px) — 글자는 아래 viewport 안쪽에서만 흐름 */
+		padding: 20px 150px;
 		overflow: hidden;
 		background: linear-gradient(90deg, #2A588F 0%, #68BA94 43.75%, #5F5397 100%);
-		
+
+		@media(max-width: 1400px) {
+			padding: 20px 40px;
+		}
+
+		@media(max-width: 1024px) {
+			padding: 20px 24px;
+		}
+
+		@media(max-width: 375px) {
+			padding: 20px 16px;
+		}
+
 		.cl-output {
 			font-weight: 600;
 			color: @white;
 		}
-		
+
+		/* 흐르는 글자를 padding 안쪽(content 영역)에서 자르기 위한 뷰포트 (overflow 는 padding 가장자리에서 잘리므로 별도 그룹 필요) */
+		.cl-container.header-ticker-viewport {
+			overflow: hidden !important;
+		}
+
 		.cl-container.header-ticker-track {
 			width: max-content !important;
 			overflow: visible !important;
@@ -635,6 +686,20 @@
 				color: #475569;
 				font-size: 14px;
 				font-weight: 400;
+			}
+
+			/* 4뎁스: 3뎁스와 같은 글자 — 기본은 같은 색, 선택 시에만 색이 다름. 간격은 3뎁스보다 16px 더 들여씀 */
+			&.cl-level-4 {
+				padding-top: 9px;
+				padding-bottom: 9px;
+				padding-left: 48px;
+				color: #475569;
+				font-size: 14px;
+				font-weight: 400;
+
+				&.cl-selected {
+					color: #0369A1;
+				}
 			}
 		}
 	}

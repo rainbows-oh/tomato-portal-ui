@@ -251,49 +251,65 @@
       </cl:group>
       <cl:flowlayout std:sid="f-layout-abdbe0a6" hspacing="0" vspacing="0"/>
     </cl:group>
-    <cl:group std:sid="group-73bef738" class="header-ticker">
-      <cl:verticaldata std:sid="v-data-16777ce0" width="400px" height="60px" autosize="height"/>
-      <cl:group std:sid="group-a07ec3b7" class="header-ticker-track">
-        <cl:flowlayoutdata std:sid="f-data-2808ea79" width="1880px" height="20px" autosize="both"/>
-        <cl:output std:sid="output-58a9d913" class="header-ticker-item" value="Investor alert: Beware of unofficial EDGE Portal look-alike sites">
-          <cl:flowlayoutdata std:sid="f-data-63d4334a" width="424px" height="20px" autosize="both"/>
-        </cl:output>
-        <cl:output std:sid="output-eac823f5" class="header-ticker-item" value="Non-trading day reminder: Markets closed this Friday">
-          <cl:flowlayoutdata std:sid="f-data-3f13e111" width="424px" height="20px" autosize="both"/>
-        </cl:output>
-        <cl:output std:sid="output-f48716d4" class="header-ticker-item" value="Non-trading day reminder: Markets closed this Friday">
-          <cl:flowlayoutdata std:sid="f-data-06b747bf" width="424px" height="20px" autosize="both"/>
-        </cl:output>
-        <cl:output std:sid="output-25774379" class="header-ticker-item" value="Deadline: Quarterly reports due within five trading days">
-          <cl:flowlayoutdata std:sid="f-data-b9638b07" width="424px" height="20px" autosize="both"/>
-        </cl:output>
-        <cl:output std:sid="output-25beb9d9" class="header-ticker-item" value="Investor alert: Beware of unofficial EDGE Portal look-alike sites">
-          <cl:flowlayoutdata std:sid="f-data-54270651" width="424px" height="20px" autosize="both"/>
-        </cl:output>
-        <cl:output std:sid="output-c78cdf0d" class="header-ticker-item" value="Non-trading day reminder: Markets closed this Friday">
-          <cl:flowlayoutdata std:sid="f-data-ce864dfa" width="424px" height="20px" autosize="both"/>
-        </cl:output>
-        <cl:output std:sid="output-6b4d4ba6" class="header-ticker-item" value="Non-trading day reminder: Markets closed this Friday">
-          <cl:flowlayoutdata std:sid="f-data-7067d9f7" width="424px" height="20px" autosize="both"/>
-        </cl:output>
-        <cl:output std:sid="output-5f0eef58" class="header-ticker-item" value="Deadline: Quarterly reports due within five trading days">
-          <cl:flowlayoutdata std:sid="f-data-0b8de45f" width="424px" height="20px" autosize="both"/>
-        </cl:output>
-        <cl:output std:sid="output-2385b34f" class="header-ticker-item" value="Investor alert: Beware of unofficial EDGE Portal look-alike sites">
-          <cl:flowlayoutdata std:sid="f-data-0063ed92" width="424px" height="20px" autosize="both"/>
-        </cl:output>
-        <cl:output std:sid="output-4bd3f542" class="header-ticker-item" value="Non-trading day reminder: Markets closed this Friday">
-          <cl:flowlayoutdata std:sid="f-data-bf906407" width="424px" height="20px" autosize="both"/>
-        </cl:output>
-        <cl:output std:sid="output-50e3061b" class="header-ticker-item" value="Non-trading day reminder: Markets closed this Friday">
-          <cl:flowlayoutdata std:sid="f-data-cf579a55" width="424px" height="20px" autosize="both"/>
-        </cl:output>
-        <cl:output std:sid="output-4208752a" class="header-ticker-item" value="Deadline: Quarterly reports due within five trading days">
-          <cl:flowlayoutdata std:sid="f-data-2d95d443" width="424px" height="20px" autosize="both"/>
-        </cl:output>
-        <cl:flowlayout std:sid="f-layout-e87762cb" scrollable="false" hspacing="40" vspacing="0" linewrap="false"/>
+    <cl:group std:sid="group-a55ed4ec" class="header-ticker-wrap">
+      <cl:verticaldata std:sid="v-data-16777ce0" width="400px" height="60px" autosize="none"/>
+      <cl:group std:sid="group-73bef738" class="header-ticker">
+        <cl:xylayoutdata std:sid="xyl-data-079cd120" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+        <cl:group std:sid="group-05eea4b1" class="header-ticker-viewport">
+          <cl:flowlayoutdata std:sid="f-data-f933f8ec" width="100%" height="20px" autosize="none"/>
+          <cl:group std:sid="group-a07ec3b7" class="header-ticker-track">
+            <cl:flowlayoutdata std:sid="f-data-2808ea79" width="1880px" height="20px" autosize="both"/>
+            <cl:output std:sid="output-58a9d913" class="header-ticker-item" value="Investor alert: Beware of unofficial EDGE Portal look-alike sites">
+              <cl:flowlayoutdata std:sid="f-data-63d4334a" width="424px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-eac823f5" class="header-ticker-item" value="Non-trading day reminder: Markets closed this Friday">
+              <cl:flowlayoutdata std:sid="f-data-3f13e111" width="424px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-f48716d4" class="header-ticker-item" value="Non-trading day reminder: Markets closed this Friday">
+              <cl:flowlayoutdata std:sid="f-data-06b747bf" width="424px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-25774379" class="header-ticker-item" value="Deadline: Quarterly reports due within five trading days">
+              <cl:flowlayoutdata std:sid="f-data-b9638b07" width="424px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-25beb9d9" class="header-ticker-item" value="Investor alert: Beware of unofficial EDGE Portal look-alike sites">
+              <cl:flowlayoutdata std:sid="f-data-54270651" width="424px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-c78cdf0d" class="header-ticker-item" value="Non-trading day reminder: Markets closed this Friday">
+              <cl:flowlayoutdata std:sid="f-data-ce864dfa" width="424px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-6b4d4ba6" class="header-ticker-item" value="Non-trading day reminder: Markets closed this Friday">
+              <cl:flowlayoutdata std:sid="f-data-7067d9f7" width="424px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-5f0eef58" class="header-ticker-item" value="Deadline: Quarterly reports due within five trading days">
+              <cl:flowlayoutdata std:sid="f-data-0b8de45f" width="424px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-2385b34f" class="header-ticker-item" value="Investor alert: Beware of unofficial EDGE Portal look-alike sites">
+              <cl:flowlayoutdata std:sid="f-data-0063ed92" width="424px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-4bd3f542" class="header-ticker-item" value="Non-trading day reminder: Markets closed this Friday">
+              <cl:flowlayoutdata std:sid="f-data-bf906407" width="424px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-50e3061b" class="header-ticker-item" value="Non-trading day reminder: Markets closed this Friday">
+              <cl:flowlayoutdata std:sid="f-data-cf579a55" width="424px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:output std:sid="output-4208752a" class="header-ticker-item" value="Deadline: Quarterly reports due within five trading days">
+              <cl:flowlayoutdata std:sid="f-data-2d95d443" width="424px" height="20px" autosize="both"/>
+            </cl:output>
+            <cl:flowlayout std:sid="f-layout-e87762cb" scrollable="false" hspacing="40" vspacing="0" linewrap="false"/>
+          </cl:group>
+          <cl:flowlayout std:sid="f-layout-4d80a9d3" hspacing="0" vspacing="0"/>
+        </cl:group>
+        <cl:flowlayout std:sid="f-layout-3dd5cb4c" hspacing="0" vspacing="0"/>
       </cl:group>
-      <cl:flowlayout std:sid="f-layout-3dd5cb4c" hspacing="0" vspacing="0"/>
+      <cl:group std:sid="group-c743a86c" class="ticker-fade">
+        <cl:xylayoutdata std:sid="xyl-data-2174f2a0" top="0px" right="0px" width="140px" height="60px" horizontalAnchor="RIGHT" verticalAnchor="TOP"/>
+        <cl:xylayout std:sid="xylayout-5d6ab6bf"/>
+      </cl:group>
+      <cl:button std:sid="button-abfa413b" id="btnTickerCollapse" class="icon btn-ticker-collapse" fieldLabel="Collapse header slider" icon="0">
+        <cl:listener std:sid="listener-2269ba50" name="click" handler="onBtnTickerCollapseClick"/>
+        <cl:xylayoutdata std:sid="xyl-data-287e5ed7" top="12px" right="20px" width="36px" height="36px" horizontalAnchor="RIGHT" verticalAnchor="TOP"/>
+      </cl:button>
+      <cl:xylayout std:sid="xylayout-afe4427c"/>
     </cl:group>
     <cl:group std:sid="group-d27bba1d" id="grpContent" class="content-wrap">
       <cl:attribute name="tablet-bottom-margin" value=""/>
