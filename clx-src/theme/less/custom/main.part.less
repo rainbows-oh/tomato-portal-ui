@@ -174,7 +174,6 @@
 
 	.cl-container.header-slider {
 		.cl-container.slide {
-			/* 서버에서 받아오는 배경 이미지: 화면 폭이 줄어도 비율을 유지한 채 영역을 꽉 채우고 넘치는 부분은 잘라냄 (기본 fill 은 이미지가 영역에 맞춰 줄어들어 위아래가 비어 보임) */
 			.cl-image img {
 				object-fit: cover;
 				object-position: center;
@@ -209,15 +208,12 @@
 		}
 	}
 	
-	/* 티커 영역 — XY 레이아웃 래퍼(header-ticker-wrap) 안에 티커(header-ticker)와 접기/펼치기 버튼이 겹쳐 배치됨 */
 	.cl-container.header-ticker-wrap {
-		/* 버튼 뒤로 지나가는 글자가 흐려 보이도록 우측 끝에 깔리는 페이드 (버튼보다 앞에 선언되어 버튼 아래에 위치) */
 		.cl-container.ticker-fade {
 			background: linear-gradient(90deg, rgba(95, 83, 151, 0.00) 0%, rgba(95, 83, 151, 0.85) 55%, #5F5397 100%);
 			pointer-events: none;
 		}
 
-		/* 접기/펼치기 버튼: 36x36 아이콘 이미지가 원형 배경/테두리/화살표를 모두 포함 */
 		.cl-button.btn-ticker-collapse {
 			border: 0;
 			background-color: transparent;
@@ -228,13 +224,11 @@
 				background-image: url("../../img/main/ico_slide_collapse.svg") !important;
 			}
 			
-			/* 접힌 상태(btn-ticker-expand): 화살표를 위/아래 반전 (원형 아이콘이라 회전해도 모양이 같음) */
 			&.btn-ticker-expand .cl-icon {
 				transform: rotate(180deg);
 			}
 		}
 
-		/* 버튼 우측 위치: PC/태블릿은 오른쪽에서 20px(clx 제약), 모바일(375px 이하)은 10px — 화면 폭과 무관하게 오른쪽에 고정 */
 		@media(max-width: 375px) {
 			.cl-button.btn-ticker-collapse {
 				right: 10px !important;
@@ -243,7 +237,6 @@
 	}
 
 	.cl-container.header-ticker {
-		/* 좌우 여백 150px (1400px 이하 40px, 1024px 이하 24px, 375px 이하 16px) — 글자는 아래 viewport 안쪽에서만 흐름 */
 		padding: 20px 150px;
 		overflow: hidden;
 		background: linear-gradient(90deg, #2A588F 0%, #68BA94 43.75%, #5F5397 100%);
@@ -265,7 +258,6 @@
 			color: @white;
 		}
 
-		/* 흐르는 글자를 padding 안쪽(content 영역)에서 자르기 위한 뷰포트 (overflow 는 padding 가장자리에서 잘리므로 별도 그룹 필요) */
 		.cl-container.header-ticker-viewport {
 			overflow: hidden !important;
 		}
@@ -372,12 +364,16 @@
 					color: @white;
 				}
 				
-				// Market Highlights
-				.cl-container.slide01 {
-					padding: 24px 20px;
-					background-repeat:  no-repeat;
-					background-position: right 12px bottom 8px, 0 0;
-					background-image: url("../../img/main/ico_MarketHighligh.svg"), linear-gradient(90deg, #6DCC9D -7.41%, #437E88 99.86%); // 앞쪽 레이어가 위에 표시
+				// Market Highlights (배경 이미지는 서버에서 받아오는 이미지 컨트롤로 표시)
+				.cl-container.slide {
+					.cl-image img {
+						object-fit: cover;
+						object-position: center;
+					}
+
+					.cl-container.slide-txt {
+						padding: 24px 20px;
+					}
 				}
 			}
 
@@ -439,8 +435,7 @@
 }
 
 // ==========================================================================
-// 그리드 스타일 — 이 화면 전용 (공통 부분은 component/grid.part.less 를 사용하고, 다른 부분만 덮어씀)
-//  - 공통 그리드 스타일과 다른 값만 정의 (헤더/셀 색·여백·폰트, 행 상태, hover)
+// 그리드 스타일
 // ==========================================================================
 @grid-main--color-row-border: #DAE2EC;   // 행 간 보더 (팔레트에 없는 값)
 @grid-main--color-row-hover:  @gray-10;  // #F1F5F9 — 행 hover 배경
@@ -512,7 +507,6 @@
 			.cl-grid-row {
 				color: @gray-70;
 
-				// 행 상태는 모두 기본(흰 바탕). 삭제 행 글자색은 공통 스타일 그대로 유지
 				&.cl-inserted,
 				&.cl-modified,
 				&.cl-deleted,
@@ -526,7 +520,6 @@
 					background: inherit;
 				}
 
-				// hover — 행 상태 규칙보다 뒤에 선언해 어떤 상태에서도 hover 색이 보이게 함
 				&:hover {
 					background-color: @grid-main--color-row-hover;
 
@@ -540,18 +533,8 @@
 }
 
 .cl-container.advanced-search {
-	/* 띄울 때 헤더(z-index: 10) 위에 흰 배경으로 보이도록 (런타임이 z-index 를 지정하므로 !important) */
 	background-color: #FFF;
 	z-index: 12 !important;
-//	padding: 0px 24px;   // 헤더(header-wrap)와 같은 좌우 여백. 내용 폭은 1320px 고정, 1400px 이하는 가변(Main.js)
-//	
-//	@media(max-width: 1024px) {
-//		padding: 0px 24px;
-//	}
-//	
-//	@media(max-width: 375px) {
-//		padding: 0px 16px;
-//	}
 
 	.cl-container.header {
 		padding: 18px 0px;
@@ -610,13 +593,11 @@
 }
 
 /* 모바일 메뉴가 떠 있을 때 뒤에 깔리는 어두운 배경 */
-/* 헤더(z-index: 10, layout.part.less)보다 위에 떠야 하므로 어두운 배경 11, 패널 12 (런타임이 1, 2 를 지정하므로 !important) */
 .cl-container.mobile-dim {
 	background-color: rgba(0, 0, 0, 0.5);
 	z-index: 11 !important;
 }
 
-/* 고급 검색이 헤더 아래로 열려 있을 때 헤더(GNB 등) 조작을 막는 투명 덮개 (딤과 달리 헤더가 어둡게 보이지 않음) */
 .cl-container.header-block {
 	background-color: transparent;
 	z-index: 11 !important;
@@ -630,7 +611,6 @@
 	.cl-container.header {
 	}
 
-	/* 모바일 메뉴 사이드 내비게이션 — 뎁스별 글자 스타일 (선택/호버/포커스 스타일 없음) */
 	.cl-sidenavigation {
 		border-top: 1px solid #E2E8F0;
 		border-bottom: 1px solid #E2E8F0;
@@ -645,7 +625,6 @@
 				display: none;
 			}
 
-			/* 펼침 화살표 — 텍스트 왼쪽에 배치 (아이템이 인라인 grid 로 그려지므로 !important 로 열 위치를 덮어씀) */
 			.cl-expand-icon {
 				grid-column: 1 !important;
 				width: 16px;
@@ -653,7 +632,6 @@
 				margin-right: 8px;
 			}
 
-			/* 선택(cl-selected)된 항목은 런타임 CSS 가 화살표를 선택용 이미지로 바꿔 보이지 않으므로, 선택 여부와 관계없이 같은 화살표를 유지 */
 			&.cl-folder.cl-collapsed .cl-expand-icon,
 			&.cl-folder.cl-expanded .cl-expand-icon {
 				background-image: url("../../img/icons/ico_angle.svg") !important;
@@ -662,7 +640,6 @@
 				background-size: contain !important;
 			}
 
-			/* 하위가 없는 항목 — 화살표 자리만큼 들여써서 텍스트 시작 위치를 맞춤 (16px 아이콘 + 8px 간격) */
 			&:not(.cl-folder) .cl-text {
 				padding-left: 24px;
 			}
@@ -694,7 +671,6 @@
 				font-weight: 400;
 			}
 
-			/* 4뎁스: 3뎁스와 같은 글자 — 기본은 같은 색, 선택 시에만 색이 다름. 간격은 3뎁스보다 16px 더 들여씀 */
 			&.cl-level-4 {
 				padding-top: 9px;
 				padding-bottom: 9px;
@@ -716,7 +692,6 @@
 		background: @gray-5;
 		padding: 14px;
 
-		/* 텍스트는 왼쪽 끝, 아이콘은 오른쪽 끝 (런타임이 인라인 스타일로 가운데 정렬하므로 !important) */
 		.cl-text-wrapper {
 			display: flex !important;
 			width: 100% !important;

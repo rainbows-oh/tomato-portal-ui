@@ -1269,35 +1269,56 @@
                 </cl:group>
                 <cl:group std:sid="group-109406a0" id="grpSideSlider" class="side-slider">
                   <cl:formdata std:sid="f-data-2fde2501" row="1" col="0" rowspan="1" colspan="1"/>
-                  <cl:group std:sid="group-52973337" class="slide01">
+                  <cl:group std:sid="group-52973337" class="slide">
                     <cl:flowlayoutdata std:sid="f-data-4be40aca" width="100%" height="170px"/>
-                    <cl:output std:sid="output-0f61a426" class="font-heading-l" value="Market Highlights">
-                      <cl:verticaldata std:sid="v-data-e5360ebc" width="100px" height="26px" autosize="height"/>
-                    </cl:output>
-                    <cl:output std:sid="output-181cd14c" value="Stay informed on upcoming listings, dividend &#xD;&#xA;declarations, and exchange advisories.">
-                      <cl:verticaldata std:sid="v-data-552edcf2" width="100px" height="56px" autosize="height"/>
-                    </cl:output>
-                    <cl:verticallayout std:sid="v-layout-ccfe5a00"/>
+                    <cl:img std:sid="image-1745e45d" src="../../theme/img/main/bg_header02.svg">
+                      <cl:xylayoutdata std:sid="xyl-data-ca4cf676" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                    </cl:img>
+                    <cl:group std:sid="group-00eee213" class="slide-txt">
+                      <cl:xylayoutdata std:sid="xyl-data-b98215c5" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                      <cl:output std:sid="output-0f61a426" class="font-heading-l" value="Market Highlights">
+                        <cl:verticaldata std:sid="v-data-e5360ebc" width="100px" height="26px" autosize="height"/>
+                      </cl:output>
+                      <cl:output std:sid="output-181cd14c" value="Stay informed on upcoming listings, dividend &#xD;&#xA;declarations, and exchange advisories.">
+                        <cl:verticaldata std:sid="v-data-552edcf2" width="100px" height="56px" autosize="height"/>
+                      </cl:output>
+                      <cl:verticallayout std:sid="v-layout-ccfe5a00"/>
+                    </cl:group>
+                    <cl:xylayout std:sid="xylayout-e45b4615"/>
                   </cl:group>
-                  <cl:group std:sid="group-770fab0c" class="slide01">
+                  <cl:group std:sid="group-770fab0c" class="slide">
                     <cl:flowlayoutdata std:sid="f-data-36b105ee" width="100%" height="170px" autosize="none"/>
-                    <cl:output std:sid="output-05378cb1" class="font-heading-l" value="Market Highlights">
-                      <cl:verticaldata std:sid="v-data-c409c8a3" width="100px" height="26px" autosize="height"/>
-                    </cl:output>
-                    <cl:output std:sid="output-7d567448" value="Stay informed on upcoming listings, dividend &#xD;&#xA;declarations, and exchange advisories.">
-                      <cl:verticaldata std:sid="v-data-7c964b74" width="100px" height="56px" autosize="height"/>
-                    </cl:output>
-                    <cl:verticallayout std:sid="v-layout-49c84b12"/>
+                    <cl:img std:sid="image-82bfc29a" src="../../theme/img/main/bg_header02.svg">
+                      <cl:xylayoutdata std:sid="xyl-data-2f9266c3" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                    </cl:img>
+                    <cl:group std:sid="group-3a24ec2e" class="slide-txt">
+                      <cl:xylayoutdata std:sid="xyl-data-307f7591" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                      <cl:output std:sid="output-05378cb1" class="font-heading-l" value="Market Highlights">
+                        <cl:verticaldata std:sid="v-data-c409c8a3" width="100px" height="26px" autosize="height"/>
+                      </cl:output>
+                      <cl:output std:sid="output-7d567448" value="Stay informed on upcoming listings, dividend &#xD;&#xA;declarations, and exchange advisories.">
+                        <cl:verticaldata std:sid="v-data-7c964b74" width="100px" height="56px" autosize="height"/>
+                      </cl:output>
+                      <cl:verticallayout std:sid="v-layout-49c84b12"/>
+                    </cl:group>
+                    <cl:xylayout std:sid="xylayout-4bbbbd25"/>
                   </cl:group>
-                  <cl:group std:sid="group-0ac5b0ba" class="slide01">
+                  <cl:group std:sid="group-0ac5b0ba" class="slide">
                     <cl:flowlayoutdata std:sid="f-data-465dfcc2" width="100%" height="170px" autosize="none"/>
-                    <cl:output std:sid="output-b35c6683" class="font-heading-l" value="Market Highlights">
-                      <cl:verticaldata std:sid="v-data-838e62cf" width="100px" height="26px" autosize="height"/>
-                    </cl:output>
-                    <cl:output std:sid="output-2c29a151" value="Stay informed on upcoming listings, dividend &#xD;&#xA;declarations, and exchange advisories.">
-                      <cl:verticaldata std:sid="v-data-3c03fe61" width="100px" height="56px" autosize="height"/>
-                    </cl:output>
-                    <cl:verticallayout std:sid="v-layout-e49ddda5"/>
+                    <cl:img std:sid="image-875a82f8" src="../../theme/img/main/bg_header02.svg">
+                      <cl:xylayoutdata std:sid="xyl-data-567fdbe9" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                    </cl:img>
+                    <cl:group std:sid="group-55539c76" class="slide-txt">
+                      <cl:xylayoutdata std:sid="xyl-data-6a4c0e67" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                      <cl:output std:sid="output-b35c6683" class="font-heading-l" value="Market Highlights">
+                        <cl:verticaldata std:sid="v-data-838e62cf" width="100px" height="26px" autosize="height"/>
+                      </cl:output>
+                      <cl:output std:sid="output-2c29a151" value="Stay informed on upcoming listings, dividend &#xD;&#xA;declarations, and exchange advisories.">
+                        <cl:verticaldata std:sid="v-data-3c03fe61" width="100px" height="56px" autosize="height"/>
+                      </cl:output>
+                      <cl:verticallayout std:sid="v-layout-e49ddda5"/>
+                    </cl:group>
+                    <cl:xylayout std:sid="xylayout-b10695be"/>
                   </cl:group>
                   <cl:flowlayout std:sid="f-layout-10318fef" hspacing="0" vspacing="0"/>
                 </cl:group>
@@ -2492,35 +2513,56 @@
                 </cl:group>
                 <cl:group std:sid="group-625c11dd" class="side-slider">
                   <cl:formdata std:sid="f-data-478cff2e" row="1" col="0" rowspan="1" colspan="1"/>
-                  <cl:group std:sid="group-6e3c4e85" class="slide01">
+                  <cl:group std:sid="group-6e3c4e85" class="slide">
                     <cl:flowlayoutdata std:sid="f-data-40f12069" width="100%" height="170px"/>
-                    <cl:output std:sid="output-b80a1e97" class="font-heading-l" value="Market Highlights">
-                      <cl:verticaldata std:sid="v-data-ee3c75f8" width="100px" height="26px" autosize="height"/>
-                    </cl:output>
-                    <cl:output std:sid="output-8813fc94" value="Stay informed on upcoming listings, dividend &#xD;&#xA;declarations, and exchange advisories.">
-                      <cl:verticaldata std:sid="v-data-63d25e6b" width="100px" height="56px" autosize="height"/>
-                    </cl:output>
-                    <cl:verticallayout std:sid="v-layout-ef0bdc0c"/>
+                    <cl:img std:sid="image-3adfbb35">
+                      <cl:xylayoutdata std:sid="xyl-data-1934c905" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                    </cl:img>
+                    <cl:group std:sid="group-7fdff960" class="slide-txt">
+                      <cl:xylayoutdata std:sid="xyl-data-1e0d88c2" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                      <cl:output std:sid="output-b80a1e97" class="font-heading-l" value="Market Highlights">
+                        <cl:verticaldata std:sid="v-data-ee3c75f8" width="100px" height="26px" autosize="height"/>
+                      </cl:output>
+                      <cl:output std:sid="output-8813fc94" value="Stay informed on upcoming listings, dividend &#xD;&#xA;declarations, and exchange advisories.">
+                        <cl:verticaldata std:sid="v-data-63d25e6b" width="100px" height="56px" autosize="height"/>
+                      </cl:output>
+                      <cl:verticallayout std:sid="v-layout-ef0bdc0c"/>
+                    </cl:group>
+                    <cl:xylayout std:sid="xylayout-3ffb4110"/>
                   </cl:group>
-                  <cl:group std:sid="group-67e932ec" class="slide01">
+                  <cl:group std:sid="group-67e932ec" class="slide">
                     <cl:flowlayoutdata std:sid="f-data-eb1273bb" width="100%" height="170px" autosize="none"/>
-                    <cl:output std:sid="output-b29b99f8" class="font-heading-l" value="Market Highlights">
-                      <cl:verticaldata std:sid="v-data-9b49bc51" width="100px" height="26px" autosize="height"/>
-                    </cl:output>
-                    <cl:output std:sid="output-6c5ab5c3" value="Stay informed on upcoming listings, dividend &#xD;&#xA;declarations, and exchange advisories.">
-                      <cl:verticaldata std:sid="v-data-15cacc32" width="100px" height="56px" autosize="height"/>
-                    </cl:output>
-                    <cl:verticallayout std:sid="v-layout-3e0f04ec"/>
+                    <cl:img std:sid="image-ec1d5e09">
+                      <cl:xylayoutdata std:sid="xyl-data-95df0941" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                    </cl:img>
+                    <cl:group std:sid="group-fafd8191" class="slide-txt">
+                      <cl:xylayoutdata std:sid="xyl-data-4e33f25e" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                      <cl:output std:sid="output-b29b99f8" class="font-heading-l" value="Market Highlights">
+                        <cl:verticaldata std:sid="v-data-9b49bc51" width="100px" height="26px" autosize="height"/>
+                      </cl:output>
+                      <cl:output std:sid="output-6c5ab5c3" value="Stay informed on upcoming listings, dividend &#xD;&#xA;declarations, and exchange advisories.">
+                        <cl:verticaldata std:sid="v-data-15cacc32" width="100px" height="56px" autosize="height"/>
+                      </cl:output>
+                      <cl:verticallayout std:sid="v-layout-3e0f04ec"/>
+                    </cl:group>
+                    <cl:xylayout std:sid="xylayout-ca6a9c54"/>
                   </cl:group>
-                  <cl:group std:sid="group-d9de65b0" class="slide01">
+                  <cl:group std:sid="group-d9de65b0" class="slide">
                     <cl:flowlayoutdata std:sid="f-data-c7379067" width="100%" height="170px" autosize="none"/>
-                    <cl:output std:sid="output-c7699c8b" class="font-heading-l" value="Market Highlights">
-                      <cl:verticaldata std:sid="v-data-e1baffcc" width="100px" height="26px" autosize="height"/>
-                    </cl:output>
-                    <cl:output std:sid="output-ff80b8bd" value="Stay informed on upcoming listings, dividend &#xD;&#xA;declarations, and exchange advisories.">
-                      <cl:verticaldata std:sid="v-data-cf0ff56e" width="100px" height="56px" autosize="height"/>
-                    </cl:output>
-                    <cl:verticallayout std:sid="v-layout-04ee3fdf"/>
+                    <cl:img std:sid="image-592f8dec">
+                      <cl:xylayoutdata std:sid="xyl-data-83fdf550" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                    </cl:img>
+                    <cl:group std:sid="group-4693c40d" class="slide-txt">
+                      <cl:xylayoutdata std:sid="xyl-data-35a7acef" top="0px" right="0px" bottom="0px" left="0px" horizontalAnchor="BOTH" verticalAnchor="BOTH"/>
+                      <cl:output std:sid="output-c7699c8b" class="font-heading-l" value="Market Highlights">
+                        <cl:verticaldata std:sid="v-data-e1baffcc" width="100px" height="26px" autosize="height"/>
+                      </cl:output>
+                      <cl:output std:sid="output-ff80b8bd" value="Stay informed on upcoming listings, dividend &#xD;&#xA;declarations, and exchange advisories.">
+                        <cl:verticaldata std:sid="v-data-cf0ff56e" width="100px" height="56px" autosize="height"/>
+                      </cl:output>
+                      <cl:verticallayout std:sid="v-layout-04ee3fdf"/>
+                    </cl:group>
+                    <cl:xylayout std:sid="xylayout-35617278"/>
                   </cl:group>
                   <cl:flowlayout std:sid="f-layout-c25fb5e3" hspacing="0" vspacing="0"/>
                 </cl:group>
