@@ -12,6 +12,8 @@
       </cl:property>
       <cl:property name="dateVisible" type="boolean" default="true" bindable="true" translatable="false" std:desc="Show the Date sort checkbox"/>
       <cl:property name="companyNameVisible" type="boolean" default="true" bindable="true" translatable="false" std:desc="Show the Company Name sort checkbox"/>
+      <cl:property name="dateText" type="string" bindable="true" translatable="true" std:desc="Text of the Date sort checkbox"/>
+      <cl:property name="companyNameText" type="string" bindable="true" translatable="true" std:desc="Text of the Company Name sort checkbox"/>
       <cl:property name="targetCard" type="control" std:desc="group of card control"/>
       <cl:property name="targetGrid" type="control" std:desc="Grid control"/>
       <cl:event name="selection-change" type="cpr.events.CAppEvent"/>
@@ -20,10 +22,10 @@
   <body std:sid="body-b9e20b4b" style="top:0px; left:0px; width:300px; height:32px;" class="result-toolbar" fieldLabel="Results view">
     <cl:listener std:sid="listener-c6850c21" name="property-change" handler="onBodyPropertyChange"/>
     <cl:listener std:sid="listener-41a4f119" name="init" handler="onBodyInit"/>
-    <cl:checkbox std:sid="c-box-6744ae62" id="chkDate" text="Date" iconalign="right">
+    <cl:checkbox std:sid="c-box-6744ae62" id="chkSort1" iconalign="right">
       <cl:flowlayoutdata std:sid="f-data-3dc7cb18" width="82px" height="32px" autosize="width"/>
     </cl:checkbox>
-    <cl:checkbox std:sid="c-box-35f2c221" id="chkCompanyName" text="Company Name" iconalign="right">
+    <cl:checkbox std:sid="c-box-35f2c221" id="chkSort2" iconalign="right">
       <cl:flowlayoutdata std:sid="f-data-23201edd" width="129px" height="32px" autosize="width"/>
     </cl:checkbox>
     <cl:button std:sid="button-188529e6" id="btnShowGrid" class="btn-grid active" value="Grid view" displayexp="sstr(text, [&quot;cl-sound-only&quot;])" icon="0">

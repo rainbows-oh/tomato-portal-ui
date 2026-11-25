@@ -258,7 +258,7 @@
             </cl:output>
             <cl:udc std:sid="ud-control-fadedeb7" type="udc.pse.com.udcComResultToolbar">
               <cl:formdata std:sid="f-data-260bedf1" row="0" col="1"/>
-              <cl:property name="targetGrid" value="grpGridSection" type="control"/>
+              <cl:property name="dateText" value="Date" type="string"/><cl:property name="companyNameText" value="Company Name" type="string"/><cl:property name="targetGrid" value="grpGridSection" type="control"/>
               <cl:property name="targetCard" value="grpCardSection" type="control"/>
             </cl:udc>
             <cl:formlayout std:sid="f-layout-3c3f0541" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">

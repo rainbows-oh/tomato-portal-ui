@@ -184,7 +184,7 @@
           </cl:output>
           <cl:udc std:sid="ud-control-a70d5078" id="udccomresulttoolbar1" type="udc.pse.com.udcComResultToolbar">
             <cl:formdata std:sid="f-data-ed382046" row="0" col="1"/>
-            <cl:property name="companyNameVisible" value="false" type="boolean"/>
+            <cl:property name="dateText" value="Date" type="string"/><cl:property name="companyNameVisible" value="false" type="boolean"/>
             <cl:property name="targetGrid" value="grpGridSection" type="control"/>
             <cl:property name="targetCard" value="grpCardSection" type="control"/>
           </cl:udc>

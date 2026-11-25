@@ -53,11 +53,23 @@ function getText() {
  * 앱 속성(dateVisible, companyNameVisible)에 따라 정렬 체크박스(Date, Company Name)의 노출 여부를 반영한다.
  */
 function applyCheckboxVisible() {
-	var vcChkDate = app.lookup("chkDate");
-	var vcChkName = app.lookup("chkCompanyName");
+	var vcChkSort1 = app.lookup("chkSort1");
+	var vcChkSort2 = app.lookup("chkSort2");
 	
-	if (vcChkDate) vcChkDate.visible = app.getAppProperty("dateVisible") !== false;
-	if (vcChkName) vcChkName.visible = app.getAppProperty("companyNameVisible") !== false;
+	if (vcChkSort1) vcChkSort1.visible = app.getAppProperty("dateVisible") !== false;
+	if (vcChkSort2) vcChkSort2.visible = app.getAppProperty("companyNameVisible") !== false;
+}
+
+/**
+ * 앱 속성(dateText, companyNameText)을 정렬 체크박스(chkSort1, chkSort2)의 text 에 반영한다.
+ * 값이 비어 있으면 text 를 바꾸지 않는다.
+ */
+function applyCheckboxText() {
+	var vsDateText = app.getAppProperty("dateText");
+	var vsNameText = app.getAppProperty("companyNameText");
+	
+	if (vsDateText) app.lookup("chkSort1").text = vsDateText;
+	if (vsNameText) app.lookup("chkSort2").text = vsNameText;
 }
 
 /**
@@ -84,6 +96,7 @@ function toggleTargetVisible(psValue) {
 function onBodyInit(e) {
 	toggleTargetVisible(app.getAppProperty("value"));
 	applyCheckboxVisible();
+	applyCheckboxText();
 }
 
 /*
@@ -96,6 +109,9 @@ function onBodyPropertyChange(e) {
 	}
 	if (e.property === "dateVisible" || e.property === "companyNameVisible") {
 		applyCheckboxVisible();
+	}
+	if (e.property === "dateText" || e.property === "companyNameText") {
+		applyCheckboxText();
 	}
 }
 
