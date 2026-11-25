@@ -169,6 +169,22 @@ function doApplyInputAreaLayout() {
 	var vsWidth = (VC_SCREEN_MOBILE.indexOf(app.targetScreen.name) != -1) ? VC_INPUT_COL_WIDTH_MOBILE : VC_INPUT_COL_WIDTH;
 
 	vcLayout.setColumns([vsWidth, "1fr"]);
+	/* setColumns 는 열 정의를 다시 만들어 숨김 상태가 초기화되므로, 앱 속성(sectorVisible)에 따라 콤보박스 열 표시 여부를 다시 적용 */
+	doApplySectorVisible();
+};
+
+/**
+ * 앱 속성(sectorVisible)에 따라 Sector 콤보박스(cmbSector)가 놓인 첫 번째 열의 표시 여부를 적용한다.
+ */
+function doApplySectorVisible() {
+	app.lookup("grpInputArea").getLayout().setColumnVisible(0, app.getAppProperty("sectorVisible") === true);
+};
+
+/**
+ * 앱 속성(placeholder)을 회사명 인풋(ipbCompanyName)의 placeholder 에 반영한다. 값이 비어 있으면 placeholder 를 지운다.
+ */
+function doApplyPlaceholder() {
+	app.lookup("ipbCompanyName").placeholder = app.getAppProperty("placeholder") || "";
 };
 
 /**
@@ -277,6 +293,20 @@ function unbindScrollFollow() {
  */
 function onBodyLoad(e) {
 	doApplyInputAreaLayout();
+	doApplyPlaceholder();
+}
+
+/*
+ * 루트 컨테이너에서 property-change 이벤트 발생 시 호출.
+ * 앱 속성(sectorVisible, placeholder)이 바뀌면 화면에 반영한다.
+ */
+function onBodyPropertyChange(e) {
+	if (e.property === "sectorVisible") {
+		doApplySectorVisible();
+	}
+	if (e.property === "placeholder") {
+		doApplyPlaceholder();
+	}
 }
 
 /*
