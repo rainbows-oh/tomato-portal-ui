@@ -1,0 +1,84 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-9f0eb092" version="1.0.6209">
+  <head std:sid="head-bb1e1be1">
+    <screen std:sid="screen-6c632a37" id="default" name="default" width="1025px" height="768px" useCustomWidth="true" useCustomHeight="true" customHeight="490" customWidth="1920" active="true"/>
+    <screen std:sid="screen-1ed825e6" id="tablet" name="tablet" width="376px" height="667px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1024"/>
+    <screen std:sid="screen-1e7ade93" id="mobile" name="mobile" width="375px" height="525px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-03a64d56"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-dc6a5026" style="top:0px; left:0px; width:300px; height:600px;">
+    <cl:group std:sid="group-9b74addf" class="toggle-card">
+      <cl:formdata std:sid="f-data-7df5f6f7" width="100" height="-253" row="0" col="0"/>
+      <cl:group std:sid="group-bef75b51">
+        <cl:verticaldata std:sid="v-data-bdae580e" width="390px" height="42px" autosize="height"/>
+        <cl:output std:sid="output-e1ab280b" class="font-micro" value="Entitlement Ratio">
+          <cl:verticaldata std:sid="v-data-6623715f" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:output std:sid="output-0e8c86cd" class="font-body-s" value="1:4">
+          <cl:verticaldata std:sid="v-data-4116034e" width="353px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-c94fe639" spacing="2"/>
+      </cl:group>
+      <cl:group std:sid="group-e0516d1f">
+        <cl:verticaldata std:sid="v-data-958f8f4c" width="390px" height="42px" autosize="height"/>
+        <cl:output std:sid="output-5a8f4c5b" class="font-micro" value="Offer Price">
+          <cl:verticaldata std:sid="v-data-69263325" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:output std:sid="output-7f3f2596" class="font-body-s" value="PHP 12.50">
+          <cl:verticaldata std:sid="v-data-9b6baa4a" width="353px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-c09f7136" spacing="2"/>
+      </cl:group>
+      <cl:group std:sid="group-699402ff">
+        <cl:verticaldata std:sid="v-data-501b160a" width="390px" height="42px" autosize="height"/>
+        <cl:output std:sid="output-994bcb08" class="font-micro" value="Ex-Rights Date">
+          <cl:verticaldata std:sid="v-data-0b663c95" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:output std:sid="output-423834cf" class="font-body-s" value="Feb 05, 2026">
+          <cl:verticaldata std:sid="v-data-c6e9a958" width="353px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-1c00460b" spacing="2"/>
+      </cl:group>
+      <cl:group std:sid="group-0748bed8">
+        <cl:verticaldata std:sid="v-data-171964df" width="390px" height="42px" autosize="height"/>
+        <cl:output std:sid="output-92f3f9c9" class="font-micro" value="Start of Offer Period">
+          <cl:verticaldata std:sid="v-data-b103fd43" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:output std:sid="output-a5b51b93" class="font-body-s" value="Feb 12, 2026">
+          <cl:verticaldata std:sid="v-data-c39ef443" width="353px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-9cc5ea91" spacing="2"/>
+      </cl:group>
+      <cl:group std:sid="group-89e2f589">
+        <cl:verticaldata std:sid="v-data-1d36888a" width="390px" height="42px" autosize="height"/>
+        <cl:output std:sid="output-0617d9b3" class="font-micro" value="End of Offer Period">
+          <cl:verticaldata std:sid="v-data-4dadc953" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:output std:sid="output-80e03806" class="font-body-s" value="Feb 26, 2026">
+          <cl:verticaldata std:sid="v-data-26d754ef" width="353px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-49a51189" spacing="2"/>
+      </cl:group>
+      <cl:group std:sid="group-ce1c1eb2">
+        <cl:verticaldata std:sid="v-data-ddce07fc" width="390px" height="42px" autosize="height"/>
+        <cl:output std:sid="output-950455a4" class="font-micro" value="Circular Number">
+          <cl:verticaldata std:sid="v-data-492c7fdf" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:output std:sid="output-65ccbbaa" class="font-body-s" value="C06055-2026">
+          <cl:verticaldata std:sid="v-data-2c3235b5" width="353px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-7dc57bf8" spacing="2"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-5b10945a" spacing="8"/>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-a5a0a503" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

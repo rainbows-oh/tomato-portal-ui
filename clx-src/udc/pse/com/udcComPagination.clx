@@ -1,0 +1,52 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-c7aab440" version="1.0.6190">
+  <head std:sid="head-f7f5f3e4">
+    <screen std:sid="screen-7884675b" id="EXB-FULL" name="EXB-FULL" width="1024px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800" active="true"/>
+    <screen std:sid="screen-c3a04b21" id="EXB-DIV" name="EXB-DIV" width="768px" height="768px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-7119b9d4" id="EXB-PART" name="EXB-PART" width="0px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="360"/>
+    <cl:model std:sid="model-703e8670"/>
+    <cl:appspec title="페이지 인덱서"/>
+  </head>
+  <body std:sid="body-4e9277da" style="top:0px; left:0px; width:1024px; height:32px;" class="pagination" clipcontent="false">
+    <cl:group std:sid="group-99c2fdee" id="grpPagination" clipcontent="false">
+      <cl:attribute name="needs-auto-height" value="true"/>
+      <cl:attribute name="mobile-column-count" value="1"/>
+      <cl:formdata std:sid="f-data-5a08668f" row="0" col="0" rowspan="1" colspan="1"/>
+      <cl:group std:sid="group-146907e9" class="page-info">
+        <cl:attribute name="needs-auto-height" value="true"/>
+        <cl:formdata std:sid="f-data-22efb229" row="0" col="0"/>
+        <cl:output std:sid="output-6876f868" value="Viewing 1-10">
+          <cl:flowlayoutdata std:sid="f-data-6203ec40" width="92px" height="32px" autosize="width"/>
+        </cl:output>
+        <cl:output std:sid="output-12c916ba" value="120" displayexp="&quot;of &quot; + text">
+          <cl:flowlayoutdata std:sid="f-data-88818908" width="48px" height="32px" autosize="width"/>
+        </cl:output>
+        <cl:flowlayout std:sid="f-layout-9b47ae3b" scrollable="false" hspacing="4" vspacing="0" valign="middle" linewrap="false"/>
+      </cl:group>
+      <cl:group std:sid="group-65607b43" class="page-navi" clipcontent="false">
+        <cl:formdata std:sid="f-data-f6ec35e2" row="0" col="1"/>
+        <cl:combobox std:sid="c-box-7e9ebc4b" value="value1">
+          <cl:flowlayoutdata std:sid="f-data-eb9f24ef" width="100px" height="32px"/>
+          <cl:item std:sid="t-item-fecb1117" label="10/page" value="value1"/>
+        </cl:combobox>
+        <cl:pageindexer std:sid="p-indexer-5aef7ebf" navigationtype="button" totalrowcount="100" pagerowcount="10" viewpagecount="2" visiblefirstbutton="true" visiblelastbutton="true">
+          <cl:flowlayoutdata std:sid="f-data-87af4c76" width="256px" height="32px" autosize="both"/>
+        </cl:pageindexer>
+        <cl:flowlayout std:sid="f-layout-9792d1d5" hspacing="8"/>
+      </cl:group>
+      <cl:formlayout std:sid="f-layout-ae1b757e" scrollable="false" hspace="1fr" vspace="12px">
+        <cl:rows length="32" unit="PIXEL" autoSizing="false" shadecolor="transparent" syncminlength="true"/>
+        <cl:columns length="150" unit="PIXEL" autoSizing="true" shadecolor="transparent" syncminlength="false"/>
+        <cl:columns length="400" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+      </cl:formlayout>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-5b56665c" scrollable="false" hspace="1fr" vspace="12px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+      <cl:columns length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
