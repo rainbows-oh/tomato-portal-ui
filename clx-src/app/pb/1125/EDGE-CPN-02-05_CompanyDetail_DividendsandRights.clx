@@ -1,0 +1,367 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-b4d4063a" version="1.0.6209">
+  <head std:sid="head-d7e5a61a">
+    <screen std:sid="screen-dc9c660e" id="default" name="default" width="1025px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1040" active="true"/>
+    <screen std:sid="screen-4f61ce75" id="tablet" name="tablet" width="376px" height="667px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1024"/>
+    <screen std:sid="screen-67d6918c" id="mobile" name="mobile" width="375px" height="525px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-8cd7069e">
+      <cl:dataset comment="배당 목록" std:sid="d-set-5b4a9c6d" id="ds1">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="Type of Security" std:sid="d-column-56bb73df" name="securityType"/>
+          <cl:datacolumn comment="Stock Symbol" std:sid="d-column-b0767bb1" name="stockSymbol"/>
+          <cl:datacolumn comment="Type of Dividend" std:sid="d-column-775a8bde" name="dividendType"/>
+          <cl:datacolumn comment="Dividend Rate" std:sid="d-column-94b77d11" name="dividendRate"/>
+          <cl:datacolumn comment="Ex-Dividend Date" std:sid="d-column-0945c27f" name="exDividendDate"/>
+          <cl:datacolumn comment="Record Date" std:sid="d-column-de72be26" name="recordDate"/>
+          <cl:datacolumn comment="Payment Date" std:sid="d-column-f992b25f" name="paymentDate"/>
+          <cl:datacolumn comment="Circular Number" std:sid="d-column-79384ec3" name="circularNo"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="securityType"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="stockSymbol"><![CDATA[PRB]]></cl:datavalue>
+            <cl:datavalue columnname="dividendType"><![CDATA[Cash]]></cl:datavalue>
+            <cl:datavalue columnname="dividendRate"><![CDATA[PHP 0.25]]></cl:datavalue>
+            <cl:datavalue columnname="exDividendDate"><![CDATA[Mar 12, 2026]]></cl:datavalue>
+            <cl:datavalue columnname="recordDate"><![CDATA[Mar 14, 2026]]></cl:datavalue>
+            <cl:datavalue columnname="paymentDate"><![CDATA[Apr 10, 2026]]></cl:datavalue>
+            <cl:datavalue columnname="circularNo"><![CDATA[C06102-2026]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="securityType"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="stockSymbol"><![CDATA[PRB]]></cl:datavalue>
+            <cl:datavalue columnname="dividendType"><![CDATA[Cash]]></cl:datavalue>
+            <cl:datavalue columnname="dividendRate"><![CDATA[PHP 0.20]]></cl:datavalue>
+            <cl:datavalue columnname="exDividendDate"><![CDATA[Sep 18, 2025]]></cl:datavalue>
+            <cl:datavalue columnname="recordDate"><![CDATA[Sep 20, 2025]]></cl:datavalue>
+            <cl:datavalue columnname="paymentDate"><![CDATA[Oct 15, 2025]]></cl:datavalue>
+            <cl:datavalue columnname="circularNo"><![CDATA[C05840-2025]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="securityType"><![CDATA[Preferred]]></cl:datavalue>
+            <cl:datavalue columnname="stockSymbol"><![CDATA[PRBPR]]></cl:datavalue>
+            <cl:datavalue columnname="dividendType"><![CDATA[Cash]]></cl:datavalue>
+            <cl:datavalue columnname="dividendRate"><![CDATA[PHP 0.50]]></cl:datavalue>
+            <cl:datavalue columnname="exDividendDate"><![CDATA[Jun 04, 2025]]></cl:datavalue>
+            <cl:datavalue columnname="recordDate"><![CDATA[Jun 06, 2025]]></cl:datavalue>
+            <cl:datavalue columnname="paymentDate"><![CDATA[Jul 02, 2025]]></cl:datavalue>
+            <cl:datavalue columnname="circularNo"><![CDATA[C05511-2025]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="securityType"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="stockSymbol"><![CDATA[PRB]]></cl:datavalue>
+            <cl:datavalue columnname="dividendType"><![CDATA[Stock]]></cl:datavalue>
+            <cl:datavalue columnname="dividendRate"><![CDATA[5%]]></cl:datavalue>
+            <cl:datavalue columnname="exDividendDate"><![CDATA[Dec 09, 2024]]></cl:datavalue>
+            <cl:datavalue columnname="recordDate"><![CDATA[Dec 11, 2024]]></cl:datavalue>
+            <cl:datavalue columnname="paymentDate"><![CDATA[Jan 08, 2025]]></cl:datavalue>
+            <cl:datavalue columnname="circularNo"><![CDATA[C04988-2024]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="securityType"><![CDATA[Common]]></cl:datavalue>
+            <cl:datavalue columnname="stockSymbol"><![CDATA[PRB]]></cl:datavalue>
+            <cl:datavalue columnname="dividendType"><![CDATA[Cash]]></cl:datavalue>
+            <cl:datavalue columnname="dividendRate"><![CDATA[PHP 0.18]]></cl:datavalue>
+            <cl:datavalue columnname="exDividendDate"><![CDATA[Mar 20, 2024]]></cl:datavalue>
+            <cl:datavalue columnname="recordDate"><![CDATA[Mar 22, 2024]]></cl:datavalue>
+            <cl:datavalue columnname="paymentDate"><![CDATA[Apr 18, 2024]]></cl:datavalue>
+            <cl:datavalue columnname="circularNo"><![CDATA[C04402-2024]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset comment="유상증자 목록" std:sid="d-set-6589ec78" id="ds2">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="Entitlement Ratio" std:sid="d-column-7180a9ac" name="entitlementRatio"/>
+          <cl:datacolumn comment="Offer Price" std:sid="d-column-58f19de8" name="offerPrice"/>
+          <cl:datacolumn comment="Ex-Rights Date" std:sid="d-column-c1aac8fb" name="exRightsDate"/>
+          <cl:datacolumn comment="Start of Offer Period" std:sid="d-column-d0bc545c" name="offerStartDate"/>
+          <cl:datacolumn comment="End of Offer Period" std:sid="d-column-46d93194" name="offerEndDate"/>
+          <cl:datacolumn comment="Circular Number" std:sid="d-column-5abdc5db" name="circularNo"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="entitlementRatio"><![CDATA[1:4]]></cl:datavalue>
+            <cl:datavalue columnname="offerPrice"><![CDATA[PHP 12.50]]></cl:datavalue>
+            <cl:datavalue columnname="exRightsDate"><![CDATA[Feb 05, 2026]]></cl:datavalue>
+            <cl:datavalue columnname="offerStartDate"><![CDATA[Feb 12, 2026]]></cl:datavalue>
+            <cl:datavalue columnname="offerEndDate"><![CDATA[Feb 26, 2026]]></cl:datavalue>
+            <cl:datavalue columnname="circularNo"><![CDATA[C06055-2026]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="entitlementRatio"><![CDATA[1:5]]></cl:datavalue>
+            <cl:datavalue columnname="offerPrice"><![CDATA[PHP 11.00]]></cl:datavalue>
+            <cl:datavalue columnname="exRightsDate"><![CDATA[Aug 14, 2024]]></cl:datavalue>
+            <cl:datavalue columnname="offerStartDate"><![CDATA[Aug 21, 2024]]></cl:datavalue>
+            <cl:datavalue columnname="offerEndDate"><![CDATA[Sep 04, 2024]]></cl:datavalue>
+            <cl:datavalue columnname="circularNo"><![CDATA[C04720-2024]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="entitlementRatio"><![CDATA[1:3]]></cl:datavalue>
+            <cl:datavalue columnname="offerPrice"><![CDATA[PHP 10.25]]></cl:datavalue>
+            <cl:datavalue columnname="exRightsDate"><![CDATA[Nov 08, 2022]]></cl:datavalue>
+            <cl:datavalue columnname="offerStartDate"><![CDATA[Nov 15, 2022]]></cl:datavalue>
+            <cl:datavalue columnname="offerEndDate"><![CDATA[Nov 29, 2022]]></cl:datavalue>
+            <cl:datavalue columnname="circularNo"><![CDATA[C03114-2022]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-a8aed19c" clipcontent="false">
+    <cl:group std:sid="group-52d63b15">
+      <cl:attribute name="mobile-fit" value="true"/>
+      <cl:attribute name="mobile-spacing" value="16"/>
+      <cl:verticaldata std:sid="v-data-b60c7030" width="1040px" height="1284px" autosize="height"/>
+      <cl:tabfolder std:sid="t-folder-ce6e0b0d" class="fill" fieldLabel="2 tabs" clipcontent="false" childcombinatorclass="tablist">
+        <cl:verticaldata std:sid="v-data-8768e087" width="1040px" height="685px" autosize="height"/>
+        <cl:tabitem std:sid="t-item-1c47ade6" selected="true" text="Dividends">
+          <std:metadata>
+            <std:property key="is-active-item" value="true"/>
+          </std:metadata>
+          <cl:group std:sid="group-5b853c0e" clipcontent="false">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:group std:sid="group-e554b3b0" class="card" clipcontent="false">
+              <cl:verticaldata std:sid="v-data-4de80636" width="1040px" height="625px" autosize="height"/>
+              <cl:group std:sid="group-475dd2c1">
+                <cl:verticaldata std:sid="v-data-8921508b" width="1040px" height="32px" autosize="height"/>
+                <cl:output std:sid="output-9edfeee5" class="grd-tit" accesskey="sub-tit" value="8" displayexp="&quot;Total : [&quot;+text+&quot;]&quot;">
+                  <cl:formdata std:sid="f-data-3dc2865e" row="0" col="0"/>
+                </cl:output>
+                <cl:udc std:sid="ud-control-a70d5078" id="udccomresulttoolbar1" type="udc.pse.com.udcComResultToolbar">
+                  <cl:formdata std:sid="f-data-ed382046" row="0" col="1"/>
+                  <cl:property name="companyNameVisible" value="false" type="boolean"/>
+                  <cl:property name="dateVisible" value="false" type="boolean"/>
+                  <cl:property name="targetGrid" value="grpGridSection" type="control"/>
+                  <cl:property name="targetCard" value="grpCardSection" type="control"/>
+                </cl:udc>
+                <cl:formlayout std:sid="f-layout-aa6b7425" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                  <cl:rows length="1" unit="FRACTION"/>
+                  <cl:columns length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+                  <cl:columns length="300" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                </cl:formlayout>
+              </cl:group>
+              <cl:grid std:sid="grid-409ef81f" id="grpGridSection" datasetid="ds1" autofit="0, 1, 2, 3, 4, 5, 6, 7">
+                <cl:verticaldata std:sid="v-data-6e462528" width="1040px" height="200px" autosize="height"/>
+                <cl:gridcolumn std:sid="g-column-1eee1a9b" width="120px"/>
+                <cl:gridcolumn std:sid="g-column-0b88feb3" width="100px"/>
+                <cl:gridcolumn std:sid="g-column-fd86daee" width="100px"/>
+                <cl:gridcolumn std:sid="g-column-03838ed0" width="100px"/>
+                <cl:gridcolumn std:sid="g-column-c4a2ccad" width="120px"/>
+                <cl:gridcolumn std:sid="g-column-a18e1023" width="120px"/>
+                <cl:gridcolumn std:sid="g-column-d07b8faa" width="120px"/>
+                <cl:gridcolumn std:sid="g-column-339d9849" width="120px"/>
+                <cl:gridheader std:sid="gh-band-c8a3225d">
+                  <cl:gridrow std:sid="g-row-7b0e7dcb" height="33px"/>
+                  <cl:gridcell std:sid="gh-cell-77cce63d" rowindex="0" colindex="0" targetcolumnname="securityType" sortable="false" filterable="false" text="Type of Security"/>
+                  <cl:gridcell std:sid="gh-cell-65be93fb" rowindex="0" colindex="1" targetcolumnname="stockSymbol" sortable="false" filterable="false" text="Stock Symbol"/>
+                  <cl:gridcell std:sid="gh-cell-02cebaf4" rowindex="0" colindex="2" targetcolumnname="dividendType" sortable="false" filterable="false" text="Type of Dividend"/>
+                  <cl:gridcell std:sid="gh-cell-f03eae20" rowindex="0" colindex="3" targetcolumnname="dividendRate" sortable="false" filterable="false" text="Dividend Rate"/>
+                  <cl:gridcell std:sid="gh-cell-7e1552ca" rowindex="0" colindex="4" targetcolumnname="exDividendDate" sortable="false" filterable="false" text="Ex-Dividend Date"/>
+                  <cl:gridcell std:sid="gh-cell-aa4fa484" rowindex="0" colindex="5" targetcolumnname="recordDate" sortable="false" filterable="false" text="Record Date"/>
+                  <cl:gridcell std:sid="gh-cell-df5c4b53" rowindex="0" colindex="6" targetcolumnname="paymentDate" sortable="false" filterable="false" text="Payment Date"/>
+                  <cl:gridcell std:sid="gh-cell-f0f44834" rowindex="0" colindex="7" targetcolumnname="circularNo" sortable="false" filterable="false" text="Circular Number"/>
+                </cl:gridheader>
+                <cl:griddetail std:sid="gd-band-ae3641fd">
+                  <cl:gridrow std:sid="g-row-70ae277d" height="45px"/>
+                  <cl:gridcell std:sid="gd-cell-9b6f97ae" rowindex="0" colindex="0" columnname="securityType">
+                    <cl:output std:sid="output-bf4faaaa">
+                      <cl:celldata std:sid="c-data-a615dd88"/>
+                    </cl:output>
+                  </cl:gridcell>
+                  <cl:gridcell std:sid="gd-cell-8900a72d" rowindex="0" colindex="1" columnname="stockSymbol">
+                    <cl:output std:sid="output-9258fd1c">
+                      <cl:celldata std:sid="c-data-fbe7a132"/>
+                    </cl:output>
+                  </cl:gridcell>
+                  <cl:gridcell std:sid="gd-cell-3b4acbb6" rowindex="0" colindex="2" columnname="dividendType">
+                    <cl:output std:sid="output-76b4b9da">
+                      <cl:celldata std:sid="c-data-d0211210"/>
+                    </cl:output>
+                  </cl:gridcell>
+                  <cl:gridcell std:sid="gd-cell-98b0ec83" rowindex="0" colindex="3" columnname="dividendRate">
+                    <cl:output std:sid="output-a741aa3f">
+                      <cl:celldata std:sid="c-data-7f4133b8"/>
+                    </cl:output>
+                  </cl:gridcell>
+                  <cl:gridcell std:sid="gd-cell-af611124" rowindex="0" colindex="4" columnname="exDividendDate">
+                    <cl:output std:sid="output-62ec1740">
+                      <cl:celldata std:sid="c-data-4d2758f2"/>
+                    </cl:output>
+                  </cl:gridcell>
+                  <cl:gridcell std:sid="gd-cell-d05c3889" rowindex="0" colindex="5" columnname="recordDate">
+                    <cl:output std:sid="output-668ae5ae">
+                      <cl:celldata std:sid="c-data-a0f5bce0"/>
+                    </cl:output>
+                  </cl:gridcell>
+                  <cl:gridcell std:sid="gd-cell-602eac00" rowindex="0" colindex="6" columnname="paymentDate">
+                    <cl:output std:sid="output-d9200d53">
+                      <cl:celldata std:sid="c-data-c0136e87"/>
+                    </cl:output>
+                  </cl:gridcell>
+                  <cl:gridcell std:sid="gd-cell-73bf711f" rowindex="0" colindex="7" columnname="circularNo">
+                    <cl:output std:sid="output-0372c7f5">
+                      <cl:celldata std:sid="c-data-03945c7f"/>
+                    </cl:output>
+                  </cl:gridcell>
+                </cl:griddetail>
+              </cl:grid>
+              <cl:group std:sid="group-1b791d41" id="grpCardSection" class="card-section" visible="false">
+                <cl:attribute name="mobile-column-count" value="1"/>
+                <cl:attribute name="mobile-v-spacing" value="12"/>
+                <cl:attribute name="mobile-h-spacing" value="12"/>
+                <cl:verticaldata std:sid="v-data-c174a6fd" width="1040px" height="313px" autosize="height"/>
+                <cl:udc std:sid="ud-control-f49abdb2" id="udccompdetaildividendscard1" type="udc.pse.card.UdcCompDetailDividendsCard_Dividends">
+                  <cl:formdata std:sid="f-data-0faddade" row="0" col="0"/>
+                </cl:udc>
+                <cl:udc std:sid="ud-control-ede74e64" id="udccompdetaildividendscard2" type="udc.pse.card.UdcCompDetailDividendsCard_Dividends">
+                  <cl:formdata std:sid="f-data-60917d17" row="0" col="1"/>
+                </cl:udc>
+                <cl:udc std:sid="ud-control-c494d47e" id="udccompdetaildividendscard3" type="udc.pse.card.UdcCompDetailDividendsCard_Dividends">
+                  <cl:formdata std:sid="f-data-38f3570d" row="0" col="2"/>
+                </cl:udc>
+                <cl:formlayout std:sid="f-layout-9ec8d59e" scrollable="false" hspace="16px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                  <cl:rows length="1" unit="FRACTION"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                </cl:formlayout>
+              </cl:group>
+              <cl:udc std:sid="ud-control-52f6316f" id="udccompagination1" type="udc.pse.com.udcComPagination">
+                <cl:verticaldata std:sid="v-data-5c6168bb" width="1024px" height="32px" autosize="height"/>
+              </cl:udc>
+              <cl:verticallayout std:sid="v-layout-beadd93c" spacing="16"/>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-ba91490e" topmargin="16"/>
+          </cl:group>
+        </cl:tabitem>
+        <cl:tabitem std:sid="t-item-3e2044f5" selected="true" text="Rights">
+          <cl:group std:sid="group-c84d5863" clipcontent="false">
+            <std:metadata>
+              <std:property key="locked" value="true"/>
+            </std:metadata>
+            <cl:group std:sid="group-98f4aec2" class="card" clipcontent="false">
+              <cl:verticaldata std:sid="v-data-c8250518" width="1040px" height="625px" autosize="height"/>
+              <cl:group std:sid="group-d1c7c3e7">
+                <cl:verticaldata std:sid="v-data-c07b6c3d" width="1040px" height="32px" autosize="height"/>
+                <cl:output std:sid="output-96b8aa5b" class="grd-tit" accesskey="sub-tit" value="5" displayexp="&quot;Total : [&quot;+text+&quot;]&quot;">
+                  <cl:formdata std:sid="f-data-5c7a03ce" row="0" col="0"/>
+                </cl:output>
+                <cl:udc std:sid="ud-control-57ae7cdc" id="udccomresulttoolbar2" type="udc.pse.com.udcComResultToolbar">
+                  <cl:formdata std:sid="f-data-6d98382b" row="0" col="1"/>
+                  <cl:property name="companyNameVisible" value="false" type="boolean"/>
+                  <cl:property name="dateVisible" value="false" type="boolean"/>
+                  <cl:property name="targetGrid" value="grpGridSection2" type="control"/>
+                  <cl:property name="targetCard" value="grpCardSection2" type="control"/>
+                </cl:udc>
+                <cl:formlayout std:sid="f-layout-cb851bf8" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                  <cl:rows length="1" unit="FRACTION"/>
+                  <cl:columns length="1" unit="FRACTION" autoSizing="true" shadetype="NONE" shadecolor="transparent" syncminlength="false"/>
+                  <cl:columns length="300" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+                </cl:formlayout>
+              </cl:group>
+              <cl:grid std:sid="grid-956af940" id="grpGridSection2" datasetid="ds2" autofit="0, 1, 2, 3, 4, 5">
+                <cl:verticaldata std:sid="v-data-a635219d" width="1040px" height="200px" autosize="height"/>
+                <cl:gridcolumn std:sid="g-column-d17f1c54" width="100px"/>
+                <cl:gridcolumn std:sid="g-column-2c28dfa1" width="100px"/>
+                <cl:gridcolumn std:sid="g-column-5670d35d" width="100px"/>
+                <cl:gridcolumn std:sid="g-column-25aa1ce3" width="100px"/>
+                <cl:gridcolumn std:sid="g-column-dbc8267d" width="100px"/>
+                <cl:gridcolumn std:sid="g-column-5f6863f9" width="100px"/>
+                <cl:gridheader std:sid="gh-band-760bfe7c">
+                  <cl:gridrow std:sid="g-row-e9004d17" height="33px"/>
+                  <cl:gridcell std:sid="gh-cell-a131cf8f" rowindex="0" colindex="0" targetcolumnname="entitlementRatio" sortable="false" filterable="false" text="Entitlement Ratio"/>
+                  <cl:gridcell std:sid="gh-cell-b7b9ad72" rowindex="0" colindex="1" targetcolumnname="offerPrice" sortable="false" filterable="false" text="Offer Price"/>
+                  <cl:gridcell std:sid="gh-cell-c8d0dcca" rowindex="0" colindex="2" targetcolumnname="exRightsDate" sortable="false" filterable="false" text="Ex-Rights Date"/>
+                  <cl:gridcell std:sid="gh-cell-be7f0111" rowindex="0" colindex="3" targetcolumnname="offerStartDate" sortable="false" filterable="false" text="Start of Offer Period"/>
+                  <cl:gridcell std:sid="gh-cell-b5414093" rowindex="0" colindex="4" targetcolumnname="offerEndDate" sortable="false" filterable="false" text="End of Offer Period"/>
+                  <cl:gridcell std:sid="gh-cell-00adca31" rowindex="0" colindex="5" targetcolumnname="circularNo" sortable="false" filterable="false" text="Circular Number"/>
+                </cl:gridheader>
+                <cl:griddetail std:sid="gd-band-8c049be7">
+                  <cl:gridrow std:sid="g-row-7e469fd5" height="45px"/>
+                  <cl:gridcell std:sid="gd-cell-3ca2f874" rowindex="0" colindex="0" columnname="entitlementRatio">
+                    <cl:output std:sid="output-df7c14fb">
+                      <cl:celldata std:sid="c-data-5c0ddfc7"/>
+                    </cl:output>
+                  </cl:gridcell>
+                  <cl:gridcell std:sid="gd-cell-ea5e9409" rowindex="0" colindex="1" columnname="offerPrice">
+                    <cl:output std:sid="output-b8a57403">
+                      <cl:celldata std:sid="c-data-59a70db0"/>
+                    </cl:output>
+                  </cl:gridcell>
+                  <cl:gridcell std:sid="gd-cell-c2f26e94" rowindex="0" colindex="2" columnname="exRightsDate">
+                    <cl:output std:sid="output-cf0ebdd4">
+                      <cl:celldata std:sid="c-data-a47f3c61"/>
+                    </cl:output>
+                  </cl:gridcell>
+                  <cl:gridcell std:sid="gd-cell-0e42cbf1" rowindex="0" colindex="3" columnname="offerStartDate">
+                    <cl:output std:sid="output-f752ae9f">
+                      <cl:celldata std:sid="c-data-4047d52c"/>
+                    </cl:output>
+                  </cl:gridcell>
+                  <cl:gridcell std:sid="gd-cell-341dfe69" rowindex="0" colindex="4" columnname="offerEndDate">
+                    <cl:output std:sid="output-3bc3e00d">
+                      <cl:celldata std:sid="c-data-0d254cbd"/>
+                    </cl:output>
+                  </cl:gridcell>
+                  <cl:gridcell std:sid="gd-cell-ced1368c" rowindex="0" colindex="5" columnname="circularNo">
+                    <cl:output std:sid="output-f706f4c4">
+                      <cl:celldata std:sid="c-data-d022a770"/>
+                    </cl:output>
+                  </cl:gridcell>
+                </cl:griddetail>
+              </cl:grid>
+              <cl:group std:sid="group-a02f9f79" id="grpCardSection2" class="card-section" visible="false">
+                <cl:attribute name="mobile-column-count" value="1"/>
+                <cl:attribute name="mobile-v-spacing" value="12"/>
+                <cl:attribute name="mobile-h-spacing" value="12"/>
+                <cl:verticaldata std:sid="v-data-a0b5ce5f" width="1040px" height="313px" autosize="height"/>
+                <cl:udc std:sid="ud-control-e542248f" id="udccompdetaildividendscard_rights1" type="udc.pse.card.UdcCompDetailDividendsCard_Rights">
+                  <cl:formdata std:sid="f-data-9796511a" row="0" col="0"/>
+                </cl:udc>
+                <cl:udc std:sid="ud-control-9c6d4a39" id="udccompdetaildividendscard_rights2" type="udc.pse.card.UdcCompDetailDividendsCard_Rights">
+                  <cl:formdata std:sid="f-data-145e39b5" row="0" col="1"/>
+                </cl:udc>
+                <cl:udc std:sid="ud-control-62b32cbe" id="udccompdetaildividendscard_rights3" type="udc.pse.card.UdcCompDetailDividendsCard_Rights">
+                  <cl:formdata std:sid="f-data-5603819a" row="0" col="2"/>
+                </cl:udc>
+                <cl:formlayout std:sid="f-layout-41002ef0" scrollable="false" hspace="16px" vspace="16px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+                  <cl:rows length="1" unit="FRACTION"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                  <cl:columns length="1" unit="FRACTION"/>
+                </cl:formlayout>
+              </cl:group>
+              <cl:udc std:sid="ud-control-f3ecce67" id="udccompagination2" type="udc.pse.com.udcComPagination">
+                <cl:verticaldata std:sid="v-data-ee34eed3" width="1024px" height="32px" autosize="height"/>
+              </cl:udc>
+              <cl:verticallayout std:sid="v-layout-d96b8fea" spacing="16"/>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-29dcbdda" topmargin="16"/>
+          </cl:group>
+        </cl:tabitem>
+      </cl:tabfolder>
+      <cl:group std:sid="group-a0a9748e" class="disclaimer">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-left-margin" value="16"/>
+        <cl:attribute name="mobile-right-margin" value="16"/>
+        <cl:verticaldata std:sid="v-data-0fcfef17" width="1040px" height="187px" autosize="height"/>
+        <cl:output std:sid="output-feb9ad10" class="tit" value="DISCLAIMER">
+          <cl:verticaldata std:sid="v-data-6a279963" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:htmlsnippet std:sid="htmlsnippet-8ded7202" value="The data, information and other contents (the &quot;Contents&quot;) appearing on or accessible through http://www.exchange.com may not have been prepared by the Exchange but is made available without any responsibility on the part of the PSE, or even if prepared by the PSE, is provided on an as is or as available basis. The PSE does not guarantee the accuracy, timeliness, completeness, performance or fitness for a particular purpose of any and all Contents of this page. Your access to and use of this page and its Contents is subject to all applicable international and local laws and regulations and the terms and conditions imposed by the PSE under our &lt;a href=&quot;&quot; style=&quot;color: #0369A1; text-decoration: underline;&quot;>Disclaimer and Access and Usage Restrictions.&lt;/a> By continuing to access and use this page and its Contents, you shall be deemed to have read, understood, and agreed to, said terms and conditions.">
+          <cl:verticaldata std:sid="v-data-3b0e93b7" width="100px" height="109px" autosize="height"/>
+        </cl:htmlsnippet>
+        <cl:verticallayout std:sid="v-layout-21b90b68" leftmargin="24" rightmargin="24" topmargin="24" bottommargin="24"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-1cee029a" spacing="24"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-b58d1922"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

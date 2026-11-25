@@ -924,6 +924,75 @@
       </cl:button>
       <cl:flowlayout std:sid="f-layout-f30dff5e" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
+    <cl:group std:sid="group-4b3509fa" clipcontent="false">
+      <cl:verticaldata std:sid="v-data-a734d61c" width="1440px" height="200px" autosize="both"/>
+      <cl:output std:sid="output-b023293d" value="그리드">
+        <cl:flowlayoutdata std:sid="f-data-adfbbe33" width="160px" height="24px" syncminheight="true" autosize="height"/>
+      </cl:output>
+      <cl:grid std:sid="grid-85e5d443" id="grd1" datasetid="dsGrid" resizablecolumns="all" columnMovable="true">
+        <cl:flowlayoutdata std:sid="f-data-1229a64f" width="1024px" height="200px" autosize="height"/>
+        <cl:gridcolumn std:sid="g-column-fb66136e" width="36px"/>
+        <cl:gridcolumn std:sid="g-column-b0ac9789" width="36px"/>
+        <cl:gridcolumn std:sid="g-column-3534fc73" width="36px"/>
+        <cl:gridcolumn std:sid="g-column-9f0f8043"/>
+        <cl:gridcolumn std:sid="g-column-68581381" width="300px"/>
+        <cl:gridcolumn std:sid="g-column-8bcfab84"/>
+        <cl:gridcolumn std:sid="g-column-138448a2"/>
+        <cl:gridcolumn std:sid="g-column-d580596c"/>
+        <cl:gridcolumn std:sid="g-column-f531e915"/>
+        <cl:gridheader std:sid="gh-band-d5a4bb3f">
+          <cl:gridrow std:sid="g-row-de94087e" height="33px"/>
+          <cl:gridcell std:sid="gh-cell-401cecdf" rowindex="0" colindex="0" sortable="false" filterable="false" text="선택"/>
+          <cl:gridcell std:sid="gh-cell-87ea8c17" rowindex="0" colindex="1" sortable="false" filterable="false" columntype="checkbox"/>
+          <cl:gridcell std:sid="gh-cell-baa2cea6" rowindex="0" colindex="2" sortable="false" filterable="false" text="NO"/>
+          <cl:gridcell std:sid="gh-cell-f1b4b24d" rowindex="0" colindex="3" targetcolumnname="ID" sortable="false" filterable="true" text="품목ID"/>
+          <cl:gridcell std:sid="gh-cell-de6e2e03" rowindex="0" colindex="4" class="required" targetcolumnname="PRODUCT" sortable="true" filterable="true" text="품목"/>
+          <cl:gridcell std:sid="gh-cell-ce32bb68" rowindex="0" colindex="5" targetcolumnname="PRICE" sortable="true" filterable="true" text="가격"/>
+          <cl:gridcell std:sid="gh-cell-14eb4849" rowindex="0" colindex="6" targetcolumnname="SALES" sortable="true" filterable="true" text="판매여부"/>
+          <cl:gridcell std:sid="gh-cell-c506cc32" rowindex="0" colindex="7" targetcolumnname="REGIST_DT" sortable="true" filterable="true" text="등록일자"/>
+          <cl:gridcell std:sid="gh-cell-c15eb288" rowindex="0" colindex="8" targetcolumnname="SALES_ST" sortable="true" filterable="true" text="상태"/>
+        </cl:gridheader>
+        <cl:griddetail std:sid="gd-band-374851bc">
+          <cl:gridrow std:sid="g-row-a3b9e273" height="45px"/>
+          <cl:gridcell std:sid="gd-cell-cbf9a5ae" rowindex="0" colindex="0" columntype="radio"/>
+          <cl:gridcell std:sid="gd-cell-1f8c4798" rowindex="0" colindex="1" columntype="checkbox"/>
+          <cl:gridcell std:sid="gd-cell-8aaf84c5" rowindex="0" colindex="2" columntype="rowindex"/>
+          <cl:gridcell std:sid="gd-cell-142ee97b" rowindex="0" colindex="3" columnname="ID"/>
+          <cl:gridcell std:sid="gd-cell-813da569" rowindex="0" colindex="4" columnname="PRODUCT">
+            <cl:inputbox std:sid="i-box-c601264d" id="ipb1">
+              <cl:celldata std:sid="c-data-3f1e728f"/>
+            </cl:inputbox>
+          </cl:gridcell>
+          <cl:gridcell std:sid="gd-cell-b4d24759" rowindex="0" colindex="5" columnname="PRICE">
+            <cl:numbereditor std:sid="n-editor-96672f32" id="nbe1">
+              <cl:celldata std:sid="c-data-3ee77b62"/>
+            </cl:numbereditor>
+          </cl:gridcell>
+          <cl:gridcell std:sid="gd-cell-72c9a12d" rowindex="0" colindex="6" columnname="SALES">
+            <cl:checkbox std:sid="c-box-cc03347b" id="cbx14">
+              <cl:celldata std:sid="c-data-f5cb6644"/>
+            </cl:checkbox>
+          </cl:gridcell>
+          <cl:gridcell std:sid="gd-cell-01c1362c" rowindex="0" colindex="7" columnname="REGIST_DT">
+            <cl:dateinput std:sid="d-input-f8065495" id="dti1">
+              <cl:celldata std:sid="c-data-b871a1d9"/>
+            </cl:dateinput>
+          </cl:gridcell>
+          <cl:gridcell std:sid="gd-cell-cdf04fcb" rowindex="0" colindex="8" columnname="SALES_ST">
+            <cl:combobox std:sid="c-box-5ad952ca" id="cmb8">
+              <cl:celldata std:sid="c-data-2921dec8"/>
+              <cl:item std:sid="t-item-aefbb047" label="카테고리" value="primary"/>
+              <cl:item std:sid="t-item-3b7e19a6" label="판매중" value="success"/>
+              <cl:item std:sid="t-item-c143139b" label="품절" value="danger"/>
+              <cl:item std:sid="t-item-629b4e35" label="입고대기" value="warning"/>
+              <cl:item std:sid="t-item-141ac909" label="신상품" value="point"/>
+              <cl:item std:sid="t-item-6137896d" label="미노출/단종" value="disable"/>
+            </cl:combobox>
+          </cl:gridcell>
+        </cl:griddetail>
+      </cl:grid>
+      <cl:flowlayout std:sid="f-layout-72b883e0" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
+    </cl:group>
     <cl:group std:sid="group-a372e0a6" clipcontent="false">
       <cl:verticaldata std:sid="v-data-900f4009" width="1440px" height="200px" autosize="both"/>
       <cl:output std:sid="output-956055cb" value="그리드">
@@ -941,7 +1010,7 @@
         <cl:gridcolumn std:sid="g-column-19f62a6e"/>
         <cl:gridcolumn std:sid="g-column-3514cece"/>
         <cl:gridheader std:sid="gh-band-fedf9f3f">
-          <cl:gridrow std:sid="g-row-60da454c" height="35px"/>
+          <cl:gridrow std:sid="g-row-60da454c" height="33px"/>
           <cl:gridcell std:sid="gh-cell-7eba79ac" rowindex="0" colindex="0" sortable="false" filterable="false" text="선택"/>
           <cl:gridcell std:sid="gh-cell-7affe931" rowindex="0" colindex="1" sortable="false" filterable="false" columntype="checkbox"/>
           <cl:gridcell std:sid="gh-cell-8395382c" rowindex="0" colindex="2" sortable="false" filterable="false" text="NO"/>
@@ -953,7 +1022,7 @@
           <cl:gridcell std:sid="gh-cell-541a8fc5" rowindex="0" colindex="8" targetcolumnname="SALES_ST" sortable="true" filterable="true" text="상태"/>
         </cl:gridheader>
         <cl:griddetail std:sid="gd-band-2701d3b5">
-          <cl:gridrow std:sid="g-row-7fea761c" height="54px"/>
+          <cl:gridrow std:sid="g-row-7fea761c" height="45px"/>
           <cl:gridcell std:sid="gd-cell-fb598ba7" rowindex="0" colindex="0" columntype="radio"/>
           <cl:gridcell std:sid="gd-cell-8fc773d6" rowindex="0" colindex="1" columntype="checkbox"/>
           <cl:gridcell std:sid="gd-cell-dde9117a" rowindex="0" colindex="2" columntype="rowindex"/>
@@ -1006,12 +1075,12 @@
       <cl:flowlayout std:sid="f-layout-473c4a39" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>
     <cl:group std:sid="group-521782c8" clipcontent="false">
-      <cl:verticaldata std:sid="v-data-21bbde5f" width="1440px" height="24px" autosize="both"/>
+      <cl:verticaldata std:sid="v-data-21bbde5f" width="1440px" height="32px" autosize="both"/>
       <cl:output std:sid="output-595d4a9a" value="페이지인덱서">
         <cl:flowlayoutdata std:sid="f-data-320d7a3d" width="160px" height="24px" syncminheight="true" autosize="height"/>
       </cl:output>
-      <cl:pageindexer std:sid="p-indexer-5aef7ebf" navigationtype="button" totalrowcount="100" pagerowcount="10" viewpagecount="10">
-        <cl:flowlayoutdata std:sid="f-data-87af4c76" width="768px" height="24px" autosize="both"/>
+      <cl:pageindexer std:sid="p-indexer-5aef7ebf" navigationtype="button" totalrowcount="100" pagerowcount="10" viewpagecount="10" visiblefirstbutton="true" visiblelastbutton="true">
+        <cl:flowlayoutdata std:sid="f-data-87af4c76" width="768px" height="32px" autosize="both"/>
       </cl:pageindexer>
       <cl:flowlayout std:sid="f-layout-eda3302a" scrollable="false" hspacing="48" vspacing="24" linewrap="true"/>
     </cl:group>

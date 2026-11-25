@@ -216,51 +216,57 @@
         <cl:verticaldata std:sid="v-data-d2f86ea9" width="1320px" height="64px" autosize="height"/>
         <cl:group std:sid="group-e17a5e08" class="left">
           <cl:formdata std:sid="f-data-7b7deb61" row="0" col="0"/>
-          <cl:button std:sid="button-ae4d2404" id="btnMMenu" class="icon btn-m-menu" visible="false" value="Button" icon="0">
+          <cl:button std:sid="button-ae4d2404" id="btnMMenu" class="icon btn-m-menu" fieldLabel="Open menu" visible="false" value="Button" icon="0">
             <cl:listener std:sid="listener-66349aee" name="click" handler="onBtnMMenuClick"/>
             <cl:flowlayoutdata std:sid="f-data-15b0749b" width="24px" height="40px" autosize="none"/>
           </cl:button>
-          <cl:button std:sid="button-a5478be6" class="logo icon" icon="0">
+          <cl:button std:sid="button-a5478be6" class="logo icon" fieldLabel="PSE EDGE" icon="0">
             <cl:flowlayoutdata std:sid="f-data-c54727ef" width="100px" height="40px" autosize="width"/>
           </cl:button>
           <cl:flowlayout std:sid="f-layout-cc430526" hspacing="16"/>
         </cl:group>
+        <cl:udc std:sid="ud-control-bd3993c4" id="udcComGnb1" type="udc.pse.com.udcComGnb">
+          <cl:formdata std:sid="f-data-6e34723e" row="0" col="1"/>
+        </cl:udc>
         <cl:group std:sid="group-d7bbd2b1" class="header-utils">
           <cl:formdata std:sid="f-data-647ee846" valign="FILL" height="40" row="0" col="2"/>
-          <cl:searchinput std:sid="s-input-cf6a1835" id="iptSearch" searchposition="left" placeholder="Search companies, disclosures...">
+          <cl:searchinput std:sid="s-input-cf6a1835" id="iptSearch" fieldLabel="Search companies and disclosures" searchposition="left" placeholder="Search companies, disclosures...">
             <cl:flowlayoutdata std:sid="f-data-d73c0f0f" width="240px" height="40px" autosize="none"/>
           </cl:searchinput>
           <cl:button std:sid="button-813d2796" id="btnAdvSearch" class="btn-advsearch" value="Advanced Search" icon="0">
             <cl:listener std:sid="listener-5e21a7c0" name="click" handler="onBtnAdvSearchClick"/>
             <cl:flowlayoutdata std:sid="f-data-4445046d" width="165px" height="40px" autosize="width"/>
           </cl:button>
-          <cl:button std:sid="button-092b9cd5" id="btnMSearch" class="icon btn-m-search" visible="false" value="Button" icon="0">
-            <cl:flowlayoutdata std:sid="f-data-e254a0ef" width="24px" height="40px"/>
+          <cl:button std:sid="button-092b9cd5" id="btnMSearch" class="icon btn-m-search" fieldLabel="Search" visible="false" value="Button" icon="0">
+            <cl:flowlayoutdata std:sid="f-data-e254a0ef" width="30px" height="40px" autosize="width"/>
           </cl:button>
-          <cl:button std:sid="button-fdf46ba8" id="btnMAdvSearch" class="icon btn-m-adv-search" visible="false" value="Button" icon="0">
+          <cl:button std:sid="button-fdf46ba8" id="btnMAdvSearch" class="icon btn-m-adv-search" fieldLabel="Advanced search" visible="false" value="Button" icon="0">
             <cl:listener std:sid="listener-8d47b6f2" name="click" handler="onBtnAdvSearchClick"/>
-            <cl:flowlayoutdata std:sid="f-data-62025dae" width="24px" height="40px" autosize="none"/>
+            <cl:flowlayoutdata std:sid="f-data-62025dae" width="30px" height="40px" autosize="width"/>
+          </cl:button>
+          <cl:button std:sid="button-892f902b" id="btnMNotification" class="btn-m-notify" fieldLabel="Notifications" visible="false" value="999" displayexp="sstr(formatNumber(&quot;#,##0&quot;, text), [&quot;count&quot;]) + sstr(&quot; notifications&quot;, [&quot;cl-sound-only&quot;])" icon="0">
+            <cl:flowlayoutdata std:sid="f-data-68d76158" width="30px" height="40px" autosize="width"/>
           </cl:button>
           <cl:flowlayout std:sid="f-layout-d2604cfa" halign="right"/>
         </cl:group>
-        <cl:udc std:sid="ud-control-e85f3559" id="udcComGnb1" type="udc.pse.com.udcComGnb">
-          <cl:formdata std:sid="f-data-768f4d9e" row="0" col="1"/>
-        </cl:udc>
         <cl:formlayout std:sid="f-layout-83e8d125" scrollable="false" hspace="16px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
           <cl:rows length="1" unit="FRACTION"/>
           <cl:columns length="150" unit="PIXEL" autoSizing="true" syncminlength="false"/>
           <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
-          <cl:columns length="500" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+          <cl:columns length="550" unit="PIXEL" autoSizing="true" syncminlength="false"/>
         </cl:formlayout>
       </cl:group>
       <cl:verticallayout std:sid="v-layout-a72f52ba" distribution="center" spacing="0"/>
     </cl:group>
     <cl:group std:sid="group-da8d7bc0">
-      <cl:verticaldata std:sid="v-data-4f5667c6" width="1920px" height="1000px" autosize="height"/>
+      <cl:verticaldata std:sid="v-data-4f5667c6" width="1920px" height="2000px" autosize="height"/>
       <cl:embeddedapp std:sid="e-app-50700049" id="ea1" src="Main_content.clx">
         <cl:verticaldata std:sid="v-data-1be7c01f" width="320px" height="1000px" autosize="height"/>
       </cl:embeddedapp>
-      <cl:verticallayout std:sid="v-layout-0fc4b2e1"/>
+      <cl:embeddedapp std:sid="e-app-ecb14f76" id="eaSubPage" visible="false" src="Sub_page.clx">
+        <cl:verticaldata std:sid="v-data-dd558849" width="320px" height="1000px" autosize="height"/>
+      </cl:embeddedapp>
+      <cl:verticallayout std:sid="v-layout-0fc4b2e1" spacing="0"/>
     </cl:group>
     <cl:group std:sid="group-05c3c2de" class="footer-wrap">
       <cl:verticaldata std:sid="v-data-b92245af" width="1920px" height="256px" autosize="height"/>
@@ -338,10 +344,10 @@
           <cl:group std:sid="group-1cd6231b" class="f-b-right">
             <cl:attribute name="needs-auto-height" value="true"/>
             <cl:formdata std:sid="f-data-4c916444" row="0" col="1"/>
-            <cl:button std:sid="button-6a74ce2b" class="btn-sns fb icon" value="Contact Us" icon="0">
+            <cl:button std:sid="button-6a74ce2b" class="btn-sns fb icon" fieldLabel="Facebook" value="Contact Us" icon="0">
               <cl:flowlayoutdata std:sid="f-data-3fe3c495" width="24px" height="24px" autosize="both"/>
             </cl:button>
-            <cl:button std:sid="button-abd2344e" class="btn-sns tw icon" value="FAQs" icon="0">
+            <cl:button std:sid="button-abd2344e" class="btn-sns tw icon" fieldLabel="Twitter" value="FAQs" icon="0">
               <cl:flowlayoutdata std:sid="f-data-21e6818b" width="24px" height="24px" autosize="both"/>
             </cl:button>
             <cl:flowlayout std:sid="f-layout-eabd1b9f" hspacing="12"/>
@@ -364,7 +370,7 @@
       <cl:verticaldata std:sid="v-data-dbe42536" width="375px" height="366px" autosize="height"/>
       <cl:group std:sid="group-b54bfff8" class="header">
         <cl:verticaldata std:sid="v-data-04839180" width="400px" height="40px" autosize="height"/>
-        <cl:button std:sid="button-d33a0e7c" id="btnMobileMenuClose" class="icon btn-close" icon="0">
+        <cl:button std:sid="button-d33a0e7c" id="btnMobileMenuClose" class="icon btn-close" fieldLabel="Close menu" icon="0">
           <cl:listener std:sid="listener-3b9c1e47" name="click" handler="onBtnMobileMenuCloseClick"/>
           <cl:flowlayoutdata std:sid="f-data-aeed8026" width="40px" height="40px" autosize="none"/>
         </cl:button>

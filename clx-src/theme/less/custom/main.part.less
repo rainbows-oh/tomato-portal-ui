@@ -1,9 +1,29 @@
 @import (reference) "../../custom-settings.part.less";
 
-
 @keyframes header-ticker-marquee {
 	from { transform: translateX(0); }
 	to   { transform: translateX(calc(-100% / 3)); }   /* 3벌 중 한 벌 */
+}
+
+/* 모바일 앱 푸터(Main.js 의 applyMobileFooter)가 떠 있을 때: 페이지 스크롤(body)이 푸터 위까지만 생기도록 body 높이를 푸터 높이만큼 줄임.
+   (런타임이 body 에 min-height: 화면 높이를 인라인으로 지정하므로 !important). 푸터 높이는 Main.js 의 MOBILE_FOOTER_HEIGHT 와 같아야 함 */
+@mobile-footer-height: 80px;
+
+html.has-mobile-footer {
+	height: 100% !important;
+	overflow: hidden !important;
+
+	body {
+		height: ~"calc(100% - @{mobile-footer-height})" !important;
+		min-height: ~"calc(100% - @{mobile-footer-height})" !important;
+		overflow: auto !important;
+	}
+}
+
+/* 페이지 스크롤 잠금 (고급 검색이 열려 있는 동안 — Main.js 의 lockPageScroll). 위 규칙보다 뒤에 두어 우선 적용 */
+html.page-scroll-lock,
+html.page-scroll-lock body {
+	overflow: hidden !important;
 }
 
 .cl-container.main {
@@ -16,6 +36,23 @@
 		
 		@media(max-width: 375px) {
 			padding: 0px 16px;
+		}
+
+		/* 알림 개수 배지가 버튼 밖(헤더 좌우 padding 영역)까지 나와도 잘리지 않도록, 헤더의 조상 요소 overflow 를 풂
+		   (런타임이 overflow: hidden 을 지정하므로 !important). 컨테이너와 그 바로 아래 .cl-layout 이 대상 */
+		overflow: visible !important;
+
+		> .cl-layout {
+			overflow: visible !important;
+		}
+
+		.cl-container.header,
+		.cl-container.header-utils {
+			overflow: visible !important;
+
+			> .cl-layout {
+				overflow: visible !important;
+			}
 		}
 	}
 
@@ -31,6 +68,7 @@
 		}
 	}
 	
+	/* 구조: header-wrap > header(grpHeader) > left / header-utils */
 	.cl-container.header-wrap {
 		.cl-container.header {
 			.cl-container.left {
@@ -50,53 +88,92 @@
 					}
 				}
 			}
-			
-			.cl-button.btn-m-search {
-				.cl-icon {
-					background-image: url("../../img/main/ico_search_mo.svg") !important;
-					width: 24px;
-					height: 24px;
-				}
-			}
-			
-			.cl-button.btn-m-adv-search {
-				.cl-icon {
-					background-image: url("../../img/main/ico_adv_search_mo.svg") !important;
-					width: 24px;
-					height: 24px;
-				}
-			}
-		}
 
-		.cl-container.header-utils {
-			padding: 12px 0px;
-			
-			.cl-searchinput {
-				border-radius: @border-radius-full;
-				background-color: #E9EEF4;
-				border: none;
+			.cl-container.header-utils {
+				padding: 12px 0px;
 				
-				.cl-text {
-					padding: 0px 12px 0px 4px;
+				.cl-searchinput {
+					border-radius: @border-radius-full;
+					background-color: #E9EEF4;
+					border: none;
+					
+					.cl-text {
+						padding: 0px 12px 0px 4px;
+					}
+					
+					.cl-searchinput-search.cl-left {
+						margin-left: 12px;
+						margin-right: 0;
+					}
 				}
 				
-				.cl-searchinput-search.cl-left {
-					margin-left: 12px;
-					margin-right: 0;
+				.cl-button.btn-advsearch {
+					padding: 0px 12px;
+					border-color: #CBD5E1;
+					border-radius: @border-radius-full;
+					font-weight: 600;
+					color: #1E293B;
+					
+					.cl-icon {
+						background-image: url("../../img/main/ico_main_h_filter.svg") !important;
+						width: 24px;
+						height: 24px;
+					}
 				}
-			}
-			
-			.cl-button.btn-advsearch {
-				padding: 0px 12px;
-				border-color: #CBD5E1;
-				border-radius: @border-radius-full;
-				font-weight: 600;
-				color: #1E293B;
 				
-				.cl-icon {
-					background-image: url("../../img/icons/ico_filter.svg") !important;
-					width: 20px;
-					height: 20px;
+				.cl-button.btn-m-search {
+					.cl-icon {
+						background-image: url("../../img/main/ico_main_h_search_mo.svg") !important;
+						width: 30px;
+						height: 30px;
+					}
+				}
+				
+				.cl-button.btn-m-adv-search {
+					.cl-icon {
+						background-image: url("../../img/main/ico_main_h_filter_mo.svg") !important;
+						width: 30px;
+						height: 30px;
+					}
+				}
+
+				.cl-button.btn-m-notify {
+					position: relative;
+					padding: 0;
+					border: none;
+					overflow: visible;
+
+					.cl-icon {
+						background-image: url("../../img/main/ico_main_h_bell_mo.svg") !important;
+						width: 30px;
+						height: 30px;
+						margin: 0;
+					}
+
+					/* 개수 배지 */
+					.count {
+						box-sizing: border-box;
+						position: absolute;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						min-width: 14px;
+						height: 14px;
+						top: calc(50% - 16px);
+						left: 50%;
+						padding: 2px 4px;
+						border-radius: @border-radius-full;
+						background-color: @danger-60;
+						color: @white;
+						font-size: 7px;
+						font-weight: 700;
+						line-height: 1;
+						white-space: nowrap;
+					}
+
+					.cl-sound-only {
+						#sound-only();
+					}
 				}
 			}
 		}
@@ -152,6 +229,60 @@
 				}
 			}
 		}
+	}
+	
+	/*앱 전용 푸터*/
+	.mobile-footer {
+		position: fixed !important;
+		z-index: 9 !important;
+		border-top: 1px solid @gray-20;
+		background: @white;
+		padding: 8px 0px 14px 0px;
+		
+		.cl-button.btn-home,
+		.cl-button.btn-comp,
+		.cl-button.btn-disclo,
+		.cl-button.btn-prod,
+		.cl-button.btn-cal {
+			padding: 0;
+			border: none;
+			border-radius: 0;
+			background-color: transparent;
+			color: #7B8AA0;
+			font-size: 10px;
+			font-weight: 400;
+
+			.cl-icon {
+				width: 28px;
+				height: 28px;
+				margin: 0 0 3px 0;
+			}
+
+			&:not(.cl-disabled).cl-activated,
+			&:not(.cl-disabled):active,
+			&.cl-focus {
+				color: @secondary-90;
+				font-weight: 700;
+			}
+		}
+
+		.mobile-footer-icon(@normal, @active) {
+			.cl-icon {
+				background-image: url("../../img/main/@{normal}") !important;
+			}
+
+			&:not(.cl-disabled).cl-activated .cl-icon,
+			&:not(.cl-disabled):active .cl-icon,
+			&.cl-focus .cl-icon {
+				background-image: url("../../img/main/@{active}") !important;
+			}
+		}
+
+		.cl-button.btn-home  { .mobile-footer-icon("ico_app_home.svg",   "ico_app_home_active.svg"); }
+		.cl-button.btn-comp  { .mobile-footer-icon("ico_app_comp.svg",   "ico_app_comp_active.svg"); }
+		.cl-button.btn-disclo { .mobile-footer-icon("ico_app_disclo.svg", "ico_app_disclo_active.svg"); }
+		.cl-button.btn-prod  { .mobile-footer-icon("ico_app_prod.svg",   "ico_app_prod_active.svg"); }
+		.cl-button.btn-cal   { .mobile-footer-icon("ico_app_cal.svg",    "ico_app_cal_active.svg"); }
 	}
 }
 

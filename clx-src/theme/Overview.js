@@ -134,7 +134,7 @@ function onCmb6Open(e) {
 function onButtonClick(e) {
 	var button = e.control;
 	
-	util.Dialog.open(app, "app/pb/submission/new3/SUB-CPM-03-00_CompanyManagement_CompanyLogo", 500, -1, function(){
+	util.Dialog.open(app, "app/pb/new/EDGE-COM-01-00_CompanyList_TemplateViewer", 500, -1, function(){
 		
 	}, {
 		

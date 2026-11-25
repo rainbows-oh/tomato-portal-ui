@@ -1,4 +1,94 @@
 @import (reference) "../../custom-settings.part.less";
+/**
+ * 화면 전반에 걸쳐 사용 되는 스타일 정의
+ */
+
+.cl-container.card {
+	border-radius: 12px;
+	border: 1px solid @gray-20;
+	background: @white;
+	
+	&.gray {
+		border-color: transparent;
+		background: @gray-10;
+	}
+}
+
+.cl-container.sub-page {
+	background-color: #F3F4F5;
+	
+	/* 서브 페이지 사이드 내비게이션 — 레벨 1 항목(+ 하위 목록)이 하나의 카드, 하위 항목(레벨 2)이 카드 안의 행.
+	   DOM: .cl-list.cl-level-1 > .cl-subtree(카드) > a.cl-level-1(제목 행) + .cl-list.cl-level-2 > .cl-subtree > a.cl-level-2(항목) */
+	.cl-sidenavigation {
+		.cl-list.cl-level-1 > .cl-subtree {
+			padding: 16px 12px;
+			border: 1px solid #DAE2EC;
+			border-radius: 12px;
+			background-color: @white;
+
+			/* 카드 사이 간격 */
+			& + .cl-subtree {
+				margin-top: 10px;
+			}
+		}
+
+		/* 아이콘은 사용하지 않음 (빈 영역이 폭을 차지하므로 제거) */
+		.cl-sidenavigation-item .cl-icon {
+			display: none;
+		}
+
+		/* 펼침 화살표 — 오른쪽(기본 위치). 접힘: 아래(v), 펼침: 위(^) */
+		.cl-sidenavigation-item.cl-folder {
+			&.cl-collapsed .cl-expand-icon { transform: rotate(0deg); }
+			&.cl-expanded .cl-expand-icon { transform: rotate(180deg); }
+
+			/* 선택(cl-selected)된 항목은 런타임 CSS 가 화살표를 선택용 이미지로 바꿔 보이지 않으므로, 선택 여부와 관계없이 같은 화살표를 항상 표시 */
+			&.cl-collapsed .cl-expand-icon,
+			&.cl-expanded .cl-expand-icon {
+				background-image: url("../../img/icons/ico_angle.svg") !important;
+				background-position: center !important;
+				background-repeat: no-repeat !important;
+				background-size: contain !important;
+			}
+		}
+
+		/* 레벨 1: 카드 제목 행 */
+		.cl-sidenavigation-item.cl-level-1 {
+			padding: 0;
+			border-radius: 0;
+			background-color: transparent;
+			color: @secondary-90;
+			font-size: 17px;
+			font-weight: 800;
+
+			/* 펼쳐진 카드의 제목은 강조색 */
+			&.cl-expanded {
+				color: #1BAADE;
+			}
+		}
+
+		/* 레벨 2: 카드 안의 항목 행 */
+		.cl-list.cl-level-2 {
+			margin-top: 4px;
+
+			.cl-sidenavigation-item.cl-level-2 {
+				padding: 8px 12px;
+				border-radius: 8px;
+				background-color: transparent;
+				color: @gray-80;
+				font-size: 14px;
+				font-weight: 400;
+
+				/* 선택된 항목 */
+				&.cl-selected {
+					background-color: @primary-10;
+					color: @primary-70;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
 
 .cl-container.dot-separate {
 	.cl-output {
@@ -29,5 +119,98 @@
 
 	@media(max-width: 375px) {
 		padding: 20px 16px 40px 16px;
+	}
+}
+
+.cl-output.grd-tit {
+	color: @gray-80;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.cl-image.logo-area {
+	padding: 10px;
+	background-color: @white;
+	border: 1px solid @gray-20;
+	border-radius: 8px;
+}
+
+/* 조회 영역(grpSearch) 안의 행(.row) — 체크박스/라디오 그룹 높이 */
+.cl-container.row {
+	.cl-checkbox,
+	.cl-checkboxgroup,
+	.cl-radiobutton {
+		min-height: 36px;
+		
+		@media(max-width: 767px) {
+			min-height: 0px;
+		}
+	}
+
+	/* 그룹 항목을 36px 높이의 세로 가운데로 (display 는 그대로 두어 항목 흐름/줄바꿈 유지) */
+	.cl-checkboxgroup,
+	.cl-radiobutton {
+		line-height: 36px;
+
+		@media(max-width: 767px) {
+			line-height: normal;
+		}
+
+		/* 그룹 안의 개별 항목은 36px 로 늘리지 않고 자기 크기로 줄 가운데에 둔다 */
+		.cl-checkbox,
+		.cl-radiobutton-item {
+			min-height: 0px;
+			line-height: normal;
+			vertical-align: middle;
+		}
+	}
+}
+
+/* ==========================================================================
+ 조회형 (Search Box) - grpSearch
+ ========================================================================== */
+.cl-container.search-top-box {
+	background-color: #ffffff;
+	border: 1px solid @gray-20;
+	border-radius: 12px;
+	
+	.cl-container.search-head {
+		.cl-output.truncate {
+			color: @gray-70;
+			#font-body-s();
+			text-align: center;
+			padding: 16px 24px;
+		}
+	}
+	
+	.cl-container.sch-filter-box {
+		.font-label {
+			color: @gray-90 !important;
+		}
+	}
+}
+
+//조회 영역 하위 결과 컨텐츠
+.cl-container.search-list-top {
+	padding: 0px;
+}
+
+.cl-output.sch-info {
+	color: @gray-50;
+	font-size: 13px;
+	font-weight: @font-weight-normal;
+	line-height: 1.4;
+	letter-spacing: -0.39px;
+}
+
+.cl-container.disclaimer {
+	border-radius: 12px;
+	border: 1px solid @gray-20;
+	background: #FFF;
+	
+	.cl-output.tit {
+		color: @gray-80;
+		font-size: 15px;
+		font-weight: 800;
 	}
 }

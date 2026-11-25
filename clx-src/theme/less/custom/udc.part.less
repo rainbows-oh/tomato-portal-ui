@@ -14,6 +14,10 @@
 @gnb-color-title:     #121738;   // 열 제목, 그룹 제목
 @gnb-color-item:      #262B33;   // 하위 항목
 
+
+/************************************************
+ * [UDC] 헤더 영역의 프로젝트 전역 GNB 스타일
+ ************************************************/
 .gnb {
 	font-family: inherit;
 
@@ -249,5 +253,366 @@
 		width: 16px;
 		height: 16px;
 		background: url("../../img/main/ico_external.svg") center / contain no-repeat;
+	}
+}
+
+
+/************************************************
+ * [UDC] 앱헤더
+ ************************************************/
+.cl-container.app-header {
+	.cl-output {
+		font-size: 27px;
+		font-weight: 700;
+		color: @secondary-90;
+		
+		@media(max-width: 375px) {
+			font-size: 22px;
+		}
+	}
+}
+
+/************************************************
+ * [UDC] 조회영역 토글
+ ************************************************/
+.cl-container.udc-search-toggle {
+	.cl-button.btn-expand {
+		border: none;
+		border-radius: 12px 12px 0px 0px;
+		text-align: left;
+		font-size: 20px;
+		font-weight: 700;
+		padding: 24px 24px 0px 24px;
+		/* 아이콘(18px)을 글자 줄 세로 가운데에 맞춤: 글자 줄 = font 20px × line-height 1.5 = 30px (위 padding 24px 아래) → top = 24 + (30 - 18) / 2 = 30px */
+		background: url("../../img/icons/ico_angle_down.svg") no-repeat top 30px right 24px;
+		background-size: 18px;
+		color: @gray-80;
+		
+		&.collapse {
+			background: url("../../img/icons/ico_angle_up.svg") no-repeat top 30px right 24px;
+			background-size: 18px;
+		}
+	}
+}
+
+/************************************************
+ * [UDC] 조회 결과 툴바 — udcComResultToolbar
+ * 정렬 체크박스(Date, Company Name) + 보기 전환 버튼(표/카드)
+ ************************************************/
+.cl-container.result-toolbar {
+	/* 정렬 체크박스(Date, Company Name) — 글자 + 오른쪽 화살표(ico_toolbar_arrow.svg)가 있는 테두리 버튼 모양.
+	   체크박스 기본 아이콘(체크 박스) 대신 화살표를 상태와 관계없이 사용하고, 선택(checked)되면 화살표를 위로 뒤집음 */
+	.cl-checkbox {
+		box-sizing: border-box;
+		padding: 0 10px !important;
+		border: 1px solid #D8DADE;
+		border-radius: 8px;
+		background-color: @white;
+		color: @gray-80;
+		cursor: pointer;
+
+		.cl-checkbox-field {
+			width: auto;
+			vertical-align: middle;
+		}
+
+		.cl-text {
+			padding: 0 8px 0 0;
+			font-size: 14px;
+			font-weight: @font-weight-medium;
+			line-height: 1.2;
+			white-space: nowrap;
+			vertical-align: middle;
+		}
+
+		.cl-icon-wrapper {
+			padding-top: 0;
+			line-height: 0;
+			vertical-align: middle;
+		}
+
+		.cl-checkbox-icon {
+			width: 16px;
+			height: 16px;
+			background-image: url("@{img-path}/icons/ico_toolbar_arrow.svg") !important;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		&.cl-checked .cl-checkbox-icon {
+			transform: rotate(180deg);
+		}
+	}
+	
+	.cl-button {
+		border-radius: 6px;
+		padding: 0;
+		background-color: @secondary-10;
+		
+		.cl-icon {
+			margin: 0;
+			background-size: auto;
+		}
+		
+		&.btn-grid {
+			.cl-icon {
+				background-image: url("@{img-path}/icons/ico_grid.svg") !important;
+			}
+			
+			&.active {
+				.cl-icon {
+					background-image: url("@{img-path}/icons/ico_grid_on.svg") !important;
+				}
+			}
+		}
+		
+		&.btn-card {
+			.cl-icon {
+				background-image: url("@{img-path}/icons/ico_card.svg") !important;
+			}
+			
+			&.active {
+				.cl-icon {
+					background-image: url("@{img-path}/icons/ico_card_on.svg") !important;
+				}
+			}
+		}
+		
+		&.active {
+			background-color: @secondary-90;
+		}
+	}
+}
+
+/************************************************
+ * [UDC] 페이지 인덱서
+ ************************************************/
+.cl-container.pagination {
+	.cl-container.page-info {
+		.cl-output {
+			color: @gray-60;
+			font-size: 13px;
+			font-weight: @font-weight-normal;
+			white-space: nowrap;
+		}
+	}
+	
+	/* 모바일 — 건수 정보와 페이지 이동 영역을 각각 가운데 정렬위해*/
+	@media (max-width: 767px) {
+		.cl-container.page-info,
+		.cl-container.page-navi {
+			> .cl-layout > .cl-layout-content {
+				text-align: center !important;
+			}
+		}
+		
+		.cl-container.page-info {
+			.cl-layout-wrap,
+			.cl-output {
+				height: auto !important;
+			}
+		}
+	}
+	
+	.cl-button {
+		padding: 0px;
+		background-color: transparent;
+		color: @gray-90;
+		font-size: 13px;
+		font-weight: 600;
+		
+		&.icon {
+			min-width: 24px;
+		}
+		
+		.cl-icon {
+			position: relative;
+			top: -1px;
+			width: 24px;
+			height: 24px;
+		}
+
+		&.before {
+			.cl-icon {
+	 			background-image: url("../../img/icons/ico_pagination_before.svg") !important;
+	 		}
+	 		
+	 		&.cl-disabled {
+	 			.cl-icon {
+	 				background-image: url("../../img/icons/ico_pagination_before_disabled.svg") !important;
+	 			}
+	 		}
+		}
+		
+		&.prev {
+			.cl-icon {
+	 			background-image: url("../../img/icons/ico_pagination_prev.svg") !important;
+	 		}
+	 		
+	 		&.cl-disabled {
+	 			.cl-icon {
+	 				background-image: url("../../img/icons/ico_pagination_prev_disabled.svg") !important;
+	 			}
+	 		}
+		}
+		
+		&.next {
+			.cl-icon {
+	 			background-image: url("../../img/icons/ico_pagination_next.svg") !important;
+	 		}
+	 		
+	 		&.cl-disabled {
+	 			.cl-icon {
+	 				background-image: url("../../img/icons/ico_pagination_next_disabled.svg") !important;
+	 			}
+	 		}
+		}
+
+		&.after {
+			.cl-icon {
+	 			background-image: url("../../img/icons/ico_pagination_after.svg") !important;
+	 		}
+	 		
+	 		&.cl-disabled {
+	 			.cl-icon {
+	 				background-image: url("../../img/icons/ico_pagination_after_disabled.svg") !important;
+	 			}
+	 		}
+		}
+		
+		&.cl-disabled {
+			background-color: #ffffff;
+			color: @gray-40;
+		}
+	}
+}
+
+/************************************************
+ * [UDC] 조회 목록의 카드 스타일
+ ************************************************/
+.cl-container.toggle-card {
+	padding: 14px 12px;
+	border-radius: 8px;
+	border: 1px solid @gray-20;
+	background: #FFF;
+	
+	.cl-output.font-micro {
+		color: #7B8AA0;
+	}
+	.cl-output.font-body-s {
+		color: @gray-80;
+	}
+	
+	.cl-button.btn-link {
+		text-align: left;
+	}
+}
+
+/************************************************
+ * [UDC] 조회영역의 Company Name 항목의 선택 칩 스타일
+ ************************************************/
+ .cl-container.name-chip {
+ 	border-radius: 999px;
+ 	background: @primary-10;
+ 	height: 24px !important;
+ 	padding: 4px 10px;
+ 	border: none;
+ 	
+ 	.cl-output {
+ 		color: @primary-70;
+ 		#font-caption-strong();
+ 		font-weight: 600;
+ 		/* 칩 안쪽 높이(24px - 위아래 패딩 8px = 16px)에 맞춰 한 줄 높이 고정 */
+ 		line-height: 16px;
+ 	}
+
+ 	.cl-button {
+ 		.cl-icon {
+ 			width: 16px;
+ 			height: 16px;
+ 		}
+ 	}
+ }
+
+/************************************************
+ * [UDC] 조회영역의 Company Name 선택 리스트 스타일
+ ************************************************/
+.cl-container.company-selection {
+	.cl-button.btn-custom-selected {
+		border-radius: 6px;
+		border: 1px solid @gray-30;
+		background-color: @white;
+		color: @color-input-text;
+		font-weight: @font-weight-normal;
+		font-size: @font-size-default;
+		text-align: left;
+		padding: 0px 12px;
+
+		.cl-text-wrapper {
+			width: 100% !important;
+			justify-content: space-between !important;
+		}
+
+		.cl-icon {
+			margin-left: 8px;
+			flex-shrink: 0;
+		}
+	}
+}
+
+.cl-container.company-card {
+	padding: 6px 0px;
+	border: 1px solid @gray-30;
+	background-color: @white;
+	border-radius: 8px;
+	
+	&.cursor {
+		cursor: pointer;
+	}
+	
+	.cl-output.no-data {
+		padding: 10px 16px;
+		color: @gray-50;
+	}
+	
+	/* 체크형 카드 — 목록(company-list) 아래 Done 버튼 영역 구분선 */
+	.cl-container.card-footer {
+		border-top: 1px solid @gray-20;
+	}
+
+	/* 체크박스 그룹형 목록 — 그룹의 각 아이템이 한 줄 항목, 마우스를 올렸을 때(hover)·active 는 같은 배경색 */
+	.cl-container.company-list {
+		.cl-checkboxgroup {
+			.cl-checkbox {
+				display: block;
+				padding: 10px 14px;
+
+				&.active,
+				&:hover {
+					background-color: @gray-10;
+				}
+			}
+		}
+	}
+
+	.cl-container.company-item {
+		/* 선택(active)과 마우스를 올렸을 때(hover)는 같은 배경색 */
+		padding: 10px 16px;
+
+		&.active,
+		&:hover {
+			background-color: @gray-10;
+		}
+
+		.cl-output.badge {
+			padding: 2px 6px;
+			border-radius: 4px;
+			border: 1px solid @gray-30;
+			background-color: @gray-10;
+			#font-micro();
+			font-weight: 600;
+			color: @gray-70;
+		}
 	}
 }

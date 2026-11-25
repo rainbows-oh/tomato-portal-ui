@@ -16,14 +16,18 @@
 
 /* 파일 지역 변수 (@grid-- 접두어) — 공통 그리드 스타일 */
 @grid--color-background:   @white;
-@grid--color-border:       #D1D5DB;  /* 바깥 보더 (팔레트에 없는 값) */
+@grid--color-border:       #D1D5DB;  /* 바깥 보더 (현재 미사용 — 바깥 테두리 없음) */
 @grid--color-row-border:   @gray-20; /* #E2E8F0 — 행 간 보더 */
 @grid--border-radius:      @border-radius-5; /* 8px */
-@grid--head-color-text:    @gray-50; /* #64748B */
+@grid--head-color-text:    #141B4D;  /* 헤더 텍스트 */
 @grid--head-color-sorted:  @primary-70; /* #1D4ED8 */
-@grid--head-padding:       10px 16px;
-@grid--cell-color-text:    #273951;  /* 데이터 텍스트 (팔레트에 없는 값) */
-@grid--cell-padding:       12px 16px;
+@grid--head-background:    #EDF2F8;  /* 헤더 배경 (팔레트에 없는 값) */
+@grid--head-radius:        6px;
+@grid--head-font-size:     11px;
+@grid--head-font-weight:   700;
+@grid--head-padding:       0px 16px;
+@grid--cell-color-text:    #1E293B;  /* 데이터 텍스트 (@gray-80) */
+@grid--cell-padding:       0px 16px;
 @grid--sort-gap:           6px;  /* 헤더 텍스트 ~ 정렬 아이콘 */
 @grid--sort-icon-size:     12px;
 
@@ -98,8 +102,8 @@
  ========================================================================== */
 .cl-grid {
 	background-color: @grid--color-background;
-	border: 1px solid @grid--color-border;
-	border-radius: @grid--border-radius;
+	border: 0; /* 바깥 테두리 없음 */
+	border-radius: 0; /* 헤더 행이 자체 모서리(@grid--head-radius)를 가짐 */
 	color: @grid--cell-color-text;
 	#font-body(); /* 14px / 20px */
 	font-weight: @font-weight-normal;
@@ -240,7 +244,13 @@
 		height: 36px !important;
 		max-width: 100%;
 	}
-	
+
+	/* 셀 안의 링크 버튼(btn-link) — 기본 padding 0 대신 다른 셀과 같은 좌우 여백(@grid--cell-padding, 0 16px)
+	   (button.part.less 의 .btn-link 가 padding: 0 !important 라서 같이 !important 로 덮어씀) */
+	.cl-button.btn-link {
+		padding: @grid--cell-padding !important;
+	}
+
 	/* expander (행 확장/접기) — 직접 url */
 	.cl-expander {
 		width: @size-icon-small;
@@ -284,19 +294,20 @@
  Base — 헤더
  ========================================================================== */
 .cl-grid .cl-grid-header {
-	background-color: @grid--color-background;
+	background-color: @grid--head-background;
 	background-image: none;
 	border: 0;
+	border-radius: @grid--head-radius;
 	color: @grid--head-color-text;
 	cursor: default;
-	#font-caption(); /* 12px / 16px */
-	font-weight: @font-weight-medium;
+	font-size: @grid--head-font-size;
+	font-weight: @grid--head-font-weight;
 	text-align: left;
 	
 	.cl-grid-cell {
-		border-bottom: 1px solid @grid--color-row-border;
+		border-bottom: none; /* 헤더 하단 구분선 없음 */
 		border-right: none;
-		
+
 		/* 헤더 항목 padding (셀 공통 데이터 padding 덮어씀) */
 		.cl-control.cl-default-cell,
 		.cl-control.cl-output {
@@ -317,7 +328,7 @@
 	}
 	
 	.cl-blank {
-		background-color: @color-grid-head-background;
+		background-color: @grid--head-background;
 		box-sizing: border-box;
 	}
 	

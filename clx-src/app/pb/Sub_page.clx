@@ -1,0 +1,97 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-86db58dd" version="1.0.6209">
+  <head std:sid="head-5859f559">
+    <screen std:sid="screen-10242c78" id="default" name="default" width="1025px" height="768px" useCustomWidth="true" useCustomHeight="true" customHeight="1000" customWidth="1920" active="true"/>
+    <screen std:sid="screen-dd1c2fd1" id="tablet" name="tablet" width="376px" height="667px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1024"/>
+    <screen std:sid="screen-f11ca336" id="mobile" name="mobile" width="375px" height="525px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-098fb138">
+      <cl:dataset comment="서브 페이지 메뉴" std:sid="d-set-6092c065" id="dsSubMenu">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="메뉴명" std:sid="d-column-a3fbff20" name="MENU_NM"/>
+          <cl:datacolumn comment="메뉴ID" std:sid="d-column-4162bd50" name="MENU_ID"/>
+          <cl:datacolumn comment="상위메뉴ID" std:sid="d-column-bcde9f24" name="UP_MENU_ID"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[PSE]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M0101]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Listed Companies]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M010101]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0101]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Green Equity Label]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M010102]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0101]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[PMRC Companies]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M010103]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0101]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Watch List]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M010104]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0101]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[PDEx]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M0102]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Issuers]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M010201]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0102]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Green Equity Label (TBD)]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M010202]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0102]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="MENU_NM"><![CDATA[Watch List]]></cl:datavalue>
+            <cl:datavalue columnname="MENU_ID"><![CDATA[M010203]]></cl:datavalue>
+            <cl:datavalue columnname="UP_MENU_ID"><![CDATA[M0102]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-2deb2410" class="sub-page">
+    <cl:listener std:sid="listener-3ea7e270" name="load" handler="onBodyLoad"/>
+    <cl:listener std:sid="listener-f97b67fb" name="screen-change" handler="onBodyScreenChange"/>
+    <cl:group std:sid="group-5a188a03" class="content-wrap">
+      <cl:verticaldata std:sid="v-data-bfbd98e2" width="1920px" height="1000px" autosize="height"/>
+      <cl:group std:sid="group-6dfaa279" id="grpSubWrap">
+        <cl:verticaldata std:sid="v-data-ac698a02" width="1320px" height="880px" autosize="height"/>
+        <cl:group std:sid="group-f5ddb7d9" id="grpSideNav">
+          <cl:formdata std:sid="f-data-3b538b4d" row="0" col="0" rowspan="1" colspan="1"/>
+          <cl:sidenavigation std:sid="s-navigation-eaac8974" id="snbSubMenu">
+            <cl:verticaldata std:sid="v-data-4692be3d" width="240px" height="200px" autosize="height"/>
+            <cl:treeitemset datasetid="dsSubMenu" label="MENU_NM" value="MENU_ID" parent="UP_MENU_ID"/>
+          </cl:sidenavigation>
+          <cl:verticallayout std:sid="v-layout-2e47784b"/>
+        </cl:group>
+        <cl:embeddedapp std:sid="e-app-7a12d1c7" id="ea1" src="pb/new/EDGE-CDL-01-00_Disclosures_CompanyAnnouncements.clx">
+          <cl:formdata std:sid="f-data-79a81225" row="0" col="1"/>
+        </cl:embeddedapp>
+        <cl:formlayout std:sid="f-layout-c615e25a" scrollable="false" hspace="40px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+          <cl:rows length="1" unit="FRACTION"/>
+          <cl:columns length="240" unit="PIXEL"/>
+          <cl:columns length="1" unit="FRACTION"/>
+        </cl:formlayout>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-0832849c" distribution="center"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-41e8525d"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

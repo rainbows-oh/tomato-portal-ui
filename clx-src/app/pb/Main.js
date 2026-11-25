@@ -8,7 +8,7 @@
 /** 이 폭(px) 이하이면 모바일 검색 버튼 표시 (스크린 구분과 무관하게 화면 폭 기준) */
 var SEARCH_MOBILE_MAX_WIDTH = 767;
 /** 화면 폭이 SEARCH_MOBILE_MAX_WIDTH 이하일 때만 보이는 버튼 ID (초과 시 숨김) */
-var MOBILE_ONLY_BUTTON_IDS = ["btnMSearch", "btnMAdvSearch"];
+var MOBILE_ONLY_BUTTON_IDS = ["btnMSearch", "btnMAdvSearch", "btnMNotification"];
 /** 모바일 검색 버튼이 보일 때(폭 767px 이하) 숨기는 컨트롤 ID (초과 시 보임) */
 var MOBILE_HIDE_IDS = ["iptSearch", "btnAdvSearch"];
 /** 태블릿부터(PC가 아닐 때) 보이는 컨트롤 ID (PC에서는 숨김) */
@@ -35,8 +35,19 @@ var ADV_SEARCH_ID = "grpMobileAdvSearch";
 var ADV_SEARCH_TOP = "64px";
 /** 떠 있는 패널 정보 {id, panel, parent, index, constraint, dim} (닫을 때 원래 위치로 복원). 없으면 null — 한 번에 하나만 열림 */
 var moFloatPanel = null;
-/** 페이지 스크롤을 잠그기 전의 html/body overflow 값 (잠금 해제 시 복원). 잠겨 있지 않으면 null */
-var moScrollBackup = null;
+
+/** 모바일 스크린에서 화면 하단에 고정되는 앱 내비게이션 푸터 ID / 높이 / 버튼 정의 (class, 글자) */
+var MOBILE_FOOTER_ID = "grpMobileFooter";
+var MOBILE_FOOTER_HEIGHT = 80;
+var MOBILE_FOOTER_ITEMS = [
+	{ cls: "btn-home", text: "Home" },
+	{ cls: "btn-comp", text: "Companies" },
+	{ cls: "btn-disclo", text: "Disclosures" },
+	{ cls: "btn-prod", text: "Products" },
+	{ cls: "btn-cal", text: "Calendar" }
+];
+/** 모바일 푸터 컨테이너 (없으면 null) */
+var moMobileFooter = null;
 
 /*
  * 루트 컨테이너에서 load 이벤트 발생 시 호출.
@@ -44,6 +55,7 @@ var moScrollBackup = null;
  */
 function onBodyLoad(/* cpr.events.CEvent */ e){
 	applyMobileOnlyButtons(app.targetScreen.name);
+	applyMobileFooter(app.targetScreen.name);
 	
 	// 화면 폭에 따라 고정 폭(1320px) 영역을 가변으로 전환
 	applyFluidWidth();
@@ -68,6 +80,7 @@ function onBodyLoad(/* cpr.events.CEvent */ e){
  */
 function onBodyScreenChange(/* cpr.events.CScreenChangeEvent */ e){
 	applyMobileOnlyButtons(e.screen.name);
+	applyMobileFooter(e.screen.name);
 
 	// PC 로 돌아오면 떠 있는 모바일 메뉴를 닫는다 (PC 에서는 GNB 사용)
 	if (moFloatPanel && moFloatPanel.id == MOBILE_MENU_ID && AppProperties.SCREEN_DEFAULT_NM.indexOf(e.screen.name) != -1) {
@@ -98,6 +111,61 @@ function applyMobileOnlyButtons(psScreenName) {
 	setVisibleByIds(MOBILE_HIDE_IDS, !vbMobile);
 	setVisibleByIds(NOT_PC_SHOW_IDS, vbNotPc);
 	setVisibleByIds(NOT_PC_HIDE_IDS, !vbNotPc);
+}
+
+/**
+ * 모바일 스크린이면 화면 하단에 앱 내비게이션 푸터(Home / Companies / Disclosures / Products / Calendar)를 만듦
+ * 푸터는 화면 하단에 고정, 페이지 스크롤은 푸터 위까지만 생기도록 html 에 has-mobile-footer 클래스를 붙임.
+ * @param {String} psScreenName 스크린 명
+ */
+function applyMobileFooter(psScreenName) {
+	var vbMobile = AppProperties.SCREEN_MOBILE_NM.indexOf(psScreenName) != -1;
+	var vcRoot = app.getContainer();
+	
+	if (vbMobile && !moMobileFooter) {
+		var vcFooter = new cpr.controls.Container(MOBILE_FOOTER_ID);
+		var vcLayout = new cpr.controls.layouts.FormLayout();
+		vcLayout.scrollable = false;
+		vcLayout.horizontalSpacing = "0px";
+		vcLayout.verticalSpacing = "0px";
+		vcLayout.topMargin = "0px";
+		vcLayout.rightMargin = "0px";
+		vcLayout.bottomMargin = "0px";
+		vcLayout.leftMargin = "0px";
+		vcLayout.setColumns(MOBILE_FOOTER_ITEMS.map(function() {
+			return "1fr";	// 버튼 5개 균등 분배
+		}));
+		vcLayout.setRows(["1fr"]);
+		vcFooter.setLayout(vcLayout);
+		vcFooter.style.addClass("mobile-footer");
+		
+		MOBILE_FOOTER_ITEMS.forEach(function(voItem, idx) {
+			var vcBtn = new cpr.controls.Button();
+			vcBtn.value = voItem.text;
+			vcBtn.icon = "0";
+			vcBtn.iconAlign = "top";
+			vcBtn.style.addClass(voItem.cls);
+			vcFooter.addChild(vcBtn, {
+				colIndex: idx,
+				rowIndex: 0
+			});
+		});
+		
+		vcRoot.floatControl(vcFooter, {
+			left: "0px",
+			right: "0px",
+			bottom: "0px",
+			height: MOBILE_FOOTER_HEIGHT + "px"
+		});
+		moMobileFooter = vcFooter;
+		
+		// 페이지 스크롤이 푸터 위까지만 생기도록 html 에 클래스를 붙임 (main.part.less 의 html.has-mobile-footer)
+		document.documentElement.classList.add("has-mobile-footer");
+	} else if (!vbMobile && moMobileFooter) {
+		vcRoot.removeChild(moMobileFooter, true);
+		moMobileFooter = null;
+		document.documentElement.classList.remove("has-mobile-footer");
+	}
 }
 
 /**
@@ -243,25 +311,14 @@ function openFloatPanel(psId, poConstraint, psDimTop) {
 }
 
 /**
- * 페이지(html, body) 스크롤을 잠그거나 푼다. (잠그기 전의 overflow 값을 보관했다가 복원)
+ * 페이지 스크롤을 잠그거나 푼다. (html 에 page-scroll-lock 클래스를 붙이고 떼며, 실제 overflow 값은 main.part.less 에서 지정)
  * @param {Boolean} pbLock true: 잠금, false: 해제
  */
 function lockPageScroll(pbLock) {
-	var vaEls = [document.documentElement, document.body];
 	if (pbLock) {
-		if (moScrollBackup) return;
-		moScrollBackup = vaEls.map(function(el) {
-			return el.style.overflow;
-		});
-		vaEls.forEach(function(el) {
-			el.style.overflow = "hidden";
-		});
+		document.documentElement.classList.add("page-scroll-lock");
 	} else {
-		if (!moScrollBackup) return;
-		vaEls.forEach(function(el, idx) {
-			el.style.overflow = moScrollBackup[idx];
-		});
-		moScrollBackup = null;
+		document.documentElement.classList.remove("page-scroll-lock");
 	}
 }
 

@@ -1,0 +1,351 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-b4d4063a" version="1.0.6209">
+  <head std:sid="head-d7e5a61a">
+    <screen std:sid="screen-dc9c660e" id="default" name="default" width="1025px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1040" active="true"/>
+    <screen std:sid="screen-4f61ce75" id="tablet" name="tablet" width="376px" height="667px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1024"/>
+    <screen std:sid="screen-67d6918c" id="mobile" name="mobile" width="375px" height="525px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <cl:model std:sid="model-8cd7069e">
+      <cl:dataset comment="재무상태표" std:sid="d-set-155b9065" id="ds1">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="Item" std:sid="d-column-8d4ee381" name="item"/>
+          <cl:datacolumn comment="Current Year" std:sid="d-column-d529ba26" name="currentYear"/>
+          <cl:datacolumn comment="Previous Year" std:sid="d-column-0afe8591" name="previousYear"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="item"><![CDATA[Current Assets]]></cl:datavalue>
+            <cl:datavalue columnname="currentYear"><![CDATA[48,250,000,000]]></cl:datavalue>
+            <cl:datavalue columnname="previousYear"><![CDATA[44,180,000,000]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="item"><![CDATA[Total Assets]]></cl:datavalue>
+            <cl:datavalue columnname="currentYear"><![CDATA[126,840,000,000]]></cl:datavalue>
+            <cl:datavalue columnname="previousYear"><![CDATA[118,350,000,000]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="item"><![CDATA[Current Liabilities]]></cl:datavalue>
+            <cl:datavalue columnname="currentYear"><![CDATA[31,120,000,000]]></cl:datavalue>
+            <cl:datavalue columnname="previousYear"><![CDATA[29,450,000,000]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="item"><![CDATA[Total Liabilities]]></cl:datavalue>
+            <cl:datavalue columnname="currentYear"><![CDATA[74,560,000,000]]></cl:datavalue>
+            <cl:datavalue columnname="previousYear"><![CDATA[71,200,000,000]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="item"><![CDATA[Retained Earnings/(Deficit)]]></cl:datavalue>
+            <cl:datavalue columnname="currentYear"><![CDATA[38,920,000,000]]></cl:datavalue>
+            <cl:datavalue columnname="previousYear"><![CDATA[35,410,000,000]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="item"><![CDATA[Stockholders' Equity]]></cl:datavalue>
+            <cl:datavalue columnname="currentYear"><![CDATA[52,280,000,000]]></cl:datavalue>
+            <cl:datavalue columnname="previousYear"><![CDATA[47,150,000,000]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="item"><![CDATA[Stockholders' Equity - Parent]]></cl:datavalue>
+            <cl:datavalue columnname="currentYear"><![CDATA[49,610,000,000]]></cl:datavalue>
+            <cl:datavalue columnname="previousYear"><![CDATA[44,890,000,000]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="item"><![CDATA[Book Value Per Share]]></cl:datavalue>
+            <cl:datavalue columnname="currentYear"><![CDATA[18.42]]></cl:datavalue>
+            <cl:datavalue columnname="previousYear"><![CDATA[16.75]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+      <cl:dataset comment="손익계산서" std:sid="d-set-3148f98b" id="ds2">
+        <cl:datacolumnlist>
+          <cl:datacolumn comment="Item" std:sid="d-column-448403f8" name="item"/>
+          <cl:datacolumn comment="Current Year" std:sid="d-column-4c4af00f" name="currentYear"/>
+          <cl:datacolumn comment="Previous Year" std:sid="d-column-afaf4279" name="previousYear"/>
+        </cl:datacolumnlist>
+        <cl:datarowlist>
+          <cl:datarow>
+            <cl:datavalue columnname="item"><![CDATA[Gross Revenue]]></cl:datavalue>
+            <cl:datavalue columnname="currentYear"><![CDATA[62,480,000,000]]></cl:datavalue>
+            <cl:datavalue columnname="previousYear"><![CDATA[57,960,000,000]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="item"><![CDATA[Gross Expense]]></cl:datavalue>
+            <cl:datavalue columnname="currentYear"><![CDATA[48,210,000,000]]></cl:datavalue>
+            <cl:datavalue columnname="previousYear"><![CDATA[45,830,000,000]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="item"><![CDATA[Income/(Loss) Before Tax]]></cl:datavalue>
+            <cl:datavalue columnname="currentYear"><![CDATA[14,270,000,000]]></cl:datavalue>
+            <cl:datavalue columnname="previousYear"><![CDATA[12,130,000,000]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="item"><![CDATA[Net Income/(Loss) After Tax]]></cl:datavalue>
+            <cl:datavalue columnname="currentYear"><![CDATA[10,850,000,000]]></cl:datavalue>
+            <cl:datavalue columnname="previousYear"><![CDATA[9,240,000,000]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="item"><![CDATA[Net Income/(Loss) Attributable to Parent]]></cl:datavalue>
+            <cl:datavalue columnname="currentYear"><![CDATA[10,420,000,000]]></cl:datavalue>
+            <cl:datavalue columnname="previousYear"><![CDATA[8,910,000,000]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="item"><![CDATA[Earnings/(Loss) Per Share (Basic)]]></cl:datavalue>
+            <cl:datavalue columnname="currentYear"><![CDATA[3.87]]></cl:datavalue>
+            <cl:datavalue columnname="previousYear"><![CDATA[3.32]]></cl:datavalue>
+          </cl:datarow>
+          <cl:datarow>
+            <cl:datavalue columnname="item"><![CDATA[Earnings/(Loss) Per Share (Diluted)]]></cl:datavalue>
+            <cl:datavalue columnname="currentYear"><![CDATA[3.85]]></cl:datavalue>
+            <cl:datavalue columnname="previousYear"><![CDATA[3.30]]></cl:datavalue>
+          </cl:datarow>
+        </cl:datarowlist>
+      </cl:dataset>
+    </cl:model>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-a8aed19c">
+    <cl:group std:sid="group-52d63b15">
+      <cl:verticaldata std:sid="v-data-b60c7030" width="1920px" height="1382px" autosize="height"/>
+      <cl:group std:sid="group-e554b3b0" class="card">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="20"/>
+        <cl:verticaldata std:sid="v-data-4de80636" width="1920px" height="683px" autosize="height"/>
+        <cl:group std:sid="group-e0bd7beb" class="c-head">
+          <cl:verticaldata std:sid="v-data-e5b84d0c" width="1038px" height="61px" autosize="height"/>
+          <cl:output std:sid="output-ce10ed08" class="tit" accesskey="tit" value="Annual">
+            <cl:formdata std:sid="f-data-d9f7f0c1" row="0" col="0"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-d306381b" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-f78ed51b">
+          <cl:verticaldata std:sid="v-data-472c53a5" width="974px" height="46px" autosize="height"/>
+          <cl:group std:sid="group-700c7873">
+            <cl:formdata std:sid="f-data-a4de81ba" width="100" height="35" row="0" col="0"/>
+            <cl:output std:sid="output-574d8321" class="font-micro" value="For the fiscal year ended">
+              <cl:verticaldata std:sid="v-data-029579f4" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-be2b9839" class="font-subheading" value="Dec 31, 2025">
+              <cl:verticaldata std:sid="v-data-6d677754" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-e2785ebf" spacing="6"/>
+          </cl:group>
+          <cl:group std:sid="group-e55ccf34">
+            <cl:formdata std:sid="f-data-2c57f0e8" row="0" col="1"/>
+            <cl:output std:sid="output-1625c5fd" class="font-micro" value="Currency (and units, if applicable)">
+              <cl:verticaldata std:sid="v-data-7dcd0e44" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-80e9b70d" class="font-subheading" value="PHP (in Thousands)">
+              <cl:verticaldata std:sid="v-data-15ab597b" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-7e996f58" spacing="6"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-2e37fe7e" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="46" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-f768986e">
+          <cl:verticaldata std:sid="v-data-9125aa3a" width="1920px" height="252px" autosize="height"/>
+          <cl:output std:sid="output-9edfeee5" class="grd-tit" accesskey="sub-tit" value="Balance Sheet">
+            <cl:verticaldata std:sid="v-data-d944a441" width="1920px" height="36px" autosize="height"/>
+          </cl:output>
+          <cl:grid std:sid="grid-409ef81f" datasetid="ds1" autofit="0, 1, 2">
+            <cl:verticaldata std:sid="v-data-6e462528" width="100%" height="200px" autosize="height"/>
+            <cl:gridcolumn std:sid="g-column-e443cf6d" width="200px"/>
+            <cl:gridcolumn std:sid="g-column-fdaa1954" width="200px"/>
+            <cl:gridcolumn std:sid="g-column-52f9b7c1" width="200px"/>
+            <cl:gridheader std:sid="gh-band-c8a3225d">
+              <cl:gridrow std:sid="g-row-7b0e7dcb" height="33px"/>
+              <cl:gridcell std:sid="gh-cell-da495d9f" rowindex="0" colindex="0" targetcolumnname="item" sortable="false" filterable="false" text="Item"/>
+              <cl:gridcell std:sid="gh-cell-b15799df" rowindex="0" colindex="1" targetcolumnname="currentYear" sortable="false" filterable="false" text="Current Year"/>
+              <cl:gridcell std:sid="gh-cell-7c94a478" rowindex="0" colindex="2" targetcolumnname="previousYear" sortable="false" filterable="false" text="Previous Year"/>
+            </cl:gridheader>
+            <cl:griddetail std:sid="gd-band-ae3641fd">
+              <cl:gridrow std:sid="g-row-70ae277d" height="45px"/>
+              <cl:gridcell std:sid="gd-cell-d5185db6" rowindex="0" colindex="0" columnname="item">
+                <cl:output std:sid="output-d45ba3a6">
+                  <cl:celldata std:sid="c-data-79473284"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-a7dbfc92" rowindex="0" colindex="1" columnname="currentYear">
+                <cl:output std:sid="output-9283a4a5" class="text-right">
+                  <cl:celldata std:sid="c-data-d8a5ad66"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-4d1fe9ee" rowindex="0" colindex="2" columnname="previousYear">
+                <cl:output std:sid="output-bd1972a2" class="text-right">
+                  <cl:celldata std:sid="c-data-06308f92"/>
+                </cl:output>
+              </cl:gridcell>
+            </cl:griddetail>
+          </cl:grid>
+          <cl:verticallayout std:sid="v-layout-fca70c92" spacing="16"/>
+        </cl:group>
+        <cl:group std:sid="group-5998eb3e">
+          <cl:verticaldata std:sid="v-data-dd71ae04" width="1920px" height="252px" autosize="height"/>
+          <cl:output std:sid="output-ffebe9ca" class="grd-tit" accesskey="sub-tit" value="Income Statement">
+            <cl:verticaldata std:sid="v-data-738e52d6" width="1920px" height="36px" autosize="height"/>
+          </cl:output>
+          <cl:grid std:sid="grid-559509fa" datasetid="ds2" autofit="0, 1, 2">
+            <cl:verticaldata std:sid="v-data-4d164c69" width="100%" height="200px" autosize="height"/>
+            <cl:gridcolumn std:sid="g-column-c37ad4fe" width="200px"/>
+            <cl:gridcolumn std:sid="g-column-8f6b58b9" width="200px"/>
+            <cl:gridcolumn std:sid="g-column-225fdb23" width="200px"/>
+            <cl:gridheader std:sid="gh-band-c5701cca">
+              <cl:gridrow std:sid="g-row-c266bda7" height="33px"/>
+              <cl:gridcell std:sid="gh-cell-64b17111" rowindex="0" colindex="0" targetcolumnname="item" sortable="false" filterable="false" text="Item"/>
+              <cl:gridcell std:sid="gh-cell-887039a7" rowindex="0" colindex="1" targetcolumnname="currentYear" sortable="false" filterable="false" text="Current Year"/>
+              <cl:gridcell std:sid="gh-cell-154e8bda" rowindex="0" colindex="2" targetcolumnname="previousYear" sortable="false" filterable="false" text="Previous Year"/>
+            </cl:gridheader>
+            <cl:griddetail std:sid="gd-band-c063076d">
+              <cl:gridrow std:sid="g-row-adfc8029" height="45px"/>
+              <cl:gridcell std:sid="gd-cell-73a9359c" rowindex="0" colindex="0" columnname="item">
+                <cl:output std:sid="output-46f3afe1">
+                  <cl:celldata std:sid="c-data-e3d63600"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-b957752b" rowindex="0" colindex="1" columnname="currentYear">
+                <cl:output std:sid="output-f9e29be2" class="text-right">
+                  <cl:celldata std:sid="c-data-d752aa99"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-db62ebec" rowindex="0" colindex="2" columnname="previousYear">
+                <cl:output std:sid="output-d9603aff" class="text-right">
+                  <cl:celldata std:sid="c-data-1afcf26a"/>
+                </cl:output>
+              </cl:gridcell>
+            </cl:griddetail>
+          </cl:grid>
+          <cl:verticallayout std:sid="v-layout-acb68126" spacing="16"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-beadd93c" spacing="24"/>
+      </cl:group>
+      <cl:group std:sid="group-c6ad1d2c" class="card">
+        <cl:attribute name="mobile-fit" value="true"/>
+        <cl:attribute name="mobile-spacing" value="20"/>
+        <cl:verticaldata std:sid="v-data-4cdc0eaa" width="1920px" height="683px" autosize="height"/>
+        <cl:group std:sid="group-d77ad4bf" class="c-head">
+          <cl:verticaldata std:sid="v-data-0804dcee" width="1038px" height="61px" autosize="height"/>
+          <cl:output std:sid="output-b2034017" class="tit" accesskey="tit" value="Quarterly">
+            <cl:formdata std:sid="f-data-81e514b4" row="0" col="0"/>
+          </cl:output>
+          <cl:formlayout std:sid="f-layout-1f932915" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="36" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-b15b3963">
+          <cl:verticaldata std:sid="v-data-797a81cc" width="974px" height="46px" autosize="height"/>
+          <cl:group std:sid="group-8ef2db58">
+            <cl:formdata std:sid="f-data-3b244d83" width="100" height="35" row="0" col="0"/>
+            <cl:output std:sid="output-7de31014" class="font-micro" value="For the fiscal year ended">
+              <cl:verticaldata std:sid="v-data-44fb2367" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-fb6b60c3" class="font-subheading" value="Dec 31, 2025">
+              <cl:verticaldata std:sid="v-data-b799a4ce" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-a26ee6e3" spacing="6"/>
+          </cl:group>
+          <cl:group std:sid="group-2b05d746">
+            <cl:formdata std:sid="f-data-7c3dc824" row="0" col="1"/>
+            <cl:output std:sid="output-2fa972c3" class="font-micro" value="Currency (and units, if applicable)">
+              <cl:verticaldata std:sid="v-data-1dfb7db1" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:output std:sid="output-d2b3eea6" class="font-subheading" value="PHP (in Thousands)">
+              <cl:verticaldata std:sid="v-data-6227207e" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:verticallayout std:sid="v-layout-2caffc7a" spacing="6"/>
+          </cl:group>
+          <cl:formlayout std:sid="f-layout-4329a358" scrollable="false" hspace="8px" vspace="8px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+            <cl:rows length="46" unit="PIXEL" autoSizing="true" syncminlength="false"/>
+            <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+            <cl:columns length="1" unit="FRACTION" autoSizing="true" syncminlength="false"/>
+          </cl:formlayout>
+        </cl:group>
+        <cl:group std:sid="group-5ada3d8e">
+          <cl:verticaldata std:sid="v-data-2a7c44bf" width="1920px" height="252px" autosize="height"/>
+          <cl:output std:sid="output-1665e8de" class="grd-tit" accesskey="sub-tit" value="Balance Sheet">
+            <cl:verticaldata std:sid="v-data-154be5de" width="1920px" height="36px" autosize="height"/>
+          </cl:output>
+          <cl:grid std:sid="grid-cd1bd8eb" datasetid="ds1" autofit="0, 1, 2">
+            <cl:verticaldata std:sid="v-data-1a77c896" width="100%" height="200px" autosize="height"/>
+            <cl:gridcolumn std:sid="g-column-d818cd9f" width="200px"/>
+            <cl:gridcolumn std:sid="g-column-5060ab75" width="200px"/>
+            <cl:gridcolumn std:sid="g-column-43615158" width="200px"/>
+            <cl:gridheader std:sid="gh-band-2b8f3972">
+              <cl:gridrow std:sid="g-row-b5bd3c13" height="33px"/>
+              <cl:gridcell std:sid="gh-cell-c8215169" rowindex="0" colindex="0" targetcolumnname="item" sortable="false" filterable="false" text="Item"/>
+              <cl:gridcell std:sid="gh-cell-0ea092ac" rowindex="0" colindex="1" targetcolumnname="currentYear" sortable="false" filterable="false" text="Current Year"/>
+              <cl:gridcell std:sid="gh-cell-08547113" rowindex="0" colindex="2" targetcolumnname="previousYear" sortable="false" filterable="false" text="Previous Year"/>
+            </cl:gridheader>
+            <cl:griddetail std:sid="gd-band-5874b815">
+              <cl:gridrow std:sid="g-row-3a7a5a69" height="45px"/>
+              <cl:gridcell std:sid="gd-cell-b5f76895" rowindex="0" colindex="0" columnname="item">
+                <cl:output std:sid="output-20b776c2">
+                  <cl:celldata std:sid="c-data-6cb7e03e"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-97780a8a" rowindex="0" colindex="1" columnname="currentYear">
+                <cl:output std:sid="output-43761d8d" class="text-right">
+                  <cl:celldata std:sid="c-data-1cc809ad"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-44419c15" rowindex="0" colindex="2" columnname="previousYear">
+                <cl:output std:sid="output-01baa56b" class="text-right">
+                  <cl:celldata std:sid="c-data-83d94c60"/>
+                </cl:output>
+              </cl:gridcell>
+            </cl:griddetail>
+          </cl:grid>
+          <cl:verticallayout std:sid="v-layout-5be51a92" spacing="16"/>
+        </cl:group>
+        <cl:group std:sid="group-da742514">
+          <cl:verticaldata std:sid="v-data-ab61fd40" width="1920px" height="252px" autosize="height"/>
+          <cl:output std:sid="output-b8fcf024" class="grd-tit" accesskey="sub-tit" value="Income Statement">
+            <cl:verticaldata std:sid="v-data-adf7bf9f" width="1920px" height="36px" autosize="height"/>
+          </cl:output>
+          <cl:grid std:sid="grid-b2f3de0e" datasetid="ds2" autofit="0, 1, 2">
+            <cl:verticaldata std:sid="v-data-67d7d9da" width="100%" height="200px" autosize="height"/>
+            <cl:gridcolumn std:sid="g-column-a244f2e2" width="200px"/>
+            <cl:gridcolumn std:sid="g-column-2fefa02c" width="200px"/>
+            <cl:gridcolumn std:sid="g-column-feb79a6b" width="200px"/>
+            <cl:gridheader std:sid="gh-band-50f69308">
+              <cl:gridrow std:sid="g-row-14d2ca25" height="33px"/>
+              <cl:gridcell std:sid="gh-cell-374d1f8a" rowindex="0" colindex="0" targetcolumnname="item" sortable="false" filterable="false" text="Item"/>
+              <cl:gridcell std:sid="gh-cell-b495f45e" rowindex="0" colindex="1" targetcolumnname="currentYear" sortable="false" filterable="false" text="Current Year"/>
+              <cl:gridcell std:sid="gh-cell-14f12845" rowindex="0" colindex="2" targetcolumnname="previousYear" sortable="false" filterable="false" text="Previous Year"/>
+            </cl:gridheader>
+            <cl:griddetail std:sid="gd-band-391beb64">
+              <cl:gridrow std:sid="g-row-f01d868d" height="45px"/>
+              <cl:gridcell std:sid="gd-cell-8adf9a52" rowindex="0" colindex="0" columnname="item">
+                <cl:output std:sid="output-a53e4a02">
+                  <cl:celldata std:sid="c-data-a9a6b498"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-adc74d8e" rowindex="0" colindex="1" columnname="currentYear">
+                <cl:output std:sid="output-ce05c1c5" class="text-right">
+                  <cl:celldata std:sid="c-data-aa19469b"/>
+                </cl:output>
+              </cl:gridcell>
+              <cl:gridcell std:sid="gd-cell-8c88b850" rowindex="0" colindex="2" columnname="previousYear">
+                <cl:output std:sid="output-30cad5d3" class="text-right">
+                  <cl:celldata std:sid="c-data-ce3a5249"/>
+                </cl:output>
+              </cl:gridcell>
+            </cl:griddetail>
+          </cl:grid>
+          <cl:verticallayout std:sid="v-layout-7e256ab8" spacing="16"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-a61224a4" spacing="24"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-1cee029a" spacing="16"/>
+    </cl:group>
+    <cl:verticallayout std:sid="v-layout-b58d1922"/>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>
