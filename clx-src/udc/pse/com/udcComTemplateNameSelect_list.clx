@@ -24,7 +24,7 @@
         <cl:item std:sid="item-9a2f5d38" label="Services" value="services"/>
         <cl:item std:sid="item-7e8d1a46" label="Small, Medium &amp; Emerging Board" value="smeBoard"/>
       </cl:combobox>
-      <cl:inputbox std:sid="i-box-6c0e3a95" id="ipbCompanyName" fieldLabel="Company Name" placeholder="Enter a company name or stock symbol">
+      <cl:inputbox std:sid="i-box-6c0e3a95" id="ipbCompanyName" fieldLabel="Company Name" placeholder="Search by template name or form number">
         <cl:listener std:sid="listener-0d5b7c42" name="input" handler="onIpbCompanyNameInput"/>
         <cl:listener std:sid="listener-4c1f9a63" name="mousedown" handler="onIpbCompanyNameMousedown"/>
         <cl:formdata std:sid="f-data-a4e91b60" row="0" col="1"/>
