@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-2ccb2433" version="1.0.6164">
   <head std:sid="head-fccfcafe">
     <screen std:sid="screen-410ab7ed" id="default" name="default" width="1025px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1920" active="true"/>
-    <screen std:sid="screen-71dcbf13" id="tablet" name="tablet" width="376px" height="667px" useCustomWidth="true" customWidth="1024"/>
+    <screen std:sid="screen-71dcbf13" id="tablet" name="tablet" width="501px" height="667px" useCustomWidth="true" customWidth="1024"/>
     <screen std:sid="screen-dbff76ed" id="mobile" name="mobile" width="375px" height="525px"/>
     <cl:model std:sid="model-b8c45f8e">
       <cl:dataset std:sid="d-set-821d7a60" id="dsMenu">

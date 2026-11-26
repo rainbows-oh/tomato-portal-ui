@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-b4d4063a" version="1.0.6209">
   <head std:sid="head-d7e5a61a">
     <screen std:sid="screen-dc9c660e" id="default" name="default" width="1025px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1040" active="true"/>
-    <screen std:sid="screen-4f61ce75" id="tablet" name="tablet" width="376px" height="667px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1024"/>
+    <screen std:sid="screen-4f61ce75" id="tablet" name="tablet" width="501px" height="667px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1024"/>
     <screen std:sid="screen-67d6918c" id="mobile" name="mobile" width="375px" height="525px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
     <cl:model std:sid="model-8cd7069e">
       <cl:dataset comment="배당 목록" std:sid="d-set-5b4a9c6d" id="ds1">
