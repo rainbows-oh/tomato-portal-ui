@@ -75,6 +75,9 @@
         <cl:tabfolder std:sid="t-folder-b4d57b29" id="grpSectionBody" class="line" fieldLabel="6 tabs" childcombinatorclass="tablist" item-sizing="fill" item-spacing="0">
           <cl:verticaldata std:sid="v-data-a7f5dcce" width="1040px" height="1904px" autosize="height"/>
           <cl:tabitem std:sid="t-item-2de6050b" selected="true" text="Company Information">
+            <std:metadata>
+              <std:property key="is-active-item" value="true"/>
+            </std:metadata>
             <cl:group std:sid="group-b16ba989">
               <std:metadata>
                 <std:property key="locked" value="true"/>
@@ -527,7 +530,7 @@
               </std:metadata>
               <cl:attribute name="mobile-fit" value="true"/>
               <cl:attribute name="mobile-top-margin" value="16"/>
-              <cl:embeddedapp std:sid="e-app-2f9059b3" id="ea1" src="../new/EDGE-CPN-02-02_CompanyDetail_DirectorsandManagement.clx">
+              <cl:embeddedapp std:sid="e-app-2f9059b3" id="ea1" src="EDGE-CPN-02-02_CompanyDetail_DirectorsandManagement.clx">
                 <cl:verticaldata std:sid="v-data-200fb523" width="320px" height="1310px" autosize="height"/>
               </cl:embeddedapp>
               <cl:verticallayout std:sid="v-layout-3ffd4d56" topmargin="24"/>
@@ -540,7 +543,7 @@
               </std:metadata>
               <cl:attribute name="mobile-fit" value="true"/>
               <cl:attribute name="mobile-top-margin" value="16"/>
-              <cl:embeddedapp std:sid="e-app-c1f8d0d7" id="ea2" src="../new/EDGE-CPN-02-03_CompanyDetail_FinancialReports.clx">
+              <cl:embeddedapp std:sid="e-app-c1f8d0d7" id="ea2" src="EDGE-CPN-02-03_CompanyDetail_FinancialReports.clx">
                 <cl:verticaldata std:sid="v-data-85a38e25" width="1040px" height="1577px" autosize="height"/>
               </cl:embeddedapp>
               <cl:verticallayout std:sid="v-layout-f41e1185" topmargin="24"/>
@@ -553,7 +556,7 @@
               </std:metadata>
               <cl:attribute name="mobile-fit" value="true"/>
               <cl:attribute name="mobile-top-margin" value="16"/>
-              <cl:embeddedapp std:sid="e-app-a99cb666" id="ea3" src="../new/EDGE-CPN-02-04_CompanyDetail_Disclosures.clx">
+              <cl:embeddedapp std:sid="e-app-a99cb666" id="ea3" src="EDGE-CPN-02-04_CompanyDetail_Disclosures.clx">
                 <cl:verticaldata std:sid="v-data-3fa64975" width="1040px" height="1300px" autosize="height"/>
               </cl:embeddedapp>
               <cl:verticallayout std:sid="v-layout-73dc99fd" topmargin="24"/>
@@ -566,23 +569,20 @@
               </std:metadata>
               <cl:attribute name="mobile-fit" value="true"/>
               <cl:attribute name="mobile-top-margin" value="16"/>
-              <cl:embeddedapp std:sid="e-app-e392a669" id="ea4" src="../new/EDGE-CPN-02-05_CompanyDetail_DividendsandRights.clx">
+              <cl:embeddedapp std:sid="e-app-e392a669" id="ea4" src="EDGE-CPN-02-05_CompanyDetail_DividendsandRights.clx">
                 <cl:verticaldata std:sid="v-data-eb8bc52a" width="1040px" height="1300px" autosize="height"/>
               </cl:embeddedapp>
               <cl:verticallayout std:sid="v-layout-c714ad41" topmargin="24"/>
             </cl:group>
           </cl:tabitem>
           <cl:tabitem std:sid="t-item-a6b1115e" selected="true" text="Notices">
-            <std:metadata>
-              <std:property key="is-active-item" value="true"/>
-            </std:metadata>
             <cl:group std:sid="group-9e3a4b42">
               <std:metadata>
                 <std:property key="locked" value="true"/>
               </std:metadata>
               <cl:attribute name="mobile-fit" value="true"/>
               <cl:attribute name="mobile-top-margin" value="16"/>
-              <cl:embeddedapp std:sid="e-app-01b9edeb" id="ea5" src="../new/EDGE-CPN-02-06_CompanyDetail_Notices.clx">
+              <cl:embeddedapp std:sid="e-app-01b9edeb" id="ea5" src="EDGE-CPN-02-06_CompanyDetail_Notices.clx">
                 <cl:verticaldata std:sid="v-data-c00d3006" width="1040px" height="1300px" autosize="height"/>
               </cl:embeddedapp>
               <cl:verticallayout std:sid="v-layout-11af3bf1" topmargin="24"/>
