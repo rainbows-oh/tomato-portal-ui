@@ -18,6 +18,7 @@ var LOGO_HEIGHT_MOBILE = 60;
 function onBodyLoad(/* cpr.events.CEvent */ e){
 	// 시작 스크린이 모바일인 경우에도 적용 (screen-change 는 변경 시에만 발생)
 	applyLogoLayout(app.targetScreen.name);
+	applyMenuLayout(app.targetScreen.name);
 }
 
 /*
@@ -29,7 +30,53 @@ function onBodyScreenChange(/* cpr.events.CScreenChangeEvent */ e){
 	var vsScreenName = e.screen.name;
 	cpr.core.DeferredUpdateManager.INSTANCE.asyncExec(function() {
 		applyLogoLayout(vsScreenName);
+		applyMenuLayout(vsScreenName);
 	});
+}
+
+/*
+ * 콤보 박스(cmbMobMenu)에서 selection-change 이벤트 발생 시 호출.
+ * 모바일에서는 탭 헤더 대신 콤보 박스로 탭을 전환한다.
+ */
+function onCmbMobMenuSelectionChange(/* cpr.events.CSelectionEvent */ e){
+	var vcCombo = e.control;
+	var vcTab = app.lookup("grpSectionBody");
+
+	// 콤보 항목 순서 = 탭 아이템 순서
+	var vnIndex = vcCombo.getItems().indexOf(vcCombo.getItemByValue(vcCombo.value));
+	var voTabItem = vcTab.getTabItems()[vnIndex];
+	if (voTabItem) {
+		vcTab.setSelectedTabItem(voTabItem);
+	}
+}
+
+/**
+ * 모바일 스크린이면 카테고리 콤보 영역(grpMobMenuSelect)을 보이고 탭 헤더를 숨긴다.
+ * 그 외에는 반대로 되돌린다.
+ * @param {String} psScreenName 스크린 명
+ */
+function applyMenuLayout(psScreenName) {
+	var vcMenu = app.lookup("grpMobMenuSelect");
+	var vcTab = app.lookup("grpSectionBody");
+	var vbMobile = AppProperties.SCREEN_MOBILE_NM.indexOf(psScreenName) != -1;
+
+	if (vbMobile) {
+		var vcCombo = app.lookup("cmbMobMenu");
+		var vnIndex = vcTab.getTabItems().indexOf(vcTab.getSelectedTabItem());
+		var voItem = vcCombo.getItems()[vnIndex];
+		if (voItem) {
+			vcCombo.value = voItem.value;
+		}
+	}
+
+	vcMenu.visible = vbMobile;
+	vcTab.hideHeader = vbMobile;
+	
+	// 헤더를 다시 보일 때는 바로 다시 그린다. 그리기가 지연되면 resize 처리가 먼저 실행되어
+	// 아직 없는 화살표 버튼을 참조하는 런타임 에러(TabFolder._updateArrowButtons)가 발생한다.
+	if (!vbMobile) {
+		cpr.core.DeferredUpdateManager.INSTANCE.update();
+	}
 }
 
 /**

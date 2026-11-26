@@ -21,15 +21,19 @@
   <body std:sid="body-264c4ad9" style="top:0px; left:0px; width:900px; height:36px;" class="app-header">
     <cl:listener std:sid="listener-e2975343" name="load" handler="onBodyLoad"/>
     <cl:listener std:sid="listener-f0c29aac" name="screen-change" handler="onBodyScreenChange"/>
-    <cl:output std:sid="output-202fc71c" id="optTit">
+    <cl:output std:sid="output-202fc71c" id="optTit" ellipsis="true">
       <cl:listener std:sid="listener-b5fbb49d" name="dblclick" handler="onOutputDblclick"/>
       <cl:attribute name="needs-auto-height" value="true"/>
       <cl:apppropbind property="value" category="PROPERTY" app-property="title"/>
       <cl:formdata std:sid="f-data-e63f45a2" row="0" col="0"/>
     </cl:output>
-    <cl:formlayout std:sid="f-layout-ce0da0fb" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+    <cl:checkbox std:sid="c-box-e0ddda5d" class="fav">
+      <cl:formdata std:sid="f-data-92a16a37" row="0" col="1"/>
+    </cl:checkbox>
+    <cl:formlayout std:sid="f-layout-ce0da0fb" scrollable="false" hspace="4px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
       <cl:rows length="1" unit="FRACTION" autoSizing="true"/>
       <cl:columns length="1" unit="FRACTION" shadetype="NONE" shadecolor="transparent"/>
+      <cl:columns length="20" unit="PIXEL" hidden="true"/>
     </cl:formlayout>
   </body>
   <std:studiosetting>

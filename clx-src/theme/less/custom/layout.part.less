@@ -90,17 +90,34 @@
 	}
 }
 
+.cl-container.separate {
+	&:not(.cl-last-row) {
+		border-bottom: 1px solid @gray-20;
+	}
+}
+
+
 .cl-container.dot-separate {
 	.cl-output {
 		color: @gray-60;
 	}
 	
-	.cl-layout-wrap:not(.cl-first) > .cl-output .cl-text::before {
-		content: "·";
-		display: inline-block;
-		width: 16px;
-		text-align: center;
-		color: @gray-60;
+	/* 구분점(·) — 컨트롤 바깥(wrap)에 붙여서 버튼/아웃풋 모두 적용, 링크 밑줄·클릭 영역에서는 제외 */
+	.cl-layout-wrap:not(.cl-first) {
+		padding-left: 16px;
+
+		&::before {
+			content: "·";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 16px;
+			color: @gray-60;
+		}
 	}
 }
 
@@ -212,5 +229,21 @@
 		color: @gray-80;
 		font-size: 15px;
 		font-weight: 800;
+	}
+}
+
+.cl-container.menu-drop {
+	border-radius: 6px;
+	border: 1px solid #D1D5DB;
+	background: #FFF;
+	padding: 10px 12px;
+	
+	.cl-combobox {
+		border: none;
+		border-radius: 0px;
+		
+		.cl-text {
+			padding-left: 0px;
+		}
 	}
 }
