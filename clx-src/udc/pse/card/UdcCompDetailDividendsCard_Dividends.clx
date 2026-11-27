@@ -3,7 +3,7 @@
   <head std:sid="head-bb1e1be1">
     <screen std:sid="screen-6c632a37" id="default" name="default" width="1025px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1920" active="true"/>
     <screen std:sid="screen-1ed825e6" id="tablet" name="tablet" width="501px" height="667px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1024"/>
-    <screen std:sid="screen-1e7ade93" id="mobile" name="mobile" width="375px" height="525px" useCustomWidth="false" useCustomHeight="false" customHeight="600" customWidth="800"/>
+    <screen std:sid="screen-1e7ade93" id="mobile" name="mobile" width="0px" height="525px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="375"/>
     <cl:model std:sid="model-03a64d56"/>
     <cl:appspec/>
   </head>

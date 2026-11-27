@@ -38,7 +38,7 @@
       <cl:expbind property="fieldLabel" category="PROPERTY" expression="this.style.hasClass(&quot;active&quot;) ? text + &quot; selected&quot; : text"/>
       <cl:flowlayoutdata std:sid="f-data-947e8700" width="32px" height="32px"/>
     </cl:button>
-    <cl:flowlayout std:sid="f-layout-ba69191e" scrollable="false" hspacing="8" vspacing="0" linewrap="false"/>
+    <cl:flowlayout std:sid="f-layout-ba69191e" scrollable="false" hspacing="8" vspacing="0" halign="right" linewrap="false"/>
   </body>
   <std:studiosetting>
     <std:hruler/>

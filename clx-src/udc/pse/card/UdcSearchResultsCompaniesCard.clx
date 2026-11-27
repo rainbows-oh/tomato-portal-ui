@@ -1,0 +1,67 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cl="http://tomatosystem.co.kr/cleopatra" xmlns:std="http://tomatosystem.co.kr/cleopatra/studio" std:sid="html-9f0eb092" version="1.0.6209">
+  <head std:sid="head-bb1e1be1">
+    <screen std:sid="screen-122fb116" id="default" name="default" width="1025px" height="768px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1920"/>
+    <screen std:sid="screen-ad6c3c59" id="tablet" name="tablet" width="501px" height="667px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="1024"/>
+    <screen std:sid="screen-006e2357" id="mobile" name="mobile" width="0px" height="525px" useCustomWidth="true" useCustomHeight="false" customHeight="600" customWidth="375"/>
+    <cl:model std:sid="model-03a64d56"/>
+    <cl:appspec/>
+  </head>
+  <body std:sid="body-dc6a5026" style="top:0px; left:0px; width:300px; height:300px;">
+    <cl:group std:sid="group-9b74addf" class="toggle-card">
+      <cl:formdata std:sid="f-data-7df5f6f7" row="0" col="0"/>
+      <cl:button std:sid="button-22df9580" class="btn-link ellipsis-2" value="Davao Microworks Corp." ariabuttontype="link">
+        <cl:verticaldata std:sid="v-data-c4f3a3f6" width="300px" height="20px" autosize="height"/>
+      </cl:button>
+      <cl:group std:sid="group-f4a45437">
+        <cl:verticaldata std:sid="v-data-28d7770f" width="390px" height="42px" autosize="height"/>
+        <cl:output std:sid="output-5a57074c" class="font-micro" value="Stock Symbol">
+          <cl:verticaldata std:sid="v-data-dafee585" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:output std:sid="output-e6b33c94" class="font-body-s" value="DMW">
+          <cl:verticaldata std:sid="v-data-81fdc6fd" width="353px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-50a650ee" spacing="2"/>
+      </cl:group>
+      <cl:group std:sid="group-cc16c15e">
+        <cl:verticaldata std:sid="v-data-10530f02" width="390px" height="42px" autosize="height"/>
+        <cl:output std:sid="output-ca6ca77d" class="font-micro" value="Sector">
+          <cl:verticaldata std:sid="v-data-3f6f68db" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:output std:sid="output-32e9435b" class="font-body-s" value="Small, Medium &amp; Emerging Board">
+          <cl:verticaldata std:sid="v-data-418546ad" width="353px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-ec59cc8d" spacing="2"/>
+      </cl:group>
+      <cl:group std:sid="group-110fd9dd">
+        <cl:verticaldata std:sid="v-data-1510e96b" width="390px" height="42px" autosize="height"/>
+        <cl:output std:sid="output-2fc818f1" class="font-micro" value="Subsector">
+          <cl:verticaldata std:sid="v-data-189542d2" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:output std:sid="output-1b87b6f4" class="font-body-s" value="Small, Medium &amp; Emerging Board">
+          <cl:verticaldata std:sid="v-data-67d2d717" width="353px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-ca5e3481" spacing="2"/>
+      </cl:group>
+      <cl:group std:sid="group-94852bef">
+        <cl:verticaldata std:sid="v-data-174375d9" width="390px" height="42px" autosize="height"/>
+        <cl:output std:sid="output-625b6030" class="font-micro" value="Listing Date">
+          <cl:verticaldata std:sid="v-data-cf64f782" width="100px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:output std:sid="output-345a3c82" class="font-body-s" value="Nov 13, 2021">
+          <cl:verticaldata std:sid="v-data-147b145a" width="353px" height="20px" autosize="height"/>
+        </cl:output>
+        <cl:verticallayout std:sid="v-layout-3f047b9b" spacing="2"/>
+      </cl:group>
+      <cl:verticallayout std:sid="v-layout-5b10945a" spacing="8"/>
+    </cl:group>
+    <cl:formlayout std:sid="f-layout-a5a0a503" scrollable="false" hspace="0px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">
+      <cl:rows length="1" unit="FRACTION"/>
+      <cl:columns length="1" unit="FRACTION"/>
+    </cl:formlayout>
+  </body>
+  <std:studiosetting>
+    <std:hruler/>
+    <std:vruler/>
+  </std:studiosetting>
+</html>

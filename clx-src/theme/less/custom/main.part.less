@@ -735,102 +735,134 @@ html.page-scroll-lock body {
 }
 
 .cl-container.mobile-menu {
-	padding: 16px 16px 24px 16px;
 	background-color: #FFF;
 	z-index: 12 !important;
 	
 	.cl-container.header {
-	}
-
-	.cl-sidenavigation {
-		border-top: 1px solid #E2E8F0;
-		border-bottom: 1px solid #E2E8F0;
-		padding: 8px 0px;
+		padding: 14px 16px;
 		
-		.cl-sidenavigation-item {
-			min-height: 0;
-			padding-right: 8px;
-
-			/* 항목 아이콘 — 사용하지 않음 (빈 영역이 폭을 차지하므로 제거) */
+		.cl-button.btn-close {
 			.cl-icon {
-				display: none;
+				width: 24px;
+				height: 24px;
 			}
-
-			.cl-expand-icon {
-				grid-column: 1 !important;
-				width: 16px;
-				height: 16px;
-				margin-right: 8px;
-			}
-
-			&.cl-folder.cl-collapsed .cl-expand-icon,
-			&.cl-folder.cl-expanded .cl-expand-icon {
-				background-image: url("../../img/icons/ico_angle.svg") !important;
-				background-position: center !important;
-				background-repeat: no-repeat !important;
-				background-size: contain !important;
-			}
-
-			&:not(.cl-folder) .cl-text {
-				padding-left: 24px;
-			}
-
-			&.cl-level-1 {
-				padding-top: 12px;
-				padding-bottom: 12px;
-				padding-left: 0;
-				color: #1E293B;
-				font-size: 15px;
-				font-weight: 700;
-			}
-
-			&.cl-level-2 {
-				padding-top: 9px;
-				padding-bottom: 9px;
-				padding-left: 16px;
-				color: #1E293B;
-				font-size: 14px;
-				font-weight: 700;
-			}
-
-			&.cl-level-3 {
-				padding-top: 9px;
-				padding-bottom: 9px;
-				padding-left: 32px;
-				color: #475569;
-				font-size: 14px;
-				font-weight: 400;
-			}
-
-			&.cl-level-4 {
-				padding-top: 9px;
-				padding-bottom: 9px;
-				padding-left: 48px;
-				color: #475569;
-				font-size: 14px;
-				font-weight: 400;
-
-				&.cl-selected {
-					color: #0369A1;
-				}
+		}
+		
+		.cl-button.logo {
+			.cl-icon {
+				background-image: url("../../img/main/logo_header.svg") !important;
+				width: 60px;
+				height: 28px;
 			}
 		}
 	}
 	
-	.cl-button.btn-site {
-		border-radius: 8px;
-		border: 1px solid @gray-20;
-		background: @gray-5;
-		padding: 14px;
-
-		.cl-text-wrapper {
-			display: flex !important;
-			width: 100% !important;
-			justify-content: space-between !important;
+	.cl-container.body {
+		padding: 16px;
+		
+		.cl-container.fav-area {
+			.cl-output {
+				color: #1D4ED8;
+				font-size: 11px;
+				font-weight: 700;
+			}
+			
+			.cl-button {
+				border-radius: 0px;
+				border: none;
+				color: #0F1D3C;
+				font-size: 14px;
+				font-weight: 700;
+				padding: 13px 16px 13px 46px;
+			}
 		}
-
-		.cl-icon {
-			background-image: url("../../img/main/ico_external.svg") !important;
+	
+		.cl-sidenavigation {
+			.cl-sidenavigation-item {
+				min-height: 0;
+				padding-right: 8px;
+	
+				/* 항목 아이콘 — 사용하지 않음 (빈 영역이 폭을 차지하므로 제거) */
+				.cl-icon {
+					display: none;
+				}
+	
+				.cl-expand-icon {
+					grid-column: 1 !important;
+					width: 16px;
+					height: 16px;
+					margin-right: 8px;
+				}
+	
+				&.cl-folder.cl-collapsed .cl-expand-icon,
+				&.cl-folder.cl-expanded .cl-expand-icon {
+					background-image: url("../../img/icons/ico_angle.svg") !important;
+					background-position: center !important;
+					background-repeat: no-repeat !important;
+					background-size: contain !important;
+				}
+	
+				&:not(.cl-folder) .cl-text {
+					padding-left: 24px;
+				}
+	
+				&.cl-level-1 {
+					padding-top: 12px;
+					padding-bottom: 12px;
+					padding-left: 0;
+					color: #1E293B;
+					font-size: 15px;
+					font-weight: 700;
+				}
+	
+				&.cl-level-2 {
+					padding-top: 9px;
+					padding-bottom: 9px;
+					padding-left: 16px;
+					color: #1E293B;
+					font-size: 14px;
+					font-weight: 700;
+				}
+	
+				&.cl-level-3 {
+					padding-top: 9px;
+					padding-bottom: 9px;
+					padding-left: 32px;
+					color: #475569;
+					font-size: 14px;
+					font-weight: 400;
+				}
+	
+				&.cl-level-4 {
+					padding-top: 9px;
+					padding-bottom: 9px;
+					padding-left: 48px;
+					color: #475569;
+					font-size: 14px;
+					font-weight: 400;
+	
+					&.cl-selected {
+						color: #0369A1;
+					}
+				}
+			}
+		}
+		
+		.cl-button.btn-site {
+			border-radius: 8px;
+			border: 1px solid @gray-20;
+			background: @gray-5;
+			padding: 14px;
+	
+			.cl-text-wrapper {
+				display: flex !important;
+				width: 100% !important;
+				justify-content: space-between !important;
+			}
+	
+			.cl-icon {
+				background-image: url("../../img/main/ico_external.svg") !important;
+			}
 		}
 	}
 }

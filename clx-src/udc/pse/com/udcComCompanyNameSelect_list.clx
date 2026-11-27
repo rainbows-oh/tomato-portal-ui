@@ -7,7 +7,6 @@
     <cl:model std:sid="model-88c04fd5"/>
     <cl:appspec title="회사 선택 필터 리스트형">
       <cl:property name="sectorVisible" type="boolean" default="true" bindable="true" translatable="false" std:desc="Show the Sector combobox"/>
-      <cl:property name="placeholder" type="string" bindable="true" translatable="true" std:desc="Placeholder text of the company name input"/>
     </cl:appspec>
   </head>
   <body std:sid="body-a40d15f7" style="top:0px; left:0px; width:440px; height:440px;" class="company-selection">

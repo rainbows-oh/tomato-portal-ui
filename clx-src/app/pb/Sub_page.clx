@@ -77,7 +77,7 @@
           </cl:sidenavigation>
           <cl:verticallayout std:sid="v-layout-2e47784b"/>
         </cl:group>
-        <cl:embeddedapp std:sid="e-app-7a12d1c7" id="ea1" src="1125/EDGE-CPN-02-01_CompanyDetail_CompanyInformation.clx">
+        <cl:embeddedapp std:sid="e-app-7a12d1c7" id="ea1" src="1127/EDGR-SER-02-00_SearchResults.clx">
           <cl:formdata std:sid="f-data-79a81225" row="0" col="1"/>
         </cl:embeddedapp>
         <cl:formlayout std:sid="f-layout-c615e25a" scrollable="false" hspace="40px" vspace="0px" top-margin="0px" right-margin="0px" bottom-margin="0px" left-margin="0px">

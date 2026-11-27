@@ -3,7 +3,7 @@
   <head std:sid="head-55e86b60">
     <screen std:sid="screen-23c0e215" id="default" name="default" width="1025px" height="768px" useCustomWidth="true" useCustomHeight="true" customHeight="2000" customWidth="1920" active="true"/>
     <screen std:sid="screen-5c35466f" id="tablet" name="tablet" width="501px" height="667px" useCustomWidth="true" customWidth="1024"/>
-    <screen std:sid="screen-f95919f1" id="mobile" name="mobile" width="375px" height="525px"/>
+    <screen std:sid="screen-f95919f1" id="mobile" name="mobile" width="0px" height="525px" useCustomWidth="true" customWidth="375"/>
     <cl:model std:sid="model-2a65c7ab">
       <cl:dataset std:sid="d-set-a21f8a84" id="dsMobileMenu">
         <cl:datacolumnlist>
@@ -367,33 +367,55 @@
       <cl:verticallayout std:sid="v-layout-02912f10" distribution="center" spacing="0"/>
     </cl:group>
     <cl:group std:sid="group-6829217a" id="grpMobileSideMenu" class="mobile-menu" visible="false">
-      <cl:verticaldata std:sid="v-data-dbe42536" width="375px" height="366px" autosize="height"/>
+      <cl:verticaldata std:sid="v-data-dbe42536" width="1920px" height="424px" autosize="height"/>
       <cl:group std:sid="group-b54bfff8" class="header">
-        <cl:verticaldata std:sid="v-data-04839180" width="400px" height="40px" autosize="height"/>
+        <cl:verticaldata std:sid="v-data-04839180" width="400px" height="56px" autosize="height"/>
         <cl:button std:sid="button-d33a0e7c" id="btnMobileMenuClose" class="icon btn-close" fieldLabel="Close menu" icon="0">
           <cl:listener std:sid="listener-3b9c1e47" name="click" handler="onBtnMobileMenuCloseClick"/>
-          <cl:flowlayoutdata std:sid="f-data-aeed8026" width="40px" height="40px" autosize="none"/>
+          <cl:flowlayoutdata std:sid="f-data-aeed8026" width="24px" height="28px" autosize="none"/>
         </cl:button>
-        <cl:output std:sid="output-11c31095" value="PSE EDGE">
-          <cl:flowlayoutdata std:sid="f-data-6e1965f1" width="100px" height="20px" autosize="both"/>
-        </cl:output>
+        <cl:button std:sid="button-8cde05cc" class="logo icon" fieldLabel="PSE EDGE" icon="0">
+          <cl:flowlayoutdata std:sid="f-data-46922ec8" width="100px" height="28px" autosize="width"/>
+        </cl:button>
         <cl:flowlayout std:sid="f-layout-527bb95e" hspacing="10"/>
       </cl:group>
-      <cl:sidenavigation std:sid="s-navigation-30ce4843" id="snbMenu">
-        <cl:verticaldata std:sid="v-data-514b4bff" width="200px" height="150px" autosize="height"/>
-        <cl:treeitemset datasetid="dsMobileMenu" label="MENU_NM" value="MENU_ID" parent="UP_MENU_ID"/>
-      </cl:sidenavigation>
-      <cl:group std:sid="group-cc077e51">
-        <cl:verticaldata std:sid="v-data-7cd02cf9" width="343px" height="104px" autosize="height"/>
-        <cl:button std:sid="button-dc348a97" class="btn-site" value="PSE Site" icon="0" iconalign="right">
-          <cl:verticaldata std:sid="v-data-686e673a" width="100px" height="47px" autosize="height"/>
-        </cl:button>
-        <cl:button std:sid="button-eb90d6c8" class="btn-site" value="PDEx Site" icon="0" iconalign="right">
-          <cl:verticaldata std:sid="v-data-44211e57" width="100px" height="47px" autosize="height"/>
-        </cl:button>
-        <cl:verticallayout std:sid="v-layout-607e6250" spacing="10"/>
+      <cl:group std:sid="group-1ad4efd6" class="body">
+        <cl:verticaldata std:sid="v-data-6bab7cf2" width="1920px" height="368px" autosize="height"/>
+        <cl:group std:sid="group-94de49f4">
+          <cl:verticaldata std:sid="v-data-bb7be017" width="1888px" height="216px" autosize="height"/>
+          <cl:group std:sid="group-25c2b791" class="fav-area">
+            <cl:verticaldata std:sid="v-data-82ba0131" width="1888px" height="66px" autosize="height"/>
+            <cl:output std:sid="output-bf3d4d22" class="tit" value="My">
+              <cl:verticaldata std:sid="v-data-a35ae5d1" width="100px" height="20px" autosize="height"/>
+            </cl:output>
+            <cl:group std:sid="group-12de8596">
+              <cl:verticaldata std:sid="v-data-784ac0b4" width="1888px" height="46px" autosize="height"/>
+              <cl:button std:sid="button-f84f76af" value="Favorite Companies">
+                <cl:flowlayoutdata std:sid="f-data-60bc782a" width="273px" height="46px" autosize="both"/>
+              </cl:button>
+              <cl:flowlayout std:sid="f-layout-90017c46"/>
+            </cl:group>
+            <cl:verticallayout std:sid="v-layout-087ed85a" spacing="0"/>
+          </cl:group>
+          <cl:sidenavigation std:sid="s-navigation-30ce4843" id="snbMenu">
+            <cl:verticaldata std:sid="v-data-514b4bff" width="200px" height="150px" autosize="height"/>
+            <cl:treeitemset datasetid="dsMobileMenu" label="MENU_NM" value="MENU_ID" parent="UP_MENU_ID"/>
+          </cl:sidenavigation>
+          <cl:verticallayout std:sid="v-layout-f60363a8" spacing="0"/>
+        </cl:group>
+        <cl:group std:sid="group-cc077e51">
+          <cl:verticaldata std:sid="v-data-7cd02cf9" width="343px" height="104px" autosize="height"/>
+          <cl:button std:sid="button-dc348a97" class="btn-site" value="PSE Site" icon="0" iconalign="right">
+            <cl:verticaldata std:sid="v-data-686e673a" width="100px" height="47px" autosize="height"/>
+          </cl:button>
+          <cl:button std:sid="button-eb90d6c8" class="btn-site" value="PDEx Site" icon="0" iconalign="right">
+            <cl:verticaldata std:sid="v-data-44211e57" width="100px" height="47px" autosize="height"/>
+          </cl:button>
+          <cl:verticallayout std:sid="v-layout-607e6250" spacing="10"/>
+        </cl:group>
+        <cl:verticallayout std:sid="v-layout-28d3b39d" spacing="16"/>
       </cl:group>
-      <cl:verticallayout std:sid="v-layout-5e1a7595" spacing="16"/>
+      <cl:verticallayout std:sid="v-layout-5e1a7595" spacing="0"/>
     </cl:group>
     <cl:group std:sid="group-64a06cb1" id="grpMobileAdvSearch" class="advanced-search" visible="false">
       <cl:verticaldata std:sid="v-data-4616145e" width="1200px" height="415px" autosize="height"/>

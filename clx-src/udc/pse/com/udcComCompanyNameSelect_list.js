@@ -181,13 +181,6 @@ function doApplySectorVisible() {
 };
 
 /**
- * 앱 속성(placeholder)을 회사명 인풋(ipbCompanyName)의 placeholder 에 반영한다. 값이 비어 있으면 placeholder 를 지운다.
- */
-function doApplyPlaceholder() {
-	app.lookup("ipbCompanyName").placeholder = app.getAppProperty("placeholder") || "";
-};
-
-/**
  * 선택 칩 영역(grpSelectChips)을 표시한다.
  */
 function doShowChipArea() {
@@ -293,19 +286,15 @@ function unbindScrollFollow() {
  */
 function onBodyLoad(e) {
 	doApplyInputAreaLayout();
-	doApplyPlaceholder();
 }
 
 /*
  * 루트 컨테이너에서 property-change 이벤트 발생 시 호출.
- * 앱 속성(sectorVisible, placeholder)이 바뀌면 화면에 반영한다.
+ * 앱 속성(sectorVisible)이 바뀌면 화면에 반영한다.
  */
 function onBodyPropertyChange(e) {
 	if (e.property === "sectorVisible") {
 		doApplySectorVisible();
-	}
-	if (e.property === "placeholder") {
-		doApplyPlaceholder();
 	}
 }
 
